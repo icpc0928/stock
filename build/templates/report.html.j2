@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} · {{ date }} {{ session_label }}</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f6f6f4; --surface:#ffffff; --surface-2:#f0efec; --line:#e4e3df;
+  --ink:#141414; --ink-2:#55544f; --ink-3:#8a8983;
+  --up:#c8352b; --up-bg:#fbeae8; --down:#128a4d; --down-bg:#e6f4ec; --flat:#8a8983;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --accent:#2a78d6; --accent-bg:#e8f0fb;
+  --warn-bg:#fff4d6; --warn-ink:#7a5200;
+  --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#131312; --surface:#1c1c1b; --surface-2:#252523; --line:#31312e;
+    --ink:#f2f2ef; --ink-2:#bdbcb4; --ink-3:#85847d;
+    --up:#ef6b62; --up-bg:#3a1f1d; --down:#3fbf7f; --down-bg:#17322a; --flat:#85847d;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --accent:#3987e5; --accent-bg:#1b2a3f;
+    --warn-bg:#3a2e10; --warn-ink:#f2d38a;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei","Segoe UI",Roboto,sans-serif;font-feature-settings:"tnum"}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 18px 60px}
+header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:14px}
+header.top h1{font-size:22px;margin:0;font-weight:700;letter-spacing:.2px}
+header.top .sess{font-size:13px;padding:2px 10px;border-radius:999px;background:var(--accent-bg);color:var(--accent);font-weight:600}
+header.top .meta{color:var(--ink-3);font-size:13px;margin-left:auto}
+.banner{padding:10px 14px;border-radius:10px;background:var(--warn-bg);color:var(--warn-ink);font-size:14px;margin-bottom:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--ink-2);letter-spacing:.3px}
+section{margin-top:26px}
+section>h2.sec{font-size:19px;margin:0 0 12px;font-weight:700;display:flex;align-items:center;gap:10px}
+section>h2.sec small{font-size:13px;color:var(--ink-3);font-weight:500}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g23{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+@media (max-width:860px){.g2,.g3,.g23{grid-template-columns:1fr}}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--flat)}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:var(--surface-2);color:var(--ink-2)}
+.chip.up{background:var(--up-bg)} .chip.down{background:var(--down-bg)}
+/* headline */
+.hero{padding:22px 24px}
+.hero .hl{font-size:21px;font-weight:700;line-height:1.4;margin:0 0 10px}
+.hero ul{margin:0;padding-left:20px}
+.hero li{margin:4px 0}
+.hero .sent{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi .l{font-size:12px;color:var(--ink-3)}
+.kpi .v{font-size:20px;font-weight:700;margin-top:2px;letter-spacing:-.2px}
+.kpi .c{font-size:13px;font-weight:600}
+.kpi .s{font-size:11px;color:var(--ink-3)}
+/* charts */
+.chart{width:100%;height:280px}
+.chart.tall{height:440px}
+.chart.sm{height:220px}
+.chart.spark{height:56px}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;color:var(--ink-3);font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.n{font-weight:600}
+.sym{color:var(--ink-3);font-size:12px;margin-left:4px}
+/* stats */
+.stat{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.stat:last-child{border-bottom:0}
+.stat .k{color:var(--ink-2)} .stat .v{font-weight:600}
+.breadth{display:flex;height:10px;border-radius:6px;overflow:hidden;margin:8px 0 4px;gap:2px}
+.breadth i{display:block;height:100%}
+.breadth .u{background:var(--up)} .breadth .d{background:var(--down)} .breadth .f{background:var(--ink-3)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink-3)}
+/* watch cards */
+.wcard{display:flex;flex-direction:column;gap:6px}
+.wcard .hd{display:flex;align-items:baseline;gap:8px}
+.wcard .hd b{font-size:16px}
+.wcard .px{font-size:22px;font-weight:700}
+.wcard .m{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 10px;font-size:12px;color:var(--ink-3)}
+.wcard .m b{display:block;color:var(--ink);font-weight:600;font-size:13px}
+.wcard .note{font-size:14px;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:10px;margin-top:4px}
+.wcard .nw{font-size:13px;margin:0;padding-left:18px;color:var(--ink-2)}
+.wcard .nw .src{color:var(--ink-3);font-size:12px;margin-left:6px}
+/* picks */
+.pick{border-left:4px solid var(--accent)}
+.pick .t{display:flex;gap:8px;align-items:baseline}
+.pick .t b{font-size:16px}
+.pick p{margin:6px 0 0;font-size:14px;color:var(--ink-2)}
+/* prose */
+.prose{font-size:15px}
+.prose p{margin:8px 0}
+.prose ul,.prose ol{padding-left:22px}
+.prose table{margin:8px 0}
+.events li,.risks li{margin:4px 0}
+.events time{font-weight:600;margin-right:8px;color:var(--accent)}
+/* news */
+.news li{margin:6px 0;font-size:14px}
+.news .src{color:var(--ink-3);font-size:12px;margin-left:6px}
+footer{margin-top:40px;color:var(--ink-3);font-size:12px;line-height:1.7}
+</style>
+{{ plotly_tag | safe }}
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>{{ title }}</h1>
+  <span class="sess">{{ date }} {{ session_label }}</span>
+  <span class="meta">產生於 {{ generated_at[:16].replace('T',' ') }} · <a href="index.html">所有報告</a></span>
+</header>
+
+{% if is_sample %}<div class="banner">⚠ 這是<b>示範資料</b>產生的版面樣本，所有數字皆為隨機生成，非真實行情。</div>{% endif %}
+{% for e in errors %}<div class="banner">⚠ 部分資料抓取失敗：{{ e }}</div>{% endfor %}
+
+{# ---------------- AI 摘要 ---------------- #}
+<div class="card hero">
+  {% if has_analysis %}
+    <p class="hl">{{ a.headline }}</p>
+    {% if a.summary %}<ul>{% for s in a.summary %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+    {% if a.sentiment %}<div class="sent">
+      {% for k,v in a.sentiment.items() %}<span class="chip {{ 'up' if '多' in v else ('down' if '空' in v else '') }}">{{ {'tw':'台股','us':'美股'}.get(k,k) }}：{{ v }}</span>{% endfor %}
+    </div>{% endif %}
+  {% else %}
+    <p class="hl" style="color:var(--ink-3)">（尚無 AI 評論 — 執行 <code>claude -p "/daily-brief {{ session }}"</code> 後重新組版即可加入）</p>
+  {% endif %}
+</div>
+
+{# ---------------- KPI ---------------- #}
+<div class="kpis">
+{% for k in kpis %}
+  <div class="kpi">
+    <div class="l">{{ k.label }}</div>
+    <div class="v">{{ k.value }}</div>
+    <div class="c {{ k.pct|updown }}">{{ k.pct|arrow }} {{ k.chg|chg(k.n|default(2)) }} ({{ k.pct|pct }})</div>
+    <div class="s">{{ k.sub }}</div>
+  </div>
+{% endfor %}
+</div>
+
+{# ---------------- 台股 ---------------- #}
+{% if tw %}
+<section>
+  <h2 class="sec">台股 <small>{{ tw.trade_date }} 收盤{% if not tw.is_today %}（最近交易日）{% endif %}</small></h2>
+  <div class="grid g23">
+    <div class="card">
+      <h3>加權指數走勢（含 MA20 / MA60）</h3>
+      {% if figs.taiex %}<div id="fig-taiex" class="chart tall"></div>{% else %}<p class="flat">無走勢資料</p>{% endif %}
+    </div>
+    <div class="card">
+      <h3>市場統計</h3>
+      {% set t = tw.taiex or {} %}
+      <div class="stat"><span class="k">成交金額</span><span class="v">{{ tw.turnover_ntd|ntd }}</span></div>
+      <div class="stat"><span class="k">5 日 / 1 月 / 今年以來</span><span class="v"><span class="{{ t.chg_5d_pct|updown }}">{{ t.chg_5d_pct|pct }}</span> / <span class="{{ t.chg_1m_pct|updown }}">{{ t.chg_1m_pct|pct }}</span> / <span class="{{ t.chg_ytd_pct|updown }}">{{ t.chg_ytd_pct|pct }}</span></span></div>
+      <div class="stat"><span class="k">相對 MA20 / MA60</span><span class="v"><span class="{{ t.vs_ma20_pct|updown }}">{{ t.vs_ma20_pct|pct }}</span> / <span class="{{ t.vs_ma60_pct|updown }}">{{ t.vs_ma60_pct|pct }}</span></span></div>
+      <div class="stat"><span class="k">RSI(14) · 52 週位置</span><span class="v">{{ t.rsi14|num(1) }} · {{ t.pos_52w_pct|num(0) }}%</span></div>
+      {% if breadth %}
+      <div class="stat" style="border:0;padding-bottom:0"><span class="k">漲跌家數</span><span class="v"><span class="up">{{ breadth.up }}</span> / <span class="down">{{ breadth.down }}</span> / <span class="flat">{{ breadth.flat }}</span></span></div>
+      {% if breadth_total %}
+      <div class="breadth"><i class="u" style="width:{{ (breadth.up or 0)*100/breadth_total }}%"></i><i class="f" style="width:{{ (breadth.flat or 0)*100/breadth_total }}%"></i><i class="d" style="width:{{ (breadth.down or 0)*100/breadth_total }}%"></i></div>
+      <div class="legend"><span>▲ 上漲{% if breadth.limit_up %}（漲停 {{ breadth.limit_up }}）{% endif %}</span><span>持平</span><span>▼ 下跌{% if breadth.limit_down %}（跌停 {{ breadth.limit_down }}）{% endif %}</span></div>
+      {% endif %}{% endif %}
+      {% if tw.institutional %}
+      <h3 style="margin-top:14px">三大法人買賣超（億元）</h3>
+      <div id="fig-inst" class="chart" style="height:170px"></div>
+      <div class="stat"><span class="k">合計</span><span class="v {{ tw.institutional.total_net|updown }}">{{ tw.institutional.total_net|ntd }}</span></div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card">
+      <h3>類股漲跌（%）</h3>
+      {% if figs.tw_sectors %}<div id="fig-tw_sectors" class="chart" style="height:{{ 40 + (tw.sectors|length)*26 }}px"></div>{% else %}<p class="flat">無類股資料</p>{% endif %}
+    </div>
+    <div class="card">
+      {% if tw.foreign_buy_top %}
+      <h3>外資買超 / 賣超（張）</h3>
+      <div class="grid g2" style="gap:8px">
+        <table><tr><th>買超</th><th class="r">張數</th></tr>
+        {% for s in tw.foreign_buy_top %}<tr><td class="n">{{ s.name }}<span class="sym">{{ s.symbol }}</span></td><td class="r up">{{ s.foreign_net_shares|shares }}</td></tr>{% endfor %}</table>
+        <table><tr><th>賣超</th><th class="r">張數</th></tr>
+        {% for s in tw.foreign_sell_top %}<tr><td class="n">{{ s.name }}<span class="sym">{{ s.symbol }}</span></td><td class="r down">{{ s.foreign_net_shares|shares }}</td></tr>{% endfor %}</table>
+      </div>
+      {% endif %}
+      {% if derived.tsm_adr %}{% set x = derived.tsm_adr %}
+      <h3 style="margin-top:14px">台積電 ADR</h3>
+      <div class="stat"><span class="k">ADR 收盤（美元）</span><span class="v">{{ x.adr_usd|num }} <span class="{{ x.adr_change_pct|updown }}">({{ x.adr_change_pct|pct }})</span></span></div>
+      <div class="stat"><span class="k">換算台幣 @ {{ x.usdtwd|num(2) }}</span><span class="v">{{ x.implied_twd|num(0) }}</span></div>
+      <div class="stat"><span class="k">對台股收盤 {{ x.local_close|num(0) }} 溢價</span><span class="v {{ x.premium_pct|updown }}">{{ x.premium_pct|pct }}</span></div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% set mv = tw.movers or {} %}
+  {% if mv.gainers %}
+  <div class="grid g3" style="margin-top:14px">
+    {% for key,label,cls in (('gainers','漲幅前 '~(mv.gainers|length),'up'),('losers','跌幅前 '~(mv.losers|length),'down'),('turnover_top','成交金額前 '~(mv.turnover_top|length),'')) %}
+    <div class="card"><h3>{{ label }}</h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">成交額</th></tr>
+      {% for s in mv[key] %}<tr><td class="n">{{ s.name }}<span class="sym">{{ s.symbol }}</span></td><td class="r">{{ s.last|num }}</td><td class="r {{ s.change_pct|updown }}">{{ s.change_pct|pct }}</td><td class="r">{{ s.turnover|ntd }}</td></tr>{% endfor %}
+      </table></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{# ---------------- 美股 ---------------- #}
+{% if us %}
+<section>
+  <h2 class="sec">美股 <small>{{ (us.indices or {}).get('^GSPC', {}).get('date','') }} 收盤</small></h2>
+  <div class="grid g3">
+    {% for key,sym in (('spx','^GSPC'),('ndx','^IXIC'),('sox','^SOX')) %}{% set s = (us.indices or {}).get(sym) %}
+    <div class="card"><h3>{{ s.name if s else sym }} {% if s %}<span class="{{ s.change_pct|updown }}">{{ s.change_pct|pct }}</span>{% endif %}</h3>
+      {% if figs[key] %}<div id="fig-{{ key }}" class="chart sm"></div>{% else %}<p class="flat">無資料</p>{% endif %}</div>
+    {% endfor %}
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>類股 ETF 漲跌（%）</h3>
+      {% if figs.us_sectors %}<div id="fig-us_sectors" class="chart" style="height:{{ 40 + (us.sectors|length)*26 }}px"></div>{% endif %}</div>
+    <div class="card"><h3>總經與跨市場</h3>
+      <table><tr><th>項目</th><th class="r">最新</th><th class="r">漲跌</th><th class="r">5 日</th></tr>
+      {% for sym,s in (us.macro or {}).items() %}<tr><td class="n">{{ s.name }}</td><td class="r">{{ s.last|num(3 if sym in ('^TNX','TWD=X') else 2) }}</td><td class="r {{ s.change_pct|updown }}">{{ s.change_pct|pct }}</td><td class="r {{ s.chg_5d_pct|updown }}">{{ s.chg_5d_pct|pct }}</td></tr>{% endfor %}
+      {% for sym,s in (us.futures or {}).items() %}<tr><td class="n">{{ s.name }} <span class="sym">期貨</span></td><td class="r">{{ s.last|num }}</td><td class="r {{ s.change_pct|updown }}">{{ s.change_pct|pct }}</td><td class="r {{ s.chg_5d_pct|updown }}">{{ s.chg_5d_pct|pct }}</td></tr>{% endfor %}
+      {% for sym,s in (us.indices or {}).items() if sym in ('^DJI','^RUT') %}<tr><td class="n">{{ s.name }}</td><td class="r">{{ s.last|num }}</td><td class="r {{ s.change_pct|updown }}">{{ s.change_pct|pct }}</td><td class="r {{ s.chg_5d_pct|updown }}">{{ s.chg_5d_pct|pct }}</td></tr>{% endfor %}
+      </table></div>
+  </div>
+  {% set mv = us.movers or {} %}
+  {% if mv.gainers %}
+  <div class="grid g3" style="margin-top:14px">
+    {% for key,label in (('gainers','漲幅前 '~(mv.gainers|length)),('losers','跌幅前 '~(mv.losers|length)),('volume_surge','量能放大（量比）')) %}
+    <div class="card"><h3>{{ label }} <small class="sym">掃描 {{ us.universe_count }} 檔</small></h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">{{ '量比' if key=='volume_surge' else '5 日' }}</th></tr>
+      {% for s in mv[key] %}<tr><td class="n">{{ s.symbol }}</td><td class="r">{{ s.last|num }}</td><td class="r {{ s.change_pct|updown }}">{{ s.change_pct|pct }}</td><td class="r">{{ (s.volume_ratio|num(2) ~ 'x') if key=='volume_surge' else s.chg_5d_pct|pct }}</td></tr>{% endfor %}
+      </table></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{# ---------------- 自選股 ---------------- #}
+{% if watch_cards %}
+<section>
+  <h2 class="sec">自選觀察 <small>config.yaml → watchlist</small></h2>
+  <div class="grid g2">
+  {% for w in watch_cards %}{% set d = w.d %}
+    <div class="card wcard">
+      <div class="hd"><b>{{ d.name }}</b><span class="sym">{{ w.code }} · {{ '台股' if w.market=='tw' else '美股' }}</span>
+        <span style="margin-left:auto" class="px">{{ d.last|num }}</span>
+        <span class="{{ d.change_pct|updown }}" style="font-weight:600">{{ d.change_pct|arrow }} {{ d.change|chg }} ({{ d.change_pct|pct }})</span></div>
+      {% if figs[w.fig] %}<div id="fig-{{ w.fig }}" class="chart spark"></div>{% endif %}
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="{{ d.chg_5d_pct|updown }}">{{ d.chg_5d_pct|pct }}</span> / <span class="{{ d.chg_1m_pct|updown }}">{{ d.chg_1m_pct|pct }}</span></b></span>
+        <span>今年以來<b class="{{ d.chg_ytd_pct|updown }}">{{ d.chg_ytd_pct|pct }}</b></span>
+        <span>52 週位置<b>{{ d.pos_52w_pct|num(0) }}%</b></span>
+        <span>vs MA20 / MA60<b><span class="{{ d.vs_ma20_pct|updown }}">{{ d.vs_ma20_pct|pct }}</span> / <span class="{{ d.vs_ma60_pct|updown }}">{{ d.vs_ma60_pct|pct }}</span></b></span>
+        <span>RSI(14)<b>{{ d.rsi14|num(1) }}</b></span>
+        <span>{% if w.market=='tw' %}成交額<b>{{ d.turnover|ntd }}</b>{% else %}量比<b>{{ d.volume_ratio|num(2) }}x</b>{% endif %}</span>
+        {% if d.institutional %}<span>外資買賣超<b class="{{ d.institutional.foreign_net_shares|updown }}">{{ d.institutional.foreign_net_shares|shares }}</b></span>
+        <span>投信<b class="{{ d.institutional.trust_net_shares|updown }}">{{ d.institutional.trust_net_shares|shares }}</b></span>{% endif %}
+      </div>
+      {% if w.note %}<div class="note">{{ w.note }}</div>{% endif %}
+      {% if w.news %}<ul class="nw">{% for n in w.news %}<li><a href="{{ n.link }}" target="_blank" rel="noopener">{{ n.title }}</a><span class="src">{{ n.source }}</span></li>{% endfor %}</ul>{% endif %}
+    </div>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# ---------------- AI 值得觀察 ---------------- #}
+{% if a.picks %}
+<section>
+  <h2 class="sec">值得觀察 <small>AI 依今日資料挑選，非投資建議</small></h2>
+  <div class="grid g2">
+  {% for p in a.picks %}
+    <div class="card pick">
+      <div class="t"><b>{{ p.name or p.symbol }}</b><span class="sym">{{ p.symbol }} · {{ '台股' if p.market=='tw' else '美股' }}</span>{% if p.type %}<span class="chip" style="margin-left:auto">{{ p.type }}</span>{% endif %}</div>
+      <p>{{ p.reason }}</p>
+      {% if p.watch_for %}<p style="color:var(--ink-3)">留意：{{ p.watch_for }}</p>{% endif %}
+    </div>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# ---------------- AI 評論 ---------------- #}
+{% if sections %}
+<section>
+  <h2 class="sec">市場評論</h2>
+  <div class="grid g2">
+  {% for s in sections %}<div class="card prose"><h3>{{ s.title }}</h3>{{ s.html|safe }}</div>{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if a.events or a.risks %}
+<section>
+  <div class="grid g2">
+    {% if a.events %}<div class="card"><h3>今日 / 近期事件</h3><ul class="events" style="margin:0;padding-left:18px">{% for e in a.events %}<li><time>{{ e.time }}</time>{{ e.title }}{% if e.note %} <span class="flat">— {{ e.note }}</span>{% endif %}</li>{% endfor %}</ul></div>{% endif %}
+    {% if a.risks %}<div class="card"><h3>風險提醒</h3><ul class="risks" style="margin:0;padding-left:18px">{% for r in a.risks %}<li>{{ r }}</li>{% endfor %}</ul></div>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+{# ---------------- 新聞 ---------------- #}
+{% if news.general %}
+<section>
+  <h2 class="sec">相關新聞</h2>
+  <div class="card"><ul class="news" style="margin:0;padding-left:18px">
+  {% for n in news.general[:30] %}<li><a href="{{ n.link }}" target="_blank" rel="noopener">{{ n.title }}</a><span class="src">{{ n.source }} · {{ n.published }}</span></li>{% endfor %}
+  </ul></div>
+</section>
+{% endif %}
+
+<footer>
+  資料來源：TWSE 公開資料、Yahoo Finance（yfinance）、Google News。AI 評論由 Claude 依當日資料生成，僅供個人參考，不構成投資建議。<br>
+  台股慣例：<span class="up">紅色 ▲ 上漲</span>、<span class="down">綠色 ▼ 下跌</span>。報告識別：{{ meta.key }}
+</footer>
+</div>
+
+<script>
+(function(){
+  const figs = {{ figs_json | safe }};
+  function theme(){
+    const cs = getComputedStyle(document.documentElement);
+    const v = k => cs.getPropertyValue(k).trim();
+    return {S1:v('--s1'),S2:v('--s2'),S3:v('--s3'),UP:v('--up'),DOWN:v('--down'),
+            UPF:v('--up')+'22',DOWNF:v('--down')+'22',ink:v('--ink-2'),ink3:v('--ink-3'),line:v('--line')};
+  }
+  function paint(){
+    const t = theme();
+    const sub = s => JSON.parse(JSON.stringify(s).replace(/__(S1|S2|S3|UP|DOWN|UPF|DOWNF)__/g,(m,k)=>t[k]));
+    for (const [id, fig] of Object.entries(figs)){
+      const el = document.getElementById('fig-'+id); if(!el) continue;
+      const f = sub(fig);
+      const axis = {gridcolor:t.line, zerolinecolor:t.ink3, linecolor:t.line, tickfont:{color:t.ink3}, automargin:true};
+      const layout = Object.assign({
+        paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+        font:{family:getComputedStyle(document.body).fontFamily, size:12, color:t.ink},
+        margin:{l:8,r:16,t:8,b:28,pad:4}, autosize:true, hoverlabel:{font:{size:12}}
+      }, f.layout);
+      layout.xaxis = Object.assign({}, axis, f.layout.xaxis||{});
+      layout.yaxis = Object.assign({side:'right'}, axis, f.layout.yaxis||{});
+      layout.legend = Object.assign({font:{color:t.ink3,size:11}, bgcolor:'rgba(0,0,0,0)'}, f.layout.legend||{});
+      Plotly.react(el, f.data, layout, {displayModeBar:false, responsive:true, locale:'zh-TW'});
+    }
+  }
+  if (window.Plotly) { paint(); } else { document.querySelectorAll('.chart').forEach(e=>{e.innerHTML='<p class="flat" style="font-size:13px">圖表需要連線載入 plotly.js（或用 --inline 內嵌）</p>';}); }
+  if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ()=>window.Plotly && paint());
+})();
+</script>
+</body>
+</html>

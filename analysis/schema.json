@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "daily-brief analysis",
+  "type": "object",
+  "required": ["key", "session", "headline", "summary", "sentiment", "sections", "picks"],
+  "properties": {
+    "key": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}-(am|pm)$"},
+    "session": {"enum": ["am", "pm"]},
+    "headline": {"type": "string", "maxLength": 80},
+    "summary": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 5},
+    "sentiment": {"type": "object", "properties": {"tw": {"type": "string"}, "us": {"type": "string"}}},
+    "sections": {"type": "array", "items": {"type": "object", "required": ["title", "body_md"],
+                 "properties": {"title": {"type": "string"}, "body_md": {"type": "string"}}}},
+    "watchlist_notes": {"type": "object", "additionalProperties": {"type": "string"}},
+    "picks": {"type": "array", "minItems": 1, "maxItems": 6, "items": {"type": "object", "required": ["symbol", "market", "reason"],
+              "properties": {"symbol": {"type": "string"}, "market": {"enum": ["tw", "us"]}, "name": {"type": "string"},
+                             "type": {"type": "string"}, "reason": {"type": "string"}, "watch_for": {"type": "string"}}}},
+    "events": {"type": "array", "items": {"type": "object", "properties": {"time": {"type": "string"}, "title": {"type": "string"}, "note": {"type": "string"}}}},
+    "risks": {"type": "array", "items": {"type": "string"}}
+  }
+}

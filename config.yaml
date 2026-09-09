@@ -1,0 +1,209 @@
+# ============================================================
+#  每日市場報告 — 設定檔
+#  改完存檔即可，下一次執行就會生效（不用重啟任何東西）
+# ============================================================
+
+timezone: Asia/Taipei
+language: zh-TW
+
+# ------------------------------------------------------------
+#  自選觀察清單：固定每份報告都會有專屬區塊
+#  台股請填代號（不用加 .TW），美股填 ticker
+# ------------------------------------------------------------
+watchlist:
+  tw: ["2330", "2317", "2454", "0050"]
+  us: ["NVDA", "TSM", "AAPL", "MSFT"]
+
+# ------------------------------------------------------------
+#  自動挑選的漲跌榜 / 熱門股（不依賴自選清單，每次都會有個股）
+# ------------------------------------------------------------
+auto_movers:
+  tw:
+    top_n: 5                    # 漲幅前 N、跌幅前 N、成交金額前 N
+    min_turnover_ntd: 1000000000  # 成交金額門檻 (NT$)，過濾冷門股，預設 10 億
+  us:
+    top_n: 5
+    universe: large_caps        # 掃描範圍：下面 us_universe 這組
+
+# 美股顯示名稱（yfinance 不附公司名，這裡沒列的就顯示 ticker）
+us_names:
+  NVDA: 輝達
+  TSM: 台積電 ADR
+  AAPL: 蘋果
+  MSFT: 微軟
+  AMZN: 亞馬遜
+  GOOGL: Alphabet
+  META: Meta
+  TSLA: 特斯拉
+  AVGO: 博通
+  AMD: 超微
+  INTC: 英特爾
+  QCOM: 高通
+  MU: 美光
+  ASML: ASML
+  AMAT: 應用材料
+  LRCX: 科林研發
+  ORCL: 甲骨文
+  NFLX: Netflix
+  COST: 好市多
+  WMT: 沃爾瑪
+  JPM: 摩根大通
+  XOM: 埃克森美孚
+  PLTR: Palantir
+  SMCI: 美超微
+  MRVL: Marvell
+
+# 美股掃描範圍（yfinance 一次批次下載，數量控制在 ~60 檔以內比較快）
+us_universe:
+  - AAPL
+  - MSFT
+  - NVDA
+  - AMZN
+  - GOOGL
+  - META
+  - TSLA
+  - AVGO
+  - TSM
+  - AMD
+  - INTC
+  - QCOM
+  - MU
+  - ARM
+  - ASML
+  - AMAT
+  - LRCX
+  - KLAC
+  - ORCL
+  - CRM
+  - ADBE
+  - NFLX
+  - COST
+  - WMT
+  - JPM
+  - GS
+  - BAC
+  - V
+  - MA
+  - BRK-B
+  - UNH
+  - LLY
+  - JNJ
+  - PFE
+  - XOM
+  - CVX
+  - CAT
+  - BA
+  - GE
+  - HON
+  - PLTR
+  - COIN
+  - MSTR
+  - SMCI
+  - DELL
+  - MRVL
+  - UBER
+  - ABNB
+  - DIS
+  - NKE
+
+# ------------------------------------------------------------
+#  指數 / 總經指標（yfinance 代號: 顯示名稱）
+# ------------------------------------------------------------
+indices:
+  us:
+    "^GSPC": "S&P 500"
+    "^IXIC": "Nasdaq"
+    "^DJI": "道瓊工業"
+    "^SOX": "費城半導體"
+    "^RUT": "羅素 2000"
+  macro:
+    "^VIX": "VIX 恐慌指數"
+    "^TNX": "美債 10 年殖利率"
+    "DX-Y.NYB": "美元指數"
+    "TWD=X": "USD/TWD"
+    "GC=F": "黃金"
+    "CL=F": "WTI 原油"
+    "BTC-USD": "比特幣"
+  futures:                      # 早報用：亞洲盤時段的美股期貨
+    "ES=F": "S&P 500 期貨"
+    "NQ=F": "Nasdaq 期貨"
+  tw:
+    "^TWII": "加權指數"
+
+# 美股 11 個 SPDR 類股 ETF
+us_sectors:
+  XLK: "科技"
+  XLC: "通訊"
+  XLY: "非必需消費"
+  XLP: "必需消費"
+  XLV: "醫療"
+  XLF: "金融"
+  XLI: "工業"
+  XLE: "能源"
+  XLB: "原物料"
+  XLRE: "不動產"
+  XLU: "公用事業"
+
+# 台股主要分類指數（TWSE 名稱，用來從 MI_INDEX 表裡挑出要顯示的類股）
+tw_sectors:
+  - "半導體類指數"
+  - "電子類指數"
+  - "電腦及週邊設備類指數"
+  - "光電類指數"
+  - "通信網路類指數"
+  - "電子零組件類指數"
+  - "金融保險類指數"
+  - "航運類指數"
+  - "鋼鐵類指數"
+  - "塑膠類指數"
+  - "生技醫療類指數"
+  - "電機機械類指數"
+  - "建材營造類指數"
+  - "觀光餐旅類指數"
+
+# ------------------------------------------------------------
+#  新聞：Google News RSS（免 API key、穩定）。可自行加關鍵字
+# ------------------------------------------------------------
+news:
+  max_per_query: 8
+  queries:
+    - {q: "台股 大盤", lang: zh-TW}
+    - {q: "外資 買超 OR 賣超", lang: zh-TW}
+    - {q: "台積電", lang: zh-TW}
+    - {q: "美股 收盤", lang: zh-TW}
+    - {q: "Fed OR 聯準會 利率", lang: zh-TW}
+    - {q: "stock market today", lang: en-US}
+    - {q: "Nvidia OR semiconductor stocks", lang: en-US}
+  watchlist_news: true          # 自選清單每檔再各抓幾則
+  watchlist_news_per_symbol: 3
+
+# ------------------------------------------------------------
+#  報告輸出
+# ------------------------------------------------------------
+report:
+  output_dir: docs              # GitHub Pages 從 main 分支的 docs/ 發布
+  open_browser: true            # 產出後自動用預設瀏覽器打開
+  plotly: cdn                   # cdn | inline（inline 會把 plotly.js 塞進 html，離線可看，檔案 +3MB）
+  history_days: 120             # 走勢圖回看天數
+  title: "每日市場報告"
+
+# ------------------------------------------------------------
+#  發布到 GitHub Pages：組版後自動 git commit + push
+# ------------------------------------------------------------
+publish:
+  git_push: true                # false = 只產生檔案不推
+  remote: origin
+  branch: main
+  description: "台股 × 美股，每個交易日兩份 AI 市場短評"   # 首頁副標
+
+# ------------------------------------------------------------
+#  AI 分析（Claude Code）
+# ------------------------------------------------------------
+ai:
+  command: claude               # claude CLI 路徑
+  model: ""                     # 留空 = 使用 Claude Code 預設；可填 opus / sonnet
+  max_turns: 30
+  allowed_tools: "Read,Write,Glob,Grep,WebSearch,WebFetch"
+
+# 15:30 午報要等 TWSE 三大法人資料公布，最多等這麼久（分鐘）
+pm_wait_for_data_minutes: 30

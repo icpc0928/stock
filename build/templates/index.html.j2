@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ site_desc }}">
+<style>
+:root{color-scheme:light;--bg:#f6f6f4;--surface:#fff;--surface-2:#f0efec;--line:#e4e3df;--ink:#141414;--ink-2:#55544f;--ink-3:#8a8983;--accent:#2a78d6;--accent-bg:#e8f0fb;--up:#c8352b;--up-bg:#fbeae8;--down:#128a4d;--down-bg:#e6f4ec;--warn-bg:#fff4d6;--warn-ink:#7a5200;--shadow:0 1px 2px rgba(0,0,0,.04),0 4px 14px rgba(0,0,0,.04)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#131312;--surface:#1c1c1b;--surface-2:#252523;--line:#31312e;--ink:#f2f2ef;--ink-2:#bdbcb4;--ink-3:#85847d;--accent:#3987e5;--accent-bg:#1b2a3f;--up:#ef6b62;--up-bg:#3a1f1d;--down:#3fbf7f;--down-bg:#17322a;--warn-bg:#3a2e10;--warn-ink:#f2d38a;--shadow:none}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei","Segoe UI",Roboto,sans-serif;font-feature-settings:"tnum"}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:900px;margin:0 auto;padding:28px 18px 60px}
+header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+header h1{font-size:24px;margin:0;font-weight:700}
+header p{margin:0;color:var(--ink-3);font-size:14px}
+header .latest{margin-left:auto;font-size:13px;color:var(--accent);font-weight:600}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--ink-3)}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.chip.up{background:var(--up-bg);color:var(--up)}.chip.down{background:var(--down-bg);color:var(--down)}
+.sess{padding:2px 9px;border-radius:999px;background:var(--accent-bg);color:var(--accent);font-weight:600;font-size:12px;white-space:nowrap}
+.sample{font-size:11px;padding:1px 6px;border-radius:6px;background:var(--warn-bg);color:var(--warn-ink)}
+/* hero */
+.hero{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);border-top:4px solid var(--accent)}
+.hero:hover{border-color:var(--accent)}
+.hero .top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:var(--ink-3);font-size:13px;margin-bottom:8px}
+.hero .top b{color:var(--ink);font-size:15px}
+.hero h2{font-size:21px;line-height:1.4;margin:0 0 10px;font-weight:700}
+.hero ul{margin:0 0 12px;padding-left:20px;color:var(--ink-2)}
+.hero li{margin:3px 0}
+.kpis{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+.kpi{background:var(--surface-2);border-radius:10px;padding:6px 12px;font-size:13px}
+.kpi span{color:var(--ink-3);margin-right:6px}
+.kpi b{font-weight:700}
+.picks{font-size:13px;color:var(--ink-3);margin-top:8px}
+.picks b{color:var(--ink-2);font-weight:600}
+.cta{display:inline-block;margin-top:12px;padding:8px 16px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;font-size:14px}
+/* archive */
+h3.month{font-size:14px;color:var(--ink-3);margin:28px 0 8px;font-weight:600;letter-spacing:.5px}
+.item{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:8px}
+.item:hover{border-color:var(--accent)}
+.item .d{min-width:88px;font-weight:600;font-size:14px;padding-top:2px}
+.item .body{flex:1;min-width:0}
+.item .hl{margin:2px 0 0;font-size:14px;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.item .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.item .k{font-size:12px;color:var(--ink-3);white-space:nowrap}
+.empty{color:var(--ink-3)}
+footer{margin-top:40px;color:var(--ink-3);font-size:12px;line-height:1.7}
+@media (max-width:600px){.item{flex-direction:column;gap:6px}.item .d{min-width:0}}
+</style>
+</head>
+<body><div class="wrap">
+<header>
+  <h1>{{ title }}</h1>
+  <p>{{ site_desc }}</p>
+  {% if latest %}<a class="latest" href="latest.html">最新報告 →</a>{% endif %}
+</header>
+
+{% if not latest %}<p class="empty">還沒有任何報告。</p>{% endif %}
+
+{% if latest %}
+<a class="hero" href="{{ latest.key }}.html">
+  <div class="top"><b>{{ latest.date }}</b><span class="sess">{{ latest.session_label }}</span>
+    {% for k,v in latest.sentiment.items() %}<span class="chip {{ 'up' if '多' in v else ('down' if '空' in v else '') }}">{{ {'tw':'台股','us':'美股'}.get(k,k) }} {{ v }}</span>{% endfor %}
+    {% if latest.is_sample %}<span class="sample">示範資料</span>{% endif %}
+    <span style="margin-left:auto">{{ latest.generated_at[:16].replace('T',' ') }}</span></div>
+  {% if latest.headline %}<h2>{{ latest.headline }}</h2>{% else %}<h2 style="color:var(--ink-3)">（本份尚無 AI 評論）</h2>{% endif %}
+  {% if latest.kpis %}<div class="kpis">{% for k in latest.kpis %}<div class="kpi"><span>{{ k.label }}</span><b>{{ k.value }}</b> <b class="{{ 'up' if k.pct and k.pct>0 else ('down' if k.pct and k.pct<0 else 'flat') }}">{{ '+' if k.pct and k.pct>0 else '' }}{{ '%.2f'|format(k.pct) if k.pct is not none else '—' }}%</b></div>{% endfor %}</div>{% endif %}
+  {% if latest.summary %}<ul>{% for s in latest.summary %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+  {% if latest.picks %}<div class="picks">值得觀察：{% for p in latest.picks %}<b>{{ p.name or p.symbol }}</b>{% if p.type %}（{{ p.type }}）{% endif %}{% if not loop.last %}、{% endif %}{% endfor %}</div>{% endif %}
+  <span class="cta">閱讀完整報告</span>
+</a>
+{% endif %}
+
+{% for month, list in months.items() %}
+<h3 class="month">{{ month[:4] }} 年 {{ month[5:]|int }} 月</h3>
+{% for it in list %}
+<a class="item" href="{{ it.key }}.html">
+  <div class="d">{{ it.date[5:] }}<br><span class="sess">{{ it.session_label }}</span></div>
+  <div class="body">
+    <div class="meta">
+      {% for k,v in it.sentiment.items() %}<span class="chip {{ 'up' if '多' in v else ('down' if '空' in v else '') }}">{{ {'tw':'台股','us':'美股'}.get(k,k) }} {{ v }}</span>{% endfor %}
+      {% for k in it.kpis[:2] %}<span class="k">{{ k.label }} <span class="{{ 'up' if k.pct and k.pct>0 else ('down' if k.pct and k.pct<0 else 'flat') }}">{{ '+' if k.pct and k.pct>0 else '' }}{{ '%.2f'|format(k.pct) if k.pct is not none else '—' }}%</span></span>{% endfor %}
+      {% if it.is_sample %}<span class="sample">示範資料</span>{% endif %}
+    </div>
+    {% if it.headline %}<p class="hl">{{ it.headline }}</p>{% endif %}
+  </div>
+</a>
+{% endfor %}
+{% endfor %}
+
+<footer>資料來源：TWSE 公開資料、Yahoo Finance、Google News。AI 評論由 Claude 生成，僅供個人參考，不構成投資建議。</footer>
+</div></body></html>

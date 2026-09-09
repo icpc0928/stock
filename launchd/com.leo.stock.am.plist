@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.leo.stock.am</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/leo/IdeaProjects/stock/run.sh</string>
+    <string>am</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/leo/IdeaProjects/stock</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>30</integer>
+  </dict>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>/Users/leo/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <key>LANG</key><string>zh_TW.UTF-8</string>
+  </dict>
+  <key>StandardOutPath</key><string>/Users/leo/IdeaProjects/stock/logs/launchd-am.log</string>
+  <key>StandardErrorPath</key><string>/Users/leo/IdeaProjects/stock/logs/launchd-am.err</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

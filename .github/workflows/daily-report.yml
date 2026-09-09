@@ -1,0 +1,89 @@
+# 方案 B：整個流程在 GitHub Actions 上跑，Mac 不用開機。
+# 目前「未啟用」— 只能手動觸發（Actions 頁面 → Run workflow）。
+# 要啟用排程：把下面 schedule 兩行的 # 拿掉，並在 repo Settings → Secrets 新增 CLAUDE_CODE_OAUTH_TOKEN
+#（在 Mac 上執行 `claude setup-token` 取得；Max 訂閱可用，不另外計費）。
+# 啟用後記得把 config.yaml 的 publish.git_push 改成 false，或停掉 Mac 的 launchd，避免兩邊同時推。
+name: daily-report
+
+on:
+  workflow_dispatch:
+    inputs:
+      session:
+        description: "am 或 pm"
+        required: true
+        default: "am"
+        type: choice
+        options: [am, pm]
+      skip_ai:
+        description: "跳過 Claude 評論（測試資料抓取用）"
+        type: boolean
+        default: false
+  # schedule:
+  #   - cron: "30 0 * * 1-5"   # 08:30 台北 = 00:30 UTC，週一到週五
+  #   - cron: "30 7 * * 1-5"   # 15:30 台北 = 07:30 UTC
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TZ: Asia/Taipei
+      NO_OPEN: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: 決定 session（排程依 UTC 時間判斷；手動觸發用輸入值）
+        id: s
+        run: |
+          if [ -n "${{ inputs.session }}" ]; then S="${{ inputs.session }}"; 
+          elif [ "$(date -u +%H)" -lt 4 ]; then S=am; else S=pm; fi
+          echo "session=$S" >> "$GITHUB_OUTPUT"
+          echo "date=$(date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: 抓資料
+        run: |
+          WAIT=""; [ "${{ steps.s.outputs.session }}" = "pm" ] && WAIT="--wait"
+          python -m fetch.run --session "${{ steps.s.outputs.session }}" $WAIT
+
+      - uses: actions/setup-node@v4
+        if: ${{ !inputs.skip_ai }}
+        with:
+          node-version: "20"
+
+      - name: Claude 評論
+        if: ${{ !inputs.skip_ai }}
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # 或改用 API 計費：ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude -p "/daily-brief ${{ steps.s.outputs.session }} ${{ steps.s.outputs.date }}" \
+            --allowedTools "Read,Write,Glob,Grep,WebSearch,WebFetch" --max-turns 30 \
+            || echo "::warning::Claude 執行失敗，將以無評論版本組版"
+
+      - name: 組版
+        run: python -m build.build --session "${{ steps.s.outputs.session }}" --no-open
+
+      - name: 推送到 main（GitHub Pages 會自動部署 docs/）
+        run: |
+          git config user.name "daily-report-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A docs data analysis
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "report: ${{ steps.s.outputs.date }}-${{ steps.s.outputs.session }} [actions]"
+          git pull --rebase
+          git push
