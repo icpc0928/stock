@@ -200,8 +200,9 @@ publish:
 #  AI 分析（Claude Code）
 # ------------------------------------------------------------
 ai:
-  command: claude               # claude CLI 路徑
-  model: ""                     # 留空 = 使用 Claude Code 預設；可填 opus / sonnet
+  command: claude               # claude CLI 路徑（本機 run.sh 用）
+  model: "opus"                     # 留空 = 帳號預設（Max 目前是 Opus 5）。可填 opus / sonnet / fable / best，或完整 ID 如 claude-opus-5
+  effort: "high"                    # 留空 = 預設。可填 low / medium / high / xhigh / max（越高越慢、用量越多）
   max_turns: 30
   allowed_tools: "Read,Write,Glob,Grep,WebSearch,WebFetch"
 

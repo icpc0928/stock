@@ -6,3 +6,4 @@ build/plotly.min.js
 reports/
 .DS_Store
 .cache/
+_to_delete/

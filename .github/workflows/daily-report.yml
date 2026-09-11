@@ -38,9 +38,9 @@ jobs:
       NO_OPEN: "1"
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -68,18 +68,32 @@ jobs:
           print("tw taiex:", (d.get("tw") or {}).get("taiex", {}).get("last"), "| us spx:", ((d.get("us") or {}).get("indices") or {}).get("^GSPC", {}).get("last"))
           PY
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: ${{ !inputs.skip_ai && env.CLAUDE_CODE_OAUTH_TOKEN != '' }}
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Claude 評論
         if: ${{ !inputs.skip_ai && env.CLAUDE_CODE_OAUTH_TOKEN != '' }}
         # 或改用 API 計費：env ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        # 模型 / 思考深度 / 工具 / 回合數都讀 config.yaml 的 ai 區塊
         run: |
           npm install -g @anthropic-ai/claude-code
+          eval "$(python - <<'PY'
+          import yaml, shlex
+          ai = yaml.safe_load(open("config.yaml")).get("ai", {})
+          print("MODEL=" + shlex.quote(str(ai.get("model") or "")))
+          print("EFFORT=" + shlex.quote(str(ai.get("effort") or "")))
+          print("TOOLS=" + shlex.quote(str(ai.get("allowed_tools") or "Read,Write,Glob,Grep,WebSearch,WebFetch")))
+          print("MAXT=" + shlex.quote(str(ai.get("max_turns") or 30)))
+          PY
+          )"
+          ARGS=""
+          [ -n "$MODEL" ] && ARGS="$ARGS --model $MODEL"
+          [ -n "$EFFORT" ] && ARGS="$ARGS --effort $EFFORT"
+          echo "claude -p /daily-brief ${{ steps.s.outputs.session }} --max-turns $MAXT $ARGS"
           claude -p "/daily-brief ${{ steps.s.outputs.session }} ${{ steps.s.outputs.date }}" \
-            --allowedTools "Read,Write,Glob,Grep,WebSearch,WebFetch" --max-turns 30 \
+            --allowedTools "$TOOLS" --max-turns "$MAXT" $ARGS \
             || echo "::warning::Claude 執行失敗，將以無評論版本組版"
 
       - name: 組版
