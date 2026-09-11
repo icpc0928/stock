@@ -191,7 +191,7 @@ report:
 #  發布到 GitHub Pages：組版後自動 git commit + push
 # ------------------------------------------------------------
 publish:
-  git_push: true                # false = 只產生檔案不推
+  git_push: false               # 改由 GitHub Actions 產生並推送；Mac 手動跑只產生本機檔案（要推就自己 git push）
   remote: origin
   branch: main
   description: "台股 × 美股，每個交易日兩份 AI 市場短評"   # 首頁副標

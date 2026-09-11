@@ -2,11 +2,12 @@
 from __future__ import annotations
 
 import logging
+import time
 from typing import Dict, List, Optional
 
 import pandas as pd
 
-from .common import pct, rnd
+from .common import ROOT, pct, rnd
 
 log = logging.getLogger("fetch.quotes")
 
@@ -83,6 +84,14 @@ def fetch_many(symbols: List[str], names: Optional[Dict[str, str]] = None, days:
     """批次下載多檔，回傳 {symbol: summary}。end=YYYY-MM-DD 會切掉之後的資料（避免盤中未收盤的 K 棒混入）。"""
     import yfinance as yf  # 延後 import，讓 fixture 模式不需要安裝
 
+    # yfinance 的時區快取預設放 ~/Library/Caches，在 launchd 下常常打不開 sqlite → 改放專案內
+    try:
+        cache = ROOT / ".cache" / "yfinance"
+        cache.mkdir(parents=True, exist_ok=True)
+        yf.set_tz_cache_location(str(cache))
+    except Exception as e:  # noqa: BLE001
+        log.warning("設定 yfinance 快取位置失敗: %s", e)
+
     names = names or {}
     symbols = list(dict.fromkeys(s for s in symbols if s))
     if not symbols:
@@ -90,22 +99,34 @@ def fetch_many(symbols: List[str], names: Optional[Dict[str, str]] = None, days:
     period = f"{max(days + 40, 60)}d"
     out: Dict[str, dict] = {}
     log.info("yfinance 下載 %d 檔 (%s)", len(symbols), period)
-    raw = yf.download(symbols, period=period, interval="1d", group_by="ticker",
-                      auto_adjust=False, threads=True, progress=False)
-    for sym in symbols:
-        try:
-            df = raw[sym] if len(symbols) > 1 else raw
-            if isinstance(df.columns, pd.MultiIndex):
-                df.columns = df.columns.get_level_values(-1)
-            if end:
-                df = df[df.index.strftime("%Y-%m-%d") <= end]
-            s = summarize(df.tail(days), sym, names.get(sym, sym))
-            if s:
-                out[sym] = s
-            else:
-                log.warning("%s 無資料", sym)
-        except Exception as e:  # noqa: BLE001
-            log.warning("%s 解析失敗: %s", sym, e)
+    def _download(syms):
+        raw = yf.download(syms, period=period, interval="1d", group_by="ticker",
+                          auto_adjust=False, threads=True, progress=False)
+        for sym in syms:
+            try:
+                df = raw[sym] if len(syms) > 1 else raw
+                if isinstance(df.columns, pd.MultiIndex):
+                    df.columns = df.columns.get_level_values(-1)
+                if end:
+                    df = df[df.index.strftime("%Y-%m-%d") <= end]
+                s = summarize(df.tail(days), sym, names.get(sym, sym))
+                if s:
+                    out[sym] = s
+            except Exception as e:  # noqa: BLE001
+                log.debug("%s 解析失敗: %s", sym, e)
+
+    _download(symbols)
+    # 失敗的再補抓兩次（yfinance 批次下載偶爾會漏；網路閃斷也靠這裡救）
+    for attempt in range(2):
+        missing = [s for s in symbols if s not in out]
+        if not missing:
+            break
+        log.warning("%d 檔無資料，%d 秒後重試: %s", len(missing), 3 * (attempt + 1), ",".join(missing[:12]))
+        time.sleep(3 * (attempt + 1))
+        _download(missing)
+    missing = [s for s in symbols if s not in out]
+    if missing:
+        log.warning("最終仍無資料: %s", ",".join(missing))
     return out
 
 

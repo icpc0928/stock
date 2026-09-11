@@ -46,9 +46,13 @@ if [[ "$NO_AI" == "0" ]]; then
   MODEL="$($PY -c 'from fetch.common import load_config; print(load_config()["ai"].get("model",""))')"
   TOOLS="$($PY -c 'from fetch.common import load_config; print(load_config()["ai"].get("allowed_tools","Read,Write,WebSearch"))')"
   MAXT="$($PY -c 'from fetch.common import load_config; print(load_config()["ai"].get("max_turns",30))')"
-  MODEL_ARG=(); [[ -n "$MODEL" ]] && MODEL_ARG=(--model "$MODEL")
   echo "--- Claude 分析 ($KEY) ---"
-  "$CLAUDE_BIN" -p "/daily-brief $SESSION $DATE" --allowedTools "$TOOLS" --max-turns "$MAXT" "${MODEL_ARG[@]}" || echo "!! Claude 執行失敗，將以無評論版本組版"
+  # 注意：macOS 內建 /bin/bash 是 3.2，set -u 下空陣列會炸，所以不用陣列
+  if [[ -n "$MODEL" ]]; then
+    "$CLAUDE_BIN" -p "/daily-brief $SESSION $DATE" --allowedTools "$TOOLS" --max-turns "$MAXT" --model "$MODEL" || echo "!! Claude 執行失敗，將以無評論版本組版"
+  else
+    "$CLAUDE_BIN" -p "/daily-brief $SESSION $DATE" --allowedTools "$TOOLS" --max-turns "$MAXT" || echo "!! Claude 執行失敗，將以無評論版本組版"
+  fi
   [[ -f "analysis/$KEY.json" ]] || echo "!! 找不到 analysis/$KEY.json"
 fi
 

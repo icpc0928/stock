@@ -5,3 +5,4 @@ logs/
 build/plotly.min.js
 reports/
 .DS_Store
+.cache/

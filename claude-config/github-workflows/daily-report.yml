@@ -1,8 +1,8 @@
-# 方案 B：整個流程在 GitHub Actions 上跑，Mac 不用開機。
-# 目前「未啟用」— 只能手動觸發（Actions 頁面 → Run workflow）。
-# 要啟用排程：把下面 schedule 兩行的 # 拿掉，並在 repo Settings → Secrets 新增 CLAUDE_CODE_OAUTH_TOKEN
+# 整個流程在 GitHub Actions 上跑，Mac 不用開機。
+# 需要 repo Settings → Secrets and variables → Actions 新增 CLAUDE_CODE_OAUTH_TOKEN
 #（在 Mac 上執行 `claude setup-token` 取得；Max 訂閱可用，不另外計費）。
-# 啟用後記得把 config.yaml 的 publish.git_push 改成 false，或停掉 Mac 的 launchd，避免兩邊同時推。
+# 排程用 UTC：00:30 = 台北 08:30、07:30 = 台北 15:30，週一到週五。
+# 手動觸發：Actions 頁面 → daily-report → Run workflow（可勾 skip_ai 只測資料抓取）。
 name: daily-report
 
 on:
@@ -18,9 +18,9 @@ on:
         description: "跳過 Claude 評論（測試資料抓取用）"
         type: boolean
         default: false
-  # schedule:
-  #   - cron: "30 0 * * 1-5"   # 08:30 台北 = 00:30 UTC，週一到週五
-  #   - cron: "30 7 * * 1-5"   # 15:30 台北 = 07:30 UTC
+  schedule:
+    - cron: "30 0 * * 1-5"   # 08:30 台北 = 00:30 UTC，週一到週五
+    - cron: "30 7 * * 1-5"   # 15:30 台北 = 07:30 UTC
 
 permissions:
   contents: write
@@ -36,6 +36,7 @@ jobs:
     env:
       TZ: Asia/Taipei
       NO_OPEN: "1"
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -49,26 +50,32 @@ jobs:
       - name: 決定 session（排程依 UTC 時間判斷；手動觸發用輸入值）
         id: s
         run: |
-          if [ -n "${{ inputs.session }}" ]; then S="${{ inputs.session }}"; 
+          if [ -n "${{ inputs.session }}" ]; then S="${{ inputs.session }}";
           elif [ "$(date -u +%H)" -lt 4 ]; then S=am; else S=pm; fi
           echo "session=$S" >> "$GITHUB_OUTPUT"
           echo "date=$(date +%F)" >> "$GITHUB_OUTPUT"
+          echo "session=$S date=$(date +%F) (TZ=$TZ)"
 
       - name: 抓資料
         run: |
           WAIT=""; [ "${{ steps.s.outputs.session }}" = "pm" ] && WAIT="--wait"
           python -m fetch.run --session "${{ steps.s.outputs.session }}" $WAIT
+          python - <<'PY'
+          import json, glob
+          f = sorted(glob.glob("data/*.json"))[-1]
+          d = json.load(open(f))
+          print("errors:", d["meta"]["errors"])
+          print("tw taiex:", (d.get("tw") or {}).get("taiex", {}).get("last"), "| us spx:", ((d.get("us") or {}).get("indices") or {}).get("^GSPC", {}).get("last"))
+          PY
 
       - uses: actions/setup-node@v4
-        if: ${{ !inputs.skip_ai }}
+        if: ${{ !inputs.skip_ai && env.CLAUDE_CODE_OAUTH_TOKEN != '' }}
         with:
           node-version: "20"
 
       - name: Claude 評論
-        if: ${{ !inputs.skip_ai }}
-        env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          # 或改用 API 計費：ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        if: ${{ !inputs.skip_ai && env.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+        # 或改用 API 計費：env ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           npm install -g @anthropic-ai/claude-code
           claude -p "/daily-brief ${{ steps.s.outputs.session }} ${{ steps.s.outputs.date }}" \
@@ -85,5 +92,5 @@ jobs:
           git add -A docs data analysis
           git diff --cached --quiet && echo "no changes" && exit 0
           git commit -m "report: ${{ steps.s.outputs.date }}-${{ steps.s.outputs.session }} [actions]"
-          git pull --rebase
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
