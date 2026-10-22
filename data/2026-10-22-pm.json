@@ -3,7 +3,7 @@
   "key": "2026-10-22-pm",
   "session": "pm",
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T13:10:35+08:00",
+  "generated_at": "2026-10-22T21:04:42+08:00",
   "is_sample": false,
   "errors": [],
   "watchlist": {
@@ -3468,22 +3468,22 @@
    "^VIX": {
     "symbol": "^VIX",
     "name": "VIX 恐慌指數",
-    "date": "2026-10-21",
-    "last": 16.68,
-    "prev_close": 17.31,
-    "change": -0.63,
-    "change_pct": -3.64,
-    "chg_5d_pct": -1.13,
-    "chg_1m_pct": 17.38,
-    "chg_ytd_pct": -11.7,
+    "date": "2026-10-22",
+    "last": 17.99,
+    "prev_close": 16.68,
+    "change": 1.31,
+    "change_pct": 7.85,
+    "chg_5d_pct": 9.3,
+    "chg_1m_pct": 18.51,
+    "chg_ytd_pct": -4.76,
     "high_52w": 20.66,
     "low_52w": 14.21,
-    "pos_52w_pct": 38.3,
-    "ma20": 16.14,
-    "ma60": 15.73,
-    "vs_ma20_pct": 3.35,
-    "vs_ma60_pct": 6.05,
-    "rsi14": 51.2,
+    "pos_52w_pct": 58.6,
+    "ma20": 16.26,
+    "ma60": 15.74,
+    "vs_ma20_pct": 10.67,
+    "vs_ma60_pct": 14.26,
+    "rsi14": 60.9,
     "volume": 0.0,
     "volume_ratio": null,
     "history": [
@@ -4158,28 +4158,36 @@
       "low": 16.51,
       "close": 16.68,
       "volume": 0.0
+     },
+     {
+      "date": "2026-10-22",
+      "open": 18.29,
+      "high": 18.58,
+      "low": 17.95,
+      "close": 17.99,
+      "volume": 0.0
      }
     ]
    },
    "^TNX": {
     "symbol": "^TNX",
     "name": "美債 10 年殖利率",
-    "date": "2026-10-21",
-    "last": 5.15,
-    "prev_close": 5.12,
-    "change": 0.03,
-    "change_pct": 0.57,
-    "chg_5d_pct": -0.85,
-    "chg_1m_pct": 3.58,
-    "chg_ytd_pct": 17.17,
+    "date": "2026-10-22",
+    "last": 5.04,
+    "prev_close": 5.15,
+    "change": -0.11,
+    "change_pct": -2.06,
+    "chg_5d_pct": -0.96,
+    "chg_1m_pct": -1.45,
+    "chg_ytd_pct": 14.75,
     "high_52w": 5.31,
     "low_52w": 4.37,
-    "pos_52w_pct": 82.4,
-    "ma20": 5.21,
-    "ma60": 4.92,
-    "vs_ma20_pct": -1.24,
-    "vs_ma60_pct": 4.58,
-    "rsi14": 39.5,
+    "pos_52w_pct": 71.1,
+    "ma20": 5.2,
+    "ma60": 4.93,
+    "vs_ma20_pct": -3.16,
+    "vs_ma60_pct": 2.28,
+    "rsi14": 26.3,
     "volume": 0.0,
     "volume_ratio": null,
     "history": [
@@ -4846,6 +4854,14 @@
       "low": 5.08,
       "close": 5.15,
       "volume": 0.0
+     },
+     {
+      "date": "2026-10-22",
+      "open": 5.04,
+      "high": 5.04,
+      "low": 5.03,
+      "close": 5.04,
+      "volume": 0.0
      }
     ]
    },
@@ -4853,21 +4869,21 @@
     "symbol": "DX-Y.NYB",
     "name": "美元指數",
     "date": "2026-10-22",
-    "last": 101.57,
+    "last": 101.77,
     "prev_close": 101.78,
-    "change": -0.21,
-    "change_pct": -0.2,
-    "chg_5d_pct": -0.42,
-    "chg_1m_pct": 0.47,
-    "chg_ytd_pct": 0.14,
+    "change": -0.01,
+    "change_pct": -0.01,
+    "chg_5d_pct": -0.22,
+    "chg_1m_pct": 0.67,
+    "chg_ytd_pct": 0.34,
     "high_52w": 102.58,
     "low_52w": 98.77,
-    "pos_52w_pct": 73.6,
-    "ma20": 101.89,
+    "pos_52w_pct": 78.8,
+    "ma20": 101.9,
     "ma60": 100.4,
-    "vs_ma20_pct": -0.31,
-    "vs_ma60_pct": 1.18,
-    "rsi14": 45.1,
+    "vs_ma20_pct": -0.12,
+    "vs_ma60_pct": 1.37,
+    "rsi14": 47.7,
     "volume": 0.0,
     "volume_ratio": null,
     "history": [
@@ -5538,9 +5554,9 @@
      {
       "date": "2026-10-22",
       "open": 101.71,
-      "high": 101.73,
-      "low": 101.5,
-      "close": 101.57,
+      "high": 101.84,
+      "low": 101.45,
+      "close": 101.77,
       "volume": 0.0
      }
     ]
@@ -5549,21 +5565,21 @@
     "symbol": "TWD=X",
     "name": "USD/TWD",
     "date": "2026-10-22",
-    "last": 32.57,
+    "last": 32.55,
     "prev_close": 32.58,
-    "change": -0.01,
-    "change_pct": -0.03,
-    "chg_5d_pct": 1.17,
-    "chg_1m_pct": 2.8,
-    "chg_ytd_pct": 2.39,
+    "change": -0.03,
+    "change_pct": -0.09,
+    "chg_5d_pct": 1.11,
+    "chg_1m_pct": 2.74,
+    "chg_ytd_pct": 2.33,
     "high_52w": 32.58,
     "low_52w": 31.46,
-    "pos_52w_pct": 99.0,
+    "pos_52w_pct": 97.3,
     "ma20": 32.03,
     "ma60": 31.93,
-    "vs_ma20_pct": 1.68,
-    "vs_ma60_pct": 1.99,
-    "rsi14": 84.3,
+    "vs_ma20_pct": 1.62,
+    "vs_ma60_pct": 1.93,
+    "rsi14": 82.7,
     "volume": 0.0,
     "volume_ratio": null,
     "history": [
@@ -6250,9 +6266,9 @@
      {
       "date": "2026-10-22",
       "open": 32.4,
-      "high": 32.59,
+      "high": 32.63,
       "low": 32.36,
-      "close": 32.57,
+      "close": 32.55,
       "volume": 0.0
      }
     ]
@@ -6261,23 +6277,23 @@
     "symbol": "GC=F",
     "name": "黃金",
     "date": "2026-10-22",
-    "last": 4104.0,
+    "last": 4099.0,
     "prev_close": 4150.0,
-    "change": -46.0,
-    "change_pct": -1.11,
-    "chg_5d_pct": -1.59,
-    "chg_1m_pct": -4.96,
-    "chg_ytd_pct": 1.39,
+    "change": -51.0,
+    "change_pct": -1.23,
+    "chg_5d_pct": -1.7,
+    "chg_1m_pct": -5.08,
+    "chg_ytd_pct": 1.27,
     "high_52w": 4697.8,
     "low_52w": 3992.1,
-    "pos_52w_pct": 15.9,
-    "ma20": 4173.11,
-    "ma60": 4338.87,
-    "vs_ma20_pct": -1.66,
-    "vs_ma60_pct": -5.41,
-    "rsi14": 43.2,
-    "volume": 43719.0,
-    "volume_ratio": 0.32,
+    "pos_52w_pct": 15.1,
+    "ma20": 4172.86,
+    "ma60": 4338.79,
+    "vs_ma20_pct": -1.77,
+    "vs_ma60_pct": -5.53,
+    "rsi14": 42.7,
+    "volume": 109982.0,
+    "volume_ratio": 0.75,
     "history": [
      {
       "date": "2026-06-25",
@@ -6805,7 +6821,7 @@
       "high": 4315.6,
       "low": 4143.1,
       "close": 4168.4,
-      "volume": 140092.0
+      "volume": 229031.0
      },
      {
       "date": "2026-09-29",
@@ -6947,9 +6963,9 @@
       "date": "2026-10-22",
       "open": 4159.0,
       "high": 4164.3,
-      "low": 4100.2,
-      "close": 4104.0,
-      "volume": 43719.0
+      "low": 4072.7,
+      "close": 4099.0,
+      "volume": 109982.0
      }
     ]
    },
@@ -6957,23 +6973,23 @@
     "symbol": "CL=F",
     "name": "WTI 原油",
     "date": "2026-10-22",
-    "last": 99.12,
+    "last": 99.52,
     "prev_close": 97.15,
-    "change": 1.97,
-    "change_pct": 2.03,
-    "chg_5d_pct": 1.17,
-    "chg_1m_pct": 7.55,
-    "chg_ytd_pct": 37.82,
+    "change": 2.37,
+    "change_pct": 2.44,
+    "chg_5d_pct": 1.58,
+    "chg_1m_pct": 7.99,
+    "chg_ytd_pct": 38.38,
     "high_52w": 105.83,
     "low_52w": 68.55,
-    "pos_52w_pct": 82.0,
-    "ma20": 94.17,
-    "ma60": 90.46,
-    "vs_ma20_pct": 5.26,
-    "vs_ma60_pct": 9.57,
-    "rsi14": 65.0,
-    "volume": 21151.0,
-    "volume_ratio": 0.08,
+    "pos_52w_pct": 83.1,
+    "ma20": 94.19,
+    "ma60": 90.47,
+    "vs_ma20_pct": 5.66,
+    "vs_ma60_pct": 10.0,
+    "rsi14": 65.5,
+    "volume": 104445.0,
+    "volume_ratio": 0.38,
     "history": [
      {
       "date": "2026-06-25",
@@ -7229,7 +7245,7 @@
       "high": 82.38,
       "low": 77.79,
       "close": 82.13,
-      "volume": 271132.0
+      "volume": 241222.0
      },
      {
       "date": "2026-08-11",
@@ -7501,7 +7517,7 @@
       "high": 96.54,
       "low": 91.25,
       "close": 92.6,
-      "volume": 345783.0
+      "volume": 370326.0
      },
      {
       "date": "2026-09-29",
@@ -7642,10 +7658,10 @@
      {
       "date": "2026-10-22",
       "open": 97.78,
-      "high": 99.18,
+      "high": 100.09,
       "low": 97.72,
-      "close": 99.12,
-      "volume": 21151.0
+      "close": 99.52,
+      "volume": 104445.0
      }
     ]
    },
@@ -7653,23 +7669,23 @@
     "symbol": "BTC-USD",
     "name": "比特幣",
     "date": "2026-10-22",
-    "last": 82760.93,
-    "prev_close": 82941.0,
-    "change": -180.07,
-    "change_pct": -0.22,
-    "chg_5d_pct": 1.55,
-    "chg_1m_pct": -0.95,
-    "chg_ytd_pct": 38.58,
+    "last": 81594.24,
+    "prev_close": 84011.97,
+    "change": -2417.73,
+    "change_pct": -2.88,
+    "chg_5d_pct": 0.26,
+    "chg_1m_pct": -3.84,
+    "chg_ytd_pct": 36.62,
     "high_52w": 86602.91,
     "low_52w": 58558.86,
-    "pos_52w_pct": 86.3,
-    "ma20": 83109.66,
-    "ma60": 81135.3,
-    "vs_ma20_pct": -0.42,
-    "vs_ma60_pct": 2.0,
-    "rsi14": 47.8,
-    "volume": 35482660864.0,
-    "volume_ratio": 1.31,
+    "pos_52w_pct": 82.1,
+    "ma20": 83027.06,
+    "ma60": 81220.13,
+    "vs_ma20_pct": -1.73,
+    "vs_ma60_pct": 0.46,
+    "rsi14": 49.7,
+    "volume": 38404964352.0,
+    "volume_ratio": 1.46,
     "history": [
      {
       "date": "2026-06-25",
@@ -8616,12 +8632,20 @@
       "volume": 26999680268.0
      },
      {
+      "date": "2026-10-21",
+      "open": 82941.0,
+      "high": 84840.05,
+      "low": 82543.45,
+      "close": 84011.97,
+      "volume": 30470182680.0
+     },
+     {
       "date": "2026-10-22",
       "open": 84024.44,
       "high": 84280.19,
-      "low": 82598.14,
-      "close": 82760.93,
-      "volume": 35482660864.0
+      "low": 81603.35,
+      "close": 81594.24,
+      "volume": 38404964352.0
      }
     ]
    }
@@ -8631,45 +8655,45 @@
     "symbol": "ES=F",
     "name": "S&P 500 期貨",
     "date": "2026-10-22",
-    "last": 7737.5,
+    "last": 7725.25,
     "prev_close": 7800.25,
-    "change": -62.75,
-    "change_pct": -0.8,
-    "chg_5d_pct": -0.69,
-    "chg_1m_pct": -0.45,
-    "chg_ytd_pct": 4.23,
+    "change": -75.0,
+    "change_pct": -0.96,
+    "chg_5d_pct": -0.84,
+    "chg_1m_pct": -0.61,
+    "chg_ytd_pct": 4.07,
     "high_52w": 7874.0,
     "low_52w": 7351.25,
-    "pos_52w_pct": 73.9,
-    "ma20": 7786.75,
-    "ma60": 7728.98,
-    "vs_ma20_pct": -0.63,
-    "vs_ma60_pct": 0.11,
-    "rsi14": 46.4,
-    "volume": 107445.0,
-    "volume_ratio": 0.07
+    "pos_52w_pct": 71.5,
+    "ma20": 7786.14,
+    "ma60": 7728.77,
+    "vs_ma20_pct": -0.78,
+    "vs_ma60_pct": -0.05,
+    "rsi14": 45.4,
+    "volume": 337249.0,
+    "volume_ratio": 0.21
    },
    "NQ=F": {
     "symbol": "NQ=F",
     "name": "Nasdaq 期貨",
     "date": "2026-10-22",
-    "last": 29561.25,
+    "last": 29509.0,
     "prev_close": 30007.0,
-    "change": -445.75,
-    "change_pct": -1.49,
-    "chg_5d_pct": -1.93,
-    "chg_1m_pct": -3.91,
-    "chg_ytd_pct": -0.55,
+    "change": -498.0,
+    "change_pct": -1.66,
+    "chg_5d_pct": -2.11,
+    "chg_1m_pct": -4.08,
+    "chg_ytd_pct": -0.73,
     "high_52w": 31483.25,
     "low_52w": 27342.0,
-    "pos_52w_pct": 53.6,
-    "ma20": 30562.25,
-    "ma60": 29896.16,
-    "vs_ma20_pct": -3.28,
-    "vs_ma60_pct": -1.12,
-    "rsi14": 31.0,
-    "volume": 83011.0,
-    "volume_ratio": 0.14
+    "pos_52w_pct": 52.3,
+    "ma20": 30559.64,
+    "ma60": 29895.29,
+    "vs_ma20_pct": -3.44,
+    "vs_ma60_pct": -1.29,
+    "rsi14": 30.6,
+    "volume": 175875.0,
+    "volume_ratio": 0.29
    }
   },
   "sectors": {
@@ -12011,30 +12035,14 @@
   "universe_count": 50
  },
  "tw": {
-  "trade_date": "2026-10-20",
-  "is_today": false,
+  "trade_date": "2026-10-22",
+  "is_today": true,
   "taiex": {
    "name": "發行量加權股價指數",
-   "last": 46292.93,
-   "change": -529.15,
-   "change_pct": -1.13,
+   "last": 46041.43,
+   "change": -846.34,
+   "change_pct": -1.81,
    "history": [
-    {
-     "date": "2026-04-28",
-     "open": 39531.93,
-     "high": 40101.23,
-     "low": 39521.73,
-     "close": 39521.73,
-     "volume": 5020400.0
-    },
-    {
-     "date": "2026-04-29",
-     "open": 39176.24,
-     "high": 39548.18,
-     "low": 38896.3,
-     "close": 39303.5,
-     "volume": 5009300.0
-    },
     {
      "date": "2026-04-30",
      "open": 39571.46,
@@ -12978,135 +12986,151 @@
      "low": 46163.03,
      "close": 46292.93,
      "volume": 3913700.0
+    },
+    {
+     "date": "2026-10-21",
+     "open": 46454.33,
+     "high": 47254.93,
+     "low": 46454.33,
+     "close": 46887.77,
+     "volume": 4161800.0
+    },
+    {
+     "date": "2026-10-22",
+     "open": 46942.75,
+     "high": 47332.18,
+     "low": 46041.43,
+     "close": 46041.43,
+     "volume": 0.0
     }
    ],
-   "chg_5d_pct": -4.24,
-   "chg_1m_pct": 0.97,
-   "chg_ytd_pct": 17.13,
+   "chg_5d_pct": -1.98,
+   "chg_1m_pct": -2.41,
+   "chg_ytd_pct": 18.28,
    "high_52w": 49822.55,
    "low_52w": 38926.63,
-   "pos_52w_pct": 67.6,
-   "ma20": 48170.13,
-   "ma60": 46113.09,
-   "vs_ma20_pct": -3.9,
-   "vs_ma60_pct": 0.39,
-   "rsi14": 39.8
+   "pos_52w_pct": 65.3,
+   "ma20": 48071.61,
+   "ma60": 46207.09,
+   "vs_ma20_pct": -4.22,
+   "vs_ma60_pct": -0.36,
+   "rsi14": 34.1
   },
-  "turnover_ntd": 719504180585.0,
-  "turnover_ntd_stocks": 719504180585.0,
+  "turnover_ntd": 842426895166.0,
+  "turnover_ntd_stocks": 842426895166.0,
   "breadth": {
-   "up": 269,
-   "limit_up": 8,
-   "down": 701,
-   "limit_down": 0,
-   "flat": 104
+   "up": 247,
+   "limit_up": 3,
+   "down": 756,
+   "limit_down": 5,
+   "flat": 74
   },
   "sectors": [
    {
     "name": "半導體類指數",
-    "last": 1537.55,
-    "change": -14.61,
-    "change_pct": -0.94
+    "last": 1522.74,
+    "change": -29.6,
+    "change_pct": -1.91
    },
    {
     "name": "電腦及週邊設備類指數",
-    "last": 451.3,
-    "change": 5.95,
-    "change_pct": 1.34
+    "last": 441.71,
+    "change": -10.34,
+    "change_pct": -2.29
    },
    {
     "name": "光電類指數",
-    "last": 75.02,
-    "change": -1.32,
-    "change_pct": -1.73
+    "last": 76.15,
+    "change": -1.58,
+    "change_pct": -2.03
    },
    {
     "name": "通信網路類指數",
-    "last": 244.64,
-    "change": -1.69,
-    "change_pct": -0.69
+    "last": 239.44,
+    "change": 0.05,
+    "change_pct": 0.02
    },
    {
     "name": "電子零組件類指數",
-    "last": 899.39,
-    "change": -20.27,
-    "change_pct": -2.2
+    "last": 883.7,
+    "change": -33.42,
+    "change_pct": -3.64
    },
    {
     "name": "金融保險類指數",
-    "last": 3627.32,
-    "change": -87.79,
-    "change_pct": -2.36
+    "last": 3742.82,
+    "change": 23.15,
+    "change_pct": 0.62
    },
    {
     "name": "航運類指數",
-    "last": 216.35,
-    "change": -2.19,
-    "change_pct": -1.0
+    "last": 217.22,
+    "change": 1.4,
+    "change_pct": 0.65
    },
    {
     "name": "鋼鐵類指數",
-    "last": 124.89,
-    "change": -0.64,
-    "change_pct": -0.51
+    "last": 125.71,
+    "change": 0.49,
+    "change_pct": 0.39
    },
    {
     "name": "塑膠類指數",
-    "last": 468.54,
-    "change": -12.79,
-    "change_pct": -2.66
+    "last": 472.15,
+    "change": -26.92,
+    "change_pct": -5.39
    },
    {
     "name": "生技醫療類指數",
-    "last": 87.6,
-    "change": -0.66,
-    "change_pct": -0.75
+    "last": 87.51,
+    "change": -1.33,
+    "change_pct": -1.5
    },
    {
     "name": "電機機械類指數",
-    "last": 517.0,
-    "change": -7.53,
-    "change_pct": -1.44
+    "last": 513.77,
+    "change": -13.35,
+    "change_pct": -2.53
    },
    {
     "name": "建材營造類指數",
-    "last": 441.19,
-    "change": -3.61,
-    "change_pct": -0.81
+    "last": 439.39,
+    "change": -1.09,
+    "change_pct": -0.25
    },
    {
     "name": "觀光餐旅類指數",
-    "last": 102.87,
-    "change": -0.36,
-    "change_pct": -0.35
+    "last": 102.53,
+    "change": -0.15,
+    "change_pct": -0.15
    }
   ],
   "institutional": {
-   "date": "2026-10-20",
-   "foreign_net": -79539692396.0,
-   "trust_net": 18758508430.0,
-   "dealer_net": -35579304232.0,
-   "total_net": -96360488198.0,
+   "date": "2026-10-22",
+   "foreign_net": -81582101452.0,
+   "trust_net": 9492200518.0,
+   "dealer_net": -27377364607.0,
+   "total_net": -99467265541.0,
    "raw": {
     "自營商(自行買賣)": {
-     "buy": 6542914327.0,
-     "sell": 13397949503.0,
-     "net": -6855035176.0
+     "buy": 7229694959.0,
+     "sell": 10945959717.0,
+     "net": -3716264758.0
     },
     "自營商(避險)": {
-     "buy": 27529320011.0,
-     "sell": 56253589067.0,
-     "net": -28724269056.0
+     "buy": 34944625822.0,
+     "sell": 58605725671.0,
+     "net": -23661099849.0
     },
     "投信": {
-     "buy": 34044387977.0,
-     "sell": 15285879547.0,
-     "net": 18758508430.0
+     "buy": 25263632690.0,
+     "sell": 15771432172.0,
+     "net": 9492200518.0
     },
     "外資及陸資(不含外資自營商)": {
-     "buy": 248675549542.0,
-     "sell": 328215241938.0,
-     "net": -79539692396.0
+     "buy": 304133658440.0,
+     "sell": 385715759892.0,
+     "net": -81582101452.0
     },
     "外資自營商": {
      "buy": 0.0,
@@ -13114,286 +13138,286 @@
      "net": 0.0
     },
     "合計": {
-     "buy": 316792171857.0,
-     "sell": 413152660055.0,
-     "net": -96360488198.0
+     "buy": 371571611911.0,
+     "sell": 471038877452.0,
+     "net": -99467265541.0
     }
    }
   },
   "foreign_buy_top": [
    {
-    "symbol": "3231",
-    "name": "緯創",
-    "foreign_net_shares": 32813179.0,
-    "trust_net_shares": 8333486.0,
-    "total_net_shares": 42702800.0
+    "symbol": "1101",
+    "name": "台泥",
+    "foreign_net_shares": 25549325.0,
+    "trust_net_shares": 4726000.0,
+    "total_net_shares": 33359013.0
    },
    {
     "symbol": "1802",
     "name": "台玻",
-    "foreign_net_shares": 17677503.0,
-    "trust_net_shares": 25363.0,
-    "total_net_shares": 18618416.0
-   },
-   {
-    "symbol": "2324",
-    "name": "仁寶",
-    "foreign_net_shares": 14964319.0,
-    "trust_net_shares": -800134.0,
-    "total_net_shares": 15951843.0
+    "foreign_net_shares": 25235718.0,
+    "trust_net_shares": 2968000.0,
+    "total_net_shares": 28524470.0
    },
    {
     "symbol": "2002",
     "name": "中鋼",
-    "foreign_net_shares": 13459052.0,
-    "trust_net_shares": 11147208.0,
-    "total_net_shares": 24566970.0
+    "foreign_net_shares": 24664994.0,
+    "trust_net_shares": 650000.0,
+    "total_net_shares": 24927823.0
+   },
+   {
+    "symbol": "2887",
+    "name": "台新新光金",
+    "foreign_net_shares": 12843070.0,
+    "trust_net_shares": -1773000.0,
+    "total_net_shares": 14858770.0
    },
    {
     "symbol": "6505",
     "name": "台塑化",
-    "foreign_net_shares": 11723302.0,
-    "trust_net_shares": -11130552.0,
-    "total_net_shares": 400771.0
+    "foreign_net_shares": 12635429.0,
+    "trust_net_shares": -8119000.0,
+    "total_net_shares": 4398383.0
    }
   ],
   "foreign_sell_top": [
    {
     "symbol": "00406A",
     "name": "主動中信台灣收益",
-    "foreign_net_shares": -130735468.0,
+    "foreign_net_shares": -122361680.0,
     "trust_net_shares": 0.0,
-    "total_net_shares": -520623490.0
-   },
-   {
-    "symbol": "0050",
-    "name": "元大台灣50",
-    "foreign_net_shares": -49031125.0,
-    "trust_net_shares": 660000.0,
-    "total_net_shares": -82414987.0
-   },
-   {
-    "symbol": "2409",
-    "name": "友達",
-    "foreign_net_shares": -31610492.0,
-    "trust_net_shares": 3057168.0,
-    "total_net_shares": -30301134.0
+    "total_net_shares": -742044248.0
    },
    {
     "symbol": "00981A",
     "name": "主動統一台股增長",
-    "foreign_net_shares": -29051545.0,
-    "trust_net_shares": 0.0,
-    "total_net_shares": -71409188.0
+    "foreign_net_shares": -56719808.0,
+    "trust_net_shares": 1077000.0,
+    "total_net_shares": -98528057.0
    },
    {
-    "symbol": "2887",
-    "name": "台新新光金",
-    "foreign_net_shares": -22523897.0,
-    "trust_net_shares": -672513.0,
-    "total_net_shares": -19628738.0
+    "symbol": "0050",
+    "name": "元大台灣50",
+    "foreign_net_shares": -45989683.0,
+    "trust_net_shares": 2106000.0,
+    "total_net_shares": -82663372.0
+   },
+   {
+    "symbol": "2409",
+    "name": "友達",
+    "foreign_net_shares": -41971178.0,
+    "trust_net_shares": 4839000.0,
+    "total_net_shares": -46603056.0
+   },
+   {
+    "symbol": "00403A",
+    "name": "主動統一升級50",
+    "foreign_net_shares": -34918247.0,
+    "trust_net_shares": 0.0,
+    "total_net_shares": -100840876.0
    }
   ],
   "movers": {
    "gainers": [
     {
-     "symbol": "6269",
-     "name": "台郡",
-     "last": 88.3,
-     "change": 8.0,
-     "change_pct": 9.96,
-     "turnover": 2749273073.0,
-     "volume": 31667759.0,
-     "trades": 15860.0,
-     "open": 82.1,
-     "high": 88.3,
-     "low": 81.7
+     "symbol": "2468",
+     "name": "華經",
+     "last": 55.0,
+     "change": 5.0,
+     "change_pct": 10.0,
+     "turnover": 1156827766.0,
+     "volume": 21504294.0,
+     "trades": 11819.0,
+     "open": 51.4,
+     "high": 55.0,
+     "low": 50.2
     },
     {
-     "symbol": "1709",
-     "name": "和益",
-     "last": 56.5,
-     "change": 5.1,
-     "change_pct": 9.92,
-     "turnover": 1473448192.0,
-     "volume": 26787925.0,
-     "trades": 13006.0,
-     "open": 53.0,
-     "high": 56.5,
-     "low": 51.3
+     "symbol": "2465",
+     "name": "麗臺",
+     "last": 96.2,
+     "change": 8.7,
+     "change_pct": 9.94,
+     "turnover": 1000993349.0,
+     "volume": 10480813.0,
+     "trades": 6608.0,
+     "open": 89.0,
+     "high": 96.2,
+     "low": 89.0
     },
     {
-     "symbol": "4960",
-     "name": "誠美材",
-     "last": 30.55,
-     "change": 2.75,
-     "change_pct": 9.89,
-     "turnover": 1341314521.0,
-     "volume": 44773642.0,
-     "trades": 14603.0,
-     "open": 30.3,
-     "high": 30.55,
-     "low": 28.25
+     "symbol": "4526",
+     "name": "東台",
+     "last": 41.05,
+     "change": 3.0,
+     "change_pct": 7.88,
+     "turnover": 2343162317.0,
+     "volume": 56896421.0,
+     "trades": 29850.0,
+     "open": 39.25,
+     "high": 41.85,
+     "low": 38.8
     },
     {
-     "symbol": "6209",
-     "name": "今國光",
-     "last": 112.0,
-     "change": 10.0,
-     "change_pct": 9.8,
-     "turnover": 3382846504.0,
-     "volume": 31114422.0,
-     "trades": 17115.0,
-     "open": 101.0,
-     "high": 112.0,
-     "low": 100.5
+     "symbol": "2466",
+     "name": "冠西電",
+     "last": 261.0,
+     "change": 12.5,
+     "change_pct": 5.03,
+     "turnover": 1871604138.0,
+     "volume": 7239928.0,
+     "trades": 8005.0,
+     "open": 261.0,
+     "high": 270.0,
+     "low": 244.0
     },
     {
-     "symbol": "3026",
-     "name": "禾伸堂",
-     "last": 794.0,
-     "change": 59.0,
-     "change_pct": 8.03,
-     "turnover": 10535632232.0,
-     "volume": 13315873.0,
-     "trades": 15310.0,
-     "open": 736.0,
-     "high": 808.0,
-     "low": 734.0
+     "symbol": "1101",
+     "name": "台泥",
+     "last": 27.95,
+     "change": 1.15,
+     "change_pct": 4.29,
+     "turnover": 2880485345.0,
+     "volume": 103437782.0,
+     "trades": 30012.0,
+     "open": 27.15,
+     "high": 28.2,
+     "low": 27.05
     }
    ],
    "losers": [
     {
-     "symbol": "6505",
-     "name": "台塑化",
-     "last": 106.5,
-     "change": -9.5,
-     "change_pct": -8.19,
-     "turnover": 5834446282.0,
-     "volume": 52915196.0,
-     "trades": 29261.0,
-     "open": 113.5,
-     "high": 117.0,
-     "low": 106.5
+     "symbol": "6209",
+     "name": "今國光",
+     "last": 99.0,
+     "change": -11.0,
+     "change_pct": -10.0,
+     "turnover": 3641629146.0,
+     "volume": 35111890.0,
+     "trades": 24091.0,
+     "open": 111.5,
+     "high": 112.5,
+     "low": 99.0
     },
     {
-     "symbol": "8021",
-     "name": "尖點",
-     "last": 489.0,
-     "change": -31.0,
-     "change_pct": -5.96,
-     "turnover": 5267281374.0,
-     "volume": 10312573.0,
-     "trades": 18161.0,
-     "open": 517.0,
-     "high": 529.0,
-     "low": 488.0
+     "symbol": "6834",
+     "name": "天二科技",
+     "last": 130.0,
+     "change": -14.0,
+     "change_pct": -9.72,
+     "turnover": 2601673440.0,
+     "volume": 18751429.0,
+     "trades": 14290.0,
+     "open": 141.0,
+     "high": 149.5,
+     "low": 130.0
     },
     {
-     "symbol": "3037",
-     "name": "欣興",
-     "last": 1055.0,
-     "change": -65.0,
-     "change_pct": -5.8,
-     "turnover": 15275358350.0,
-     "volume": 14027579.0,
-     "trades": 32009.0,
-     "open": 1100.0,
-     "high": 1125.0,
-     "low": 1050.0
+     "symbol": "2492",
+     "name": "華新科",
+     "last": 368.0,
+     "change": -37.5,
+     "change_pct": -9.25,
+     "turnover": 21984668735.0,
+     "volume": 56103198.0,
+     "trades": 61944.0,
+     "open": 415.0,
+     "high": 422.0,
+     "low": 365.0
     },
     {
-     "symbol": "6668",
-     "name": "中揚光",
-     "last": 58.1,
-     "change": -3.4,
-     "change_pct": -5.53,
-     "turnover": 1011271387.0,
-     "volume": 16498919.0,
-     "trades": 11202.0,
-     "open": 60.8,
-     "high": 64.5,
-     "low": 57.9
+     "symbol": "8039",
+     "name": "台虹",
+     "last": 266.0,
+     "change": -27.0,
+     "change_pct": -9.22,
+     "turnover": 9893960168.0,
+     "volume": 35048706.0,
+     "trades": 41169.0,
+     "open": 299.0,
+     "high": 305.0,
+     "low": 264.5
     },
     {
-     "symbol": "8046",
-     "name": "南電",
-     "last": 1305.0,
-     "change": -75.0,
-     "change_pct": -5.43,
-     "turnover": 11875913620.0,
-     "volume": 8840743.0,
-     "trades": 18070.0,
-     "open": 1365.0,
-     "high": 1385.0,
-     "low": 1290.0
+     "symbol": "6269",
+     "name": "台郡",
+     "last": 78.7,
+     "change": -7.9,
+     "change_pct": -9.12,
+     "turnover": 7071038753.0,
+     "volume": 83826860.0,
+     "trades": 51263.0,
+     "open": 88.2,
+     "high": 91.2,
+     "low": 78.1
     }
    ],
    "turnover_top": [
     {
      "symbol": "2330",
      "name": "台積電",
-     "last": 2405.0,
-     "change": -15.0,
-     "change_pct": -0.62,
-     "turnover": 53857463127.0,
-     "volume": 22402430.0,
-     "trades": 246370.0,
-     "open": 2400.0,
-     "high": 2415.0,
-     "low": 2395.0
+     "last": 2385.0,
+     "change": -35.0,
+     "change_pct": -1.45,
+     "turnover": 71536783195.0,
+     "volume": 29796590.0,
+     "trades": 291228.0,
+     "open": 2435.0,
+     "high": 2435.0,
+     "low": 2385.0
+    },
+    {
+     "symbol": "6213",
+     "name": "聯茂",
+     "last": 777.0,
+     "change": -46.0,
+     "change_pct": -5.59,
+     "turnover": 31991956902.0,
+     "volume": 38695736.0,
+     "trades": 51098.0,
+     "open": 863.0,
+     "high": 885.0,
+     "low": 770.0
     },
     {
      "symbol": "1303",
      "name": "南亞",
-     "last": 296.0,
-     "change": -7.5,
-     "change_pct": -2.47,
-     "turnover": 31996092594.0,
-     "volume": 103990891.0,
-     "trades": 92946.0,
-     "open": 303.0,
-     "high": 319.0,
-     "low": 295.0
+     "last": 301.0,
+     "change": -19.5,
+     "change_pct": -6.08,
+     "turnover": 31346770710.0,
+     "volume": 101068589.0,
+     "trades": 110157.0,
+     "open": 324.0,
+     "high": 324.5,
+     "low": 299.0
     },
     {
      "symbol": "2454",
      "name": "聯發科",
-     "last": 4150.0,
-     "change": -55.0,
-     "change_pct": -1.31,
-     "turnover": 27894505615.0,
-     "volume": 6632490.0,
-     "trades": 92401.0,
-     "open": 4260.0,
-     "high": 4305.0,
-     "low": 4120.0
+     "last": 4010.0,
+     "change": -130.0,
+     "change_pct": -3.14,
+     "turnover": 29076357970.0,
+     "volume": 7074445.0,
+     "trades": 104590.0,
+     "open": 4230.0,
+     "high": 4230.0,
+     "low": 4005.0
     },
     {
-     "symbol": "2327",
-     "name": "國巨*",
-     "last": 523.0,
+     "symbol": "4958",
+     "name": "臻鼎-KY",
+     "last": 567.0,
      "change": -11.0,
-     "change_pct": -2.06,
-     "turnover": 23040911494.0,
-     "volume": 42961801.0,
-     "trades": 75835.0,
-     "open": 532.0,
-     "high": 550.0,
-     "low": 521.0
-    },
-    {
-     "symbol": "8039",
-     "name": "台虹",
-     "last": 296.0,
-     "change": -3.0,
-     "change_pct": -1.0,
-     "turnover": 19486445456.0,
-     "volume": 62451990.0,
-     "trades": 56312.0,
-     "open": 304.0,
-     "high": 328.5,
-     "low": 295.5
+     "change_pct": -1.9,
+     "turnover": 27129980635.0,
+     "volume": 46056903.0,
+     "trades": 53673.0,
+     "open": 598.0,
+     "high": 614.0,
+     "low": 564.0
     }
    ]
   },
@@ -13401,41 +13425,25 @@
    "2330": {
     "symbol": "2330",
     "name": "台積電",
-    "date": "2026-10-20",
-    "last": 2405.0,
+    "date": "2026-10-22",
+    "last": 2385.0,
     "prev_close": 2420.0,
-    "change": -15.0,
-    "change_pct": -0.62,
-    "chg_5d_pct": -3.41,
-    "chg_1m_pct": 1.05,
-    "chg_ytd_pct": 8.58,
+    "change": -35.0,
+    "change_pct": -1.45,
+    "chg_5d_pct": -2.25,
+    "chg_1m_pct": -3.05,
+    "chg_ytd_pct": 11.71,
     "high_52w": 2585.0,
     "low_52w": 2135.0,
-    "pos_52w_pct": 60.0,
-    "ma20": 2492.0,
-    "ma60": 2421.5,
-    "vs_ma20_pct": -3.49,
-    "vs_ma60_pct": -0.68,
-    "rsi14": 38.7,
-    "volume": 22402430.0,
-    "volume_ratio": 0.73,
+    "pos_52w_pct": 55.6,
+    "ma20": 2485.25,
+    "ma60": 2423.25,
+    "vs_ma20_pct": -4.03,
+    "vs_ma60_pct": -1.58,
+    "rsi14": 30.8,
+    "volume": 29796590.0,
+    "volume_ratio": 1.17,
     "history": [
-     {
-      "date": "2026-04-28",
-      "open": 2245.0,
-      "high": 2280.0,
-      "low": 2215.0,
-      "close": 2215.0,
-      "volume": 47175356.0
-     },
-     {
-      "date": "2026-04-29",
-      "open": 2175.0,
-      "high": 2210.0,
-      "low": 2165.0,
-      "close": 2180.0,
-      "volume": 42895935.0
-     },
      {
       "date": "2026-04-30",
       "open": 2205.0,
@@ -14379,59 +14387,59 @@
       "low": 2395.0,
       "close": 2405.0,
       "volume": 17099557.0
+     },
+     {
+      "date": "2026-10-21",
+      "open": 2425.0,
+      "high": 2435.0,
+      "low": 2400.0,
+      "close": 2420.0,
+      "volume": 22321809.0
+     },
+     {
+      "date": "2026-10-22",
+      "open": 2435.0,
+      "high": 2435.0,
+      "low": 2385.0,
+      "close": 2385.0,
+      "volume": 27360404.0
      }
     ],
-    "turnover": 53857463127.0,
-    "trades": 246370.0,
-    "open": 2400.0,
-    "high": 2415.0,
-    "low": 2395.0,
+    "turnover": 71536783195.0,
+    "trades": 291228.0,
+    "open": 2435.0,
+    "high": 2435.0,
+    "low": 2385.0,
     "institutional": {
      "symbol": "2330",
      "name": "台積電",
-     "foreign_net_shares": -9364622.0,
-     "trust_net_shares": 1029673.0,
-     "total_net_shares": -8363771.0
+     "foreign_net_shares": -12694626.0,
+     "trust_net_shares": 1349951.0,
+     "total_net_shares": -10149175.0
     }
    },
    "2317": {
     "symbol": "2317",
     "name": "鴻海",
-    "date": "2026-10-20",
-    "last": 241.5,
-    "prev_close": 239.5,
-    "change": 2.0,
-    "change_pct": 0.84,
-    "chg_5d_pct": 0.63,
-    "chg_1m_pct": -2.62,
-    "chg_ytd_pct": 7.1,
+    "date": "2026-10-22",
+    "last": 245.0,
+    "prev_close": 250.0,
+    "change": -5.0,
+    "change_pct": -2.0,
+    "chg_5d_pct": 2.3,
+    "chg_1m_pct": -2.2,
+    "chg_ytd_pct": 11.62,
     "high_52w": 309.0,
     "low_52w": 219.5,
-    "pos_52w_pct": 24.6,
-    "ma20": 248.5,
-    "ma60": 250.45,
-    "vs_ma20_pct": -2.82,
-    "vs_ma60_pct": -3.57,
-    "rsi14": 40.0,
-    "volume": 28509338.0,
-    "volume_ratio": 0.68,
+    "pos_52w_pct": 28.5,
+    "ma20": 248.22,
+    "ma60": 250.28,
+    "vs_ma20_pct": -1.3,
+    "vs_ma60_pct": -2.11,
+    "rsi14": 41.8,
+    "volume": 26653604.0,
+    "volume_ratio": 0.67,
     "history": [
-     {
-      "date": "2026-04-28",
-      "open": 230.0,
-      "high": 234.0,
-      "low": 225.0,
-      "close": 225.5,
-      "volume": 101695092.0
-     },
-     {
-      "date": "2026-04-29",
-      "open": 226.0,
-      "high": 226.0,
-      "low": 222.0,
-      "close": 225.0,
-      "volume": 42650013.0
-     },
      {
       "date": "2026-04-30",
       "open": 224.5,
@@ -15375,59 +15383,59 @@
       "low": 237.0,
       "close": 241.5,
       "volume": 26245878.0
+     },
+     {
+      "date": "2026-10-21",
+      "open": 244.5,
+      "high": 250.0,
+      "low": 244.5,
+      "close": 250.0,
+      "volume": 53398911.0
+     },
+     {
+      "date": "2026-10-22",
+      "open": 249.5,
+      "high": 250.5,
+      "low": 244.5,
+      "close": 245.0,
+      "volume": 26532180.0
      }
     ],
-    "turnover": 6878317361.0,
-    "trades": 25365.0,
-    "open": 238.0,
-    "high": 244.5,
-    "low": 237.0,
+    "turnover": 6596707385.0,
+    "trades": 28047.0,
+    "open": 249.5,
+    "high": 250.5,
+    "low": 244.5,
     "institutional": {
      "symbol": "2317",
      "name": "鴻海",
-     "foreign_net_shares": 3853759.0,
-     "trust_net_shares": 967931.0,
-     "total_net_shares": 5218756.0
+     "foreign_net_shares": 1739424.0,
+     "trust_net_shares": -255528.0,
+     "total_net_shares": 1916014.0
     }
    },
    "2454": {
     "symbol": "2454",
     "name": "聯發科",
-    "date": "2026-10-20",
-    "last": 4150.0,
-    "prev_close": 4205.0,
-    "change": -55.0,
-    "change_pct": -1.31,
-    "chg_5d_pct": -8.29,
-    "chg_1m_pct": -8.39,
-    "chg_ytd_pct": 58.7,
+    "date": "2026-10-22",
+    "last": 4010.0,
+    "prev_close": 4140.0,
+    "change": -130.0,
+    "change_pct": -3.14,
+    "chg_5d_pct": -3.72,
+    "chg_1m_pct": -14.86,
+    "chg_ytd_pct": 53.64,
     "high_52w": 5285.0,
-    "low_52w": 2575.0,
-    "pos_52w_pct": 58.1,
-    "ma20": 4756.75,
-    "ma60": 4285.0,
-    "vs_ma20_pct": -12.76,
-    "vs_ma60_pct": -3.15,
-    "rsi14": 24.7,
-    "volume": 6632490.0,
-    "volume_ratio": 0.76,
+    "low_52w": 2610.0,
+    "pos_52w_pct": 52.3,
+    "ma20": 4678.25,
+    "ma60": 4297.0,
+    "vs_ma20_pct": -14.28,
+    "vs_ma60_pct": -6.68,
+    "rsi14": 19.1,
+    "volume": 7074445.0,
+    "volume_ratio": 0.96,
     "history": [
-     {
-      "date": "2026-04-28",
-      "open": 2490.0,
-      "high": 2675.0,
-      "low": 2485.0,
-      "close": 2615.0,
-      "volume": 22923298.0
-     },
-     {
-      "date": "2026-04-29",
-      "open": 2550.0,
-      "high": 2595.0,
-      "low": 2500.0,
-      "close": 2575.0,
-      "volume": 11761568.0
-     },
      {
       "date": "2026-04-30",
       "open": 2665.0,
@@ -16371,59 +16379,59 @@
       "low": 4120.0,
       "close": 4150.0,
       "volume": 5623105.0
+     },
+     {
+      "date": "2026-10-21",
+      "open": 4215.0,
+      "high": 4295.0,
+      "low": 4095.0,
+      "close": 4140.0,
+      "volume": 8028758.0
+     },
+     {
+      "date": "2026-10-22",
+      "open": 4230.0,
+      "high": 4230.0,
+      "low": 4005.0,
+      "close": 4010.0,
+      "volume": 6932946.0
      }
     ],
-    "turnover": 27894505615.0,
-    "trades": 92401.0,
-    "open": 4260.0,
-    "high": 4305.0,
-    "low": 4120.0,
+    "turnover": 29076357970.0,
+    "trades": 104590.0,
+    "open": 4230.0,
+    "high": 4230.0,
+    "low": 4005.0,
     "institutional": {
      "symbol": "2454",
      "name": "聯發科",
-     "foreign_net_shares": -1565622.0,
-     "trust_net_shares": 295568.0,
-     "total_net_shares": -1367864.0
+     "foreign_net_shares": -1083796.0,
+     "trust_net_shares": 357000.0,
+     "total_net_shares": -630999.0
     }
    },
    "0050": {
     "symbol": "0050",
     "name": "元大台灣50",
-    "date": "2026-10-20",
-    "last": 107.25,
+    "date": "2026-10-22",
+    "last": 106.9,
     "prev_close": 108.15,
-    "change": -0.9,
-    "change_pct": -0.83,
-    "chg_5d_pct": -4.58,
-    "chg_1m_pct": 0.33,
-    "chg_ytd_pct": 16.58,
+    "change": -1.25,
+    "change_pct": -1.16,
+    "chg_5d_pct": -1.84,
+    "chg_1m_pct": -2.69,
+    "chg_ytd_pct": 18.12,
     "high_52w": 116.5,
     "low_52w": 90.5,
-    "pos_52w_pct": 64.4,
-    "ma20": 112.2,
-    "ma60": 107.23,
-    "vs_ma20_pct": -4.41,
-    "vs_ma60_pct": 0.02,
-    "rsi14": 37.4,
-    "volume": 123086544.0,
-    "volume_ratio": 1.0,
+    "pos_52w_pct": 63.1,
+    "ma20": 111.89,
+    "ma60": 107.43,
+    "vs_ma20_pct": -4.46,
+    "vs_ma60_pct": -0.49,
+    "rsi14": 31.9,
+    "volume": 132441805.0,
+    "volume_ratio": 1.25,
     "history": [
-     {
-      "date": "2026-04-28",
-      "open": 92.55,
-      "high": 93.65,
-      "low": 91.9,
-      "close": 92.0,
-      "volume": 114706934.0
-     },
-     {
-      "date": "2026-04-29",
-      "open": 90.7,
-      "high": 91.5,
-      "low": 90.0,
-      "close": 90.75,
-      "volume": 93857452.0
-     },
      {
       "date": "2026-04-30",
       "open": 91.25,
@@ -17367,36 +17375,66 @@
       "low": 107.05,
       "close": 107.25,
       "volume": 105412059.0
+     },
+     {
+      "date": "2026-10-21",
+      "open": 108.8,
+      "high": 109.2,
+      "low": 107.6,
+      "close": 108.15,
+      "volume": 76295858.0
+     },
+     {
+      "date": "2026-10-22",
+      "open": 108.95,
+      "high": 109.15,
+      "low": 106.75,
+      "close": 106.9,
+      "volume": 131498869.0
      }
     ],
-    "turnover": 13246672426.0,
-    "trades": 274227.0,
-    "open": 107.65,
-    "high": 108.3,
-    "low": 107.05,
+    "turnover": 14246779496.0,
+    "trades": 251808.0,
+    "open": 108.95,
+    "high": 109.15,
+    "low": 106.75,
     "institutional": {
      "symbol": "0050",
      "name": "元大台灣50",
-     "foreign_net_shares": -49031125.0,
-     "trust_net_shares": 660000.0,
-     "total_net_shares": -82414987.0
+     "foreign_net_shares": -45989683.0,
+     "trust_net_shares": 2106000.0,
+     "total_net_shares": -82663372.0
     }
    }
   },
-  "listed_count": 38650
+  "listed_count": 39312
  },
  "derived": {
   "tsm_adr": {
    "adr_usd": 431.89,
    "adr_change_pct": 1.6,
-   "usdtwd": 32.57,
-   "implied_twd": 2813.33,
-   "local_close": 2405.0,
-   "premium_pct": 16.98
+   "usdtwd": 32.55,
+   "implied_twd": 2811.6,
+   "local_close": 2385.0,
+   "premium_pct": 17.89
   }
  },
  "news": {
   "general": [
+   {
+    "title": "【Hot台股】大盤開高走低跌逾400點...網問「颱風前先賣股嗎？」 投顧董座喊先跑：持股降至5成",
+    "link": "https://news.google.com/rss/articles/CBMirgRBVV95cUxQNVc1RjBWdG9mSHI2RU8taFJyUGVfRnQwNVIwUGtaYzdQODF2aHZfeDc5ZDk1b0dnaGM0Q2xWZWdWZTBYNzUzZF9lOTh0cmNiV0xNaXlHS052RVVlM2M5MzBwd1NPQ3lncjdJNzVUTW45QXpNd1F6eTk1YmpnRE1vbkVyeUdmQzBMLU9xQzd5TW5yVFZ4Y2xsQkx3SnlIdmhsd2l3RzZCYmh1Vy1ELXRGWWMzcVB3WjNyZ0ZnRHRjVkpIaFBjZHRrVHgtLVZ6OGItNnpHT0JoRkNFb1FYNzEtWkFlS2d1cTlLRURoVkxYRzZ3QndPbVQ1cEl6bnhkSDBMb21FbmFmQWRDS1ZwRmk2TUVpYWliOUo0Wm9QNWVCeFBfdU9BQzRMMDZkcTlBYjFfOEc3Ykhhc2hWamhKRW9DY0dmR3o3WTRkNWhyTjNDTUllaUZiREU5cmtRcWVHSjJmQUhRRHFHSXphVlBhTlM0TVluaUZfTWpITTdXY0t0SzZQOHhNMzhzSXNBb184RDJyRk0yT3hpT3JJRG9lR0lJVldzU29Jc1UybU9RUTRndHZKWUxuZWFUZmVud2pCUmtyNzZiV09kV2h2S0IxWEZXeVg5ZUZ0d2FZb1hQVGo3cTVJbXhSaDFJN050ZnFUUTdRMXU1Y25ubWFRUzNLVU01dWxyUzVPeHgzY1loTElxUkM0ck9GVzE0bW9TdVpNSC1hVmdZYTdXc0JEcV9KMWc?oc=5",
+    "source": "Yahoo股市",
+    "published": "2026-10-22 03:43",
+    "query": "台股 大盤"
+   },
+   {
+    "title": "52檔台股ETF 漲贏大盤",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBQZV9nT21LUDhKODM2Sjd6OWlsdXNybjEyNmk3a3N5cDg2N0VyQXh3YmFxWDBRVUIzY2VVWUdWUTZLNm5QZTRhZVVGbWlNZVN6TGpv0gFYQVVfeXFMUHl4cmJqRm9tZ01ld3J3bXlHcm1sNVViYzVjNjAxbWFKZUlJa0FnR3RvWlc5aFJzTmN2c3pnY3MzUlNzaXV2QVBzRndsS1Qza1J0c2dybEw1cg?oc=5",
+    "source": "UDN",
+    "published": "2026-10-21 17:59",
+    "query": "台股 大盤"
+   },
    {
     "title": "台股今年全世界最會漲！短線賣壓沉重...專家點名「4類股」具潛力 揭52檔ETF打敗大盤",
     "link": "https://news.google.com/rss/articles/CBMijgNBVV95cUxNZUJBMUcyaTZGNlFXTTJhNGVRQ2xPZ0pGY3VOT1NhcTh4LTJyZ21CaVNaOW43NXF5a2dZNFJiUXJ4TU5JNUlDcHhKc0tRZkJ4eXUxREZzdUV3RkZhVFRKT2F6b0JneXBMQTctVUNpOTNnVFd5Q1lBYlF2c1UzMkhHRm8yeEtQelh0YjRRUW9JTjhKSDROdU1jR19HOWlnQ0tOUnJJWVk4SW5NN2hobUd2eU9jSmZPcElNcVlXeHZqY2IzOFptQ2JmakY2bWMwTVV0Sm5YSUp1Y25ZcERRX21oSURvakdRRGhseElZc3p1b2tzUkZ0bTU2WHVEVTJINWFzTkw0VVBkX3g5Rkt1MzFwVk8tdXdIVmlIRkxsYXg1aXE5U1lCU0hORllVS3VEbmFHZjk3akNHLTRVMlpHZ1p0WGtid2Ruc091b0gxNEt4ZzlRVFZ2cjVhOW9pVVQ1Z1FDTTNyY3lpMnZvS0RGa2F0a3BzR1pIdXJqZjVLc0dsT0xTRThDenB0enc1alF1Zw?oc=5",
@@ -17405,17 +17443,10 @@
     "query": "台股 大盤"
    },
    {
-    "title": "台股高低震盪逾千點的兇手是誰？分析師曝原因 但強調下跌是買點",
-    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwMWdsMGNobDExb2ZIWVhPYVlpbVowcGRLZUtsa0l2QndpRmFkakE3YVY4dDdNR3J2VE4tbm4xV2puLUFBSVFScUxJSks5Ti16dnNVN1ZsNHRvUdIBX0FVX3lxTE4xb0Z2QloxRzlXSzl3OVNaQ3ZIT0pPVHJkaGF2dnJhOEdaVW9DZVgyOWNSZVlpMnRyX0hULVg5UkFFMmxEcWtXYTUzNVZxQzR3eTRRcjZIb1ZPZ1ppVWtB?oc=5",
-    "source": "經濟日報",
-    "published": "2026-10-22 04:33",
-    "query": "台股 大盤"
-   },
-   {
-    "title": "〈台股開盤〉權值軍團反彈引領大盤漲逾700點 慎防台指期結算",
-    "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxQZkwydWRWNE96V3RaS2YyRE8xME03WXBrUGdvRjNtZmwzZnlTamdCSWVkTWhPNkRlNmxKOFlPMS1fU3ctQy1JTkZYaXdDNnhScXZQM19vWkFCTVBIVXV3UnQ4OVlLTU5aWlF5aFJDeVFORDRWbU9ZYVdEcDhLYi0wQ0h1ZkhfZVpORF9EbGJydXZteFB4Rmt6WHh0by1zb0FNRGVZemtKM2RZa0VfT1NBNVZoblI5VFhHUzVKcjQ3eHo3dUNvYlY3RWxPVVdlTEY1Wk5hYk5uaDF3YThhWkc2VlhWdENkWTlLLWxPcExsYzhHa0JvRW1MTWt4cWNkNDRkd2c0bGNZSERSZVZiZWJ6RmNQMDV0bmQ1QWw3V0Y0eTBjNEYwbjJkRmVlLW8tX0J0aVJJN194TXJ3cXJISU5LZ2lIS2lET1p3SUpFVHFSRnpPWmx1cjVqaHNNaERpQUh3RGh1VW1XU3dhcFpjVF80Q29DdDFZQXZRQ3pGYWJvbEdNdw?oc=5",
-    "source": "Yahoo股市",
-    "published": "2026-10-21 02:48",
+    "title": "00403A、0050、006208…台股ETF績效車拚！這檔領先大盤超抗震，達人讚「兩特質」向上爆發力強",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONkdOS1QwSlBxQUM3bEVXOFR2cFU4dWZscmdWcGlGT2w4dFRvNl81WEVOaXBOQlVBRWRrd1FrYlpYYkprQTVja0NvOHN1Y3dONUw0SkFYY3RFSVJCOXVQVm9xMlZUQ1NVVG10ekU5cXVPdnRRSHdIRUVRamNoOE5wNg?oc=5",
+    "source": "今周刊",
+    "published": "2026-10-22 05:30",
     "query": "台股 大盤"
    },
    {
@@ -17426,17 +17457,10 @@
     "query": "台股 大盤"
    },
    {
-    "title": "台股ETF「50高手」大車拼！　7檔近1季報酬率飆1成",
-    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1oTUttb1ZLLTJzYlVZc21HZFlMWXVBdVlaamN4eV8xUjd3bFZYWUhIbEpPRHI4V2RlYTJmLWZwTVFqT0daMF9SeUZhMFNxWVlmclHSAVBBVV95cUxNejFmMEtuRFNqSFhLQ042VDN5T1lfQUNBRkFIOE5YcXZVbEp1RXFRcll5aXFERWdmQ2dRdFVjM0R4YWExMllEeEJXbE9Gd1hwcw?oc=5",
-    "source": "ETtoday財經雲",
-    "published": "2026-10-21 07:27",
-    "query": "台股 大盤"
-   },
-   {
-    "title": "【Hot台股】大盤開高走低跌逾400點...網問「颱風前先賣股嗎？」 投顧董座喊先跑：持股降至5成",
-    "link": "https://news.google.com/rss/articles/CBMirgRBVV95cUxQNVc1RjBWdG9mSHI2RU8taFJyUGVfRnQwNVIwUGtaYzdQODF2aHZfeDc5ZDk1b0dnaGM0Q2xWZWdWZTBYNzUzZF9lOTh0cmNiV0xNaXlHS052RVVlM2M5MzBwd1NPQ3lncjdJNzVUTW45QXpNd1F6eTk1YmpnRE1vbkVyeUdmQzBMLU9xQzd5TW5yVFZ4Y2xsQkx3SnlIdmhsd2l3RzZCYmh1Vy1ELXRGWWMzcVB3WjNyZ0ZnRHRjVkpIaFBjZHRrVHgtLVZ6OGItNnpHT0JoRkNFb1FYNzEtWkFlS2d1cTlLRURoVkxYRzZ3QndPbVQ1cEl6bnhkSDBMb21FbmFmQWRDS1ZwRmk2TUVpYWliOUo0Wm9QNWVCeFBfdU9BQzRMMDZkcTlBYjFfOEc3Ykhhc2hWamhKRW9DY0dmR3o3WTRkNWhyTjNDTUllaUZiREU5cmtRcWVHSjJmQUhRRHFHSXphVlBhTlM0TVluaUZfTWpITTdXY0t0SzZQOHhNMzhzSXNBb184RDJyRk0yT3hpT3JJRG9lR0lJVldzU29Jc1UybU9RUTRndHZKWUxuZWFUZmVud2pCUmtyNzZiV09kV2h2S0IxWEZXeVg5ZUZ0d2FZb1hQVGo3cTVJbXhSaDFJN050ZnFUUTdRMXU1Y25ubWFRUzNLVU01dWxyUzVPeHgzY1loTElxUkM0ck9GVzE0bW9TdVpNSC1hVmdZYTdXc0JEcV9KMWc?oc=5",
-    "source": "Yahoo股市",
-    "published": "2026-10-22 03:43",
+    "title": "3231 緯創- 🥰AI股跟著大盤指數開高走低，連假效應+大盤重複測底，緯創- 股市爆料同學會",
+    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE84V2hNT0w3X3hvZWx3ankzVG5pVHl3NWtBbzk4NjhDbUNIZnQ3cERldzdNQ1VhSlpzcHJaWWJFWVpZa0x5TmxkQjdVcXJSUjNkd0NsZzVvNnM?oc=5",
+    "source": "CMoney",
+    "published": "2026-10-22 06:13",
     "query": "台股 大盤"
    },
    {
@@ -17447,10 +17471,10 @@
     "query": "台股 大盤"
    },
    {
-    "title": "張菲不怕遇台股重挫！本人曾自爆握20多支：9位數對我來說很普通",
-    "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA4RDRWZU9mNDdKVXFoZTdVTnlrcVVtWlhua21vRE9jT0xMY1g0cHdFUXpLc0k3andCLTd0a3VjN2ttOEVMM21QN2FuMDnSAVJBVV95cUxOdkRJQk1SdE1JUjV5ZGN0WVpVTFQ0MUFjUW5uejJJb1A4a2g0bzNTY0JPUUlBT3BDYWE0cUoxLWJOU1YxZ0xhQnlLLWVqMHgxbFd3?oc=5",
-    "source": "NOWnews今日新聞",
-    "published": "2026-10-18 21:00",
+    "title": "台股逐洞賽｜市場觀望氣氛增溫指數高檔甩轎打底- 證券",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE11anJvQU1fNVVySTdidVFtTG0tRzZWWkNrbjFXVkxPTkNVSG9JV0NVT2tldGlZMUJwT21KaDBCci1SejlNbkc5eE5DWDk1eVQtaGF0b1V0OTEtSFBNNVBj?oc=5",
+    "source": "工商時報",
+    "published": "2026-10-22 09:30",
     "query": "台股 大盤"
    },
    {
@@ -17461,10 +17485,10 @@
     "query": "外資 買超 OR 賣超"
    },
    {
-    "title": "台股強彈站回5日線 外資終結連10賣、三大法人買超5.68億元",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkYTBpd01mZzkzVGJBWEhSYjZxaFRYcURZQUx4NHdHdm5jRXRJSmVnVG9IYV83T2ppcE15R2U4SHlvVDhMa1N3UDFoeWdhUzQ?oc=5",
+    "title": "連假前先跑！外資翻空提款816億 三大法人賣超1001.59億元",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jeEdoQnVCUU11c3NFMTM3Y2JxUVNTMTFKVXR2MkVlOU1jMzdnQ1oxM0pxT09pZlVWa09pRlFsY3NDUFJyaV9JcXlwLUpfRFE?oc=5",
     "source": "鉅亨網",
-    "published": "2026-10-21 07:04",
+    "published": "2026-10-22 07:02",
     "query": "外資 買超 OR 賣超"
    },
    {
@@ -17482,17 +17506,10 @@
     "query": "外資 買超 OR 賣超"
    },
    {
-    "title": "外資賣超不手軟！三大法人續砍899億元 台積電急拉收平、台股跌289點",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5EZkNSTFZnclFkX0dkUU9heHdFSHFubThnU3ZNNGY4YTJ1SmVWbjhSck1DNk1QbWg5WExMMkNNdVlSZUZxTlY1MVR2YkFNSndS0gFWQVVfeXFMUHFIR2I3WWJPZkplWjZaWVNzNk16SFJqcnFheHkzV2hrclYzV25nbDBNeHJIMUdtSmRfcnRkNG1Bb3NrbTdmN1pUNF93THRoZXZpQU5VblE?oc=5",
-    "source": "UDN",
-    "published": "2026-10-19 07:16",
-    "query": "外資 買超 OR 賣超"
-   },
-   {
-    "title": "外資終結「連10賣」、最多狂掃友達4.45萬張買賣超前十名一次看| 財經",
-    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDazlndlVoQm0zVkNvc3RkNXkwYl9oek9NLVJFOWFkLW5oSWUwRWZpMFlRTjVjOW91TWJQekM1QkEyWFpQcThxLWRFdElEV2k0Y1NENGpzYUdpWTQ?oc=5",
-    "source": "Newtalk新聞",
-    "published": "2026-10-21 09:23",
+    "title": "台股強彈站回5日線 外資終結連10賣、三大法人買超5.68億元",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkYTBpd01mZzkzVGJBWEhSYjZxaFRYcURZQUx4NHdHdm5jRXRJSmVnVG9IYV83T2ppcE15R2U4SHlvVDhMa1N3UDFoeWdhUzQ?oc=5",
+    "source": "鉅亨網",
+    "published": "2026-10-21 07:04",
     "query": "外資 買超 OR 賣超"
    },
    {
@@ -17503,18 +17520,18 @@
     "query": "外資 買超 OR 賣超"
    },
    {
-    "title": "外資又賣795億！「這檔ETF」被砍13萬張 敲進緯創、中鋼",
-    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xRjdBdERqaWEyeHk1aFRGdVYzNURGb3pibTJBZUxCWEhMemszTmdSNThFMjFVdktqeUp1RFBBV2pVYlVZQTZqbkpoRy1kdlMwRm0zc25obmp1QQ?oc=5",
-    "source": "東森電視",
-    "published": "2026-10-20 09:33",
+    "title": "外資賣超不手軟！三大法人續砍899億元 台積電急拉收平、台股跌289點",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5EZkNSTFZnclFkX0dkUU9heHdFSHFubThnU3ZNNGY4YTJ1SmVWbjhSck1DNk1QbWg5WExMMkNNdVlSZUZxTlY1MVR2YkFNSndS0gFWQVVfeXFMUHFIR2I3WWJPZkplWjZaWVNzNk16SFJqcnFheHkzV2hrclYzV25nbDBNeHJIMUdtSmRfcnRkNG1Bb3NrbTdmN1pUNF93THRoZXZpQU5VblE?oc=5",
+    "source": "UDN",
+    "published": "2026-10-19 07:16",
     "query": "外資 買超 OR 賣超"
    },
    {
-    "title": "馬斯克曾為了 Terafab 想併購台積電晶圓廠，遭拒絕後選擇合作模式",
-    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeGxWbnItYzc4Nm1iU3c5T0ZBNzdpcjNFbllrTzJscW5lejhLRWFsMTB0N01SSkNhNVFvSnhWa3F0UUU4LVhGZFJ4VzNOQThZd1RmSWM5Zzk0Y2F2cS1rem90QVlvclFQbkc3NTJyeEhDdDBjVmItYzdkWnBIWmdXTklRSGZEUHl0ajhQMHJYYkpKc3N1dy04RHZpNFYzRW9fbjlvU1B3?oc=5",
-    "source": "TechNews 科技新報",
-    "published": "2026-10-21 07:26",
-    "query": "台積電"
+    "title": "三大法人賣超900億 台股只跌289 網：不容小覷",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9QSG1CN3h5Mkhfd28ySWQzQnJWU2YyNFJDWllvd2RSSzlSb1N0VjllRmJoemQwc01XMGozTW1PSkpqUEZwNVFiaFVXeVJHZkNaazV0QXdR?oc=5",
+    "source": "東森電視",
+    "published": "2026-10-19 08:00",
+    "query": "外資 買超 OR 賣超"
    },
    {
     "title": "傳馬斯克想買台積電、英特爾、美光晶片廠全碰壁！遭拒後轉向韓國供應鏈",
@@ -17524,45 +17541,52 @@
     "query": "台積電"
    },
    {
-    "title": "鏡評／台積電最好與馬斯克保持距離| 財經",
-    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9yenBBcHozU1ducUp5R1ZqcWtMXzhXby1rRUZVajNEWjlmQUpNMFF3TW5MaEoxazJVQXRuMW5kb3B0Y1dqN2t1VA?oc=5",
-    "source": "三立新聞",
-    "published": "2026-10-22 01:23",
+    "title": "台積電高雄廠工安事故 工人高處墜落釀4死",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5qb1NNTS1kVEhTN0tDTE5reVJLZ001X3JqZkNONjJFR2RYOHlma3lfenFVU0tnam9qZlFBVW5rSHpGb0hrNFRaNUpRNTM3ZmM?oc=5",
+    "source": "你的公共電視",
+    "published": "2026-10-21 00:22",
     "query": "台積電"
    },
    {
-    "title": "台積電楠梓廠重大工安釀第4死 最後一名傷者搶救昨深夜不治",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5KRVFvbHBIcmVCeXBfWXB0WE9EQzN5Q25TdkY0SFp5UzJLcHFxWm42aHBScmR4TzkxSTZrWVl2d1VuekdPb0xGbG9nOEhzYzNP0gFWQVVfeXFMT1BYZVRheExpdlczMmd5RVBEZ1VhUDBuX041MGhVR0FZNE1xLU43TzRxMm5qNmx0U2tBRFRHbV9qRFE5SW1fZTR3QUY1bi1SbS1VT0RGd1E?oc=5",
+    "title": "路透：台積電擬減少或排除設備中的稀土以降低對中國的依賴| 全球財經| 全球",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBjRGlOeXF3ZjdSc3U3cmstSFQ3a1BjMDh1MnVCNlV1d1g4ZDdvdEl6NFNkYkdqQ0FZM0Qtcy1uSk1kRDc2aEFLYlcweV9UOHlH?oc=5",
     "source": "UDN",
-    "published": "2026-10-21 00:56",
+    "published": "2026-10-22 08:51",
     "query": "台積電"
    },
    {
-    "title": "台股震盪1290點險守46K　台積電跌35元收最低2385",
-    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ELWN3V1VULTRDX1l0YUhRcWhTcU0tYkJYYTduNGl4VVZLY2ViUVBkeUNkbmNrSnlVaXNrcVA2NlV3Y2VUcUVvdFRCNXpGX0Q0VEHSAVBBVV95cUxQVVJuaTRzdV9xcEd0TTk0T1EwTnQydTdNdUladjFuLVVGMHBMREFxR0Z2aDc1em5MVXlMcmM2eVRKTlVQQzZxbTEwR3NYTG1Iag?oc=5",
-    "source": "ETtoday財經雲",
-    "published": "2026-10-22 05:35",
+    "title": "路透：台積電尋求使用無稀土馬達 擺脫中國稀土壟斷控制",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Ua3prclZXUnhIa0NyMjNEamlNT19qaDNTcGs2V3lPbjNTNWNFYzdKcVAyUEhvWDhybWR1bnpjdUg0ZFRPbzlXOEw5V1AyVkE?oc=5",
+    "source": "鉅亨網",
+    "published": "2026-10-22 12:27",
     "query": "台積電"
    },
    {
-    "title": "台積電資本支出強勁 法人點名這些廠務工程股可望受惠",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1qVHQ5b0pFNnNhVXBES0hVMFNqaklpS1VtZk5OZkxiNVI4THhHQjFTNkpXaDlnY1hSeFFsd183WC1qNnFqRm9CM1pnMVNSa3pL0gFWQVVfeXFMTXBUdl9YQjlCWnZ3M0xoMUtmMWMzS0dwWjFlNjFHdEl1QmJYZjlMeUVTX3ZDZFdyRUJsaVNUM1hiYlRKUXFyY0tPdmxwdmFIR2ZqVEVaeVE?oc=5",
-    "source": "UDN",
-    "published": "2026-10-22 05:22",
+    "title": "不給中國卡脖子！台積電傳秘尋「無稀土」方案",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5aRHVxeUZqNG5DWXZxRnpYZ1BYQjhlLUVNdGNUZUVpeGtfanFsZ2pMdS1GVll6VGZKaTRqeDRicVZnanN3NjYwNzg4cGRGbUx0bjBYdVZCbE1ham1KV2hV0gFkQVVfeXFMTU8tc0pUWm5uTXRoYUhxRWNvUV85SWpSd181QUpqRk5Cd09iT3A3WkdROUEyd2VSei1NVDFrUzRYSzVRRnJOMTJWNlJEd1NiMGFmcmFveXotUDQ4UjhXYVVaXzZlcw?oc=5",
+    "source": "自由財經",
+    "published": "2026-10-22 09:59",
     "query": "台積電"
    },
    {
-    "title": "柏林GTC大會登場！黃仁勳亮CPO量產王牌 點名台積電COUPE技術",
-    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oOVZyNXd3UG81WDhoSnlRcWxBMU56bVZXMVFwOWlrVG9TZXlvX1dCaGJHYkZ2ZWl4dk80N1FaN1FxWDgzU0lSNVdfa24xbU5SUTFEeWNRM1lvMVdZd2NV?oc=5",
-    "source": "工商時報",
-    "published": "2026-10-21 10:25",
+    "title": "考量人員安全 台積電10/24運動會取消",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5HWExNRjNCajVHM2hMbHdGc01NeVNIUE04T0VzbC1oUldramR3Tzk5Vk9YWWh5WjA4N3RtTU1hdFVCRHVQRUdwSG1BN0V3UjhiSk5NX3FjQlZCay1OaHg00gFkQVVfeXFMTVFrdFlEd3p6NkoyY3lvaXJWLU5zT3hEY2F2bzRFZXV1a05UekpFWnByQlBnQkNKcVlXNVlCWkFva3hrS3V2a1R1d0ROeTEwWTdzZmZ1UXBRNjZMbW5XaHg0U3E2Ug?oc=5",
+    "source": "自由財經",
+    "published": "2026-10-22 12:21",
     "query": "台積電"
    },
    {
-    "title": "輝達採客製化 HBM，專家：可望築起新競爭護城河",
-    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbHdZZEpzNmhqNXVzdW5kb0JFM2V2Z2wxa3ZVdTJQTmdNWUlPNFZKOWhJdmNQMjZHeHc1VlRSOWh4SDZXdXFHSUIxeDU5dzZUeXpWQnNiX1JnODlENThwVzlBZkFxQTYxTENVR1dnTFhtcmVKZTVMakUyVm1qZ1d6MW90RER5a2ZGY3dsaGo0T1VldktI?oc=5",
-    "source": "TechNews 科技新報",
-    "published": "2026-10-22 03:16",
+    "title": "受薔琵颱風影響 台積電原訂周六的運動會取消",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9lYzhiaDNFejh2M1c1c2QtWkNfd1JSaGNnSU1rX1JmeElDUktQQXFZYjJFNUhJMC1oVWRjV29NRC1YcWF5bFZuSU5ueVdtemhWc3pnRElITjNvZ9IBX0FVX3lxTE5QLURWdkZXQ1lCT3lqTWZDejhBMkFvY3lUVmktSTBmWWRhSEZoeENNN2g3NVpINjIwYzA3UjY0a29aT0dBV095MzhVOTl1eFVoTzhFOXhCN1VIY3ZrdDFV?oc=5",
+    "source": "經濟日報",
+    "published": "2026-10-22 12:30",
+    "query": "台積電"
+   },
+   {
+    "title": "薔琵颱風影響 台積電宣布10/24運動會取消",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5GSVM4cS1lTWRDLXdQMThhNWFnU0kyc0ZrZEVGVVNYby1HS0ZZcEhKTW5PWXJFMTZSNDZocmUwVTd5WFluTUxWc2dYTDVQMk0?oc=5",
+    "source": "鉅亨網",
+    "published": "2026-10-22 12:22",
     "query": "台積電"
    },
    {
@@ -17629,10 +17653,10 @@
     "query": "Fed OR 聯準會 利率"
    },
    {
-    "title": "美銀剖析白宮盤算Fed升息加重政府還債負擔| 全球財經| 全球",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9tVEtfc1d5OEZFX1p4bHlKSi14dklON2h5aUUtaFpGMXJtODF1RktIcFJRb1ZhNXRGalNjdWhDaFl1S2E2aUhXQjVkVUhZQV9E?oc=5",
-    "source": "UDN",
-    "published": "2026-10-21 18:26",
+    "title": "〈貴金屬盤後〉金價從近一周低點反彈 殖利率下降和Fed決議受矚｜新聞快訊｜豐雲學堂",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE82MXdLeUctMVN1amRHSGNXd25kUGNTbjlFVURtS3VibV9VWnhjS0YyYk1rWjZYSmJiRUk1UW9lR2R2MkxSSW1TTnBTSHRCamU5Zy03LTFLd2Z4Q1lRMkdHR2xOZUZCQk1PUjJJYnZ3WWxDR3l1RVE?oc=5",
+    "source": "永豐金證券",
+    "published": "2026-10-21 22:37",
     "query": "Fed OR 聯準會 利率"
    },
    {
@@ -17650,10 +17674,24 @@
     "query": "Fed OR 聯準會 利率"
    },
    {
+    "title": "美銀剖析白宮盤算 Fed 升息 加重政府還債負擔",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB0MEdIUFRyNHJXZWY2VUQ3bUVvR1pEVzNQelVERkp0ckducWhtVUZMdGVONGFHRDlmZTl4YUhacWIzU0NQcXRHOWw4MzRxUVlmT05STDNNVllnZ9IBX0FVX3lxTFBlTmNDOU9NTDMwWXZfVG5wZGhzN2RKWTJFSmF3dTQ5cXFRMzNyTXR2MjZsbmpNZWlfR3NnUGplelNWdUFwS1hxZzJocm5VbmgyZlF6OHdiUWphSGNsbGpJ?oc=5",
+    "source": "經濟日報",
+    "published": "2026-10-21 18:26",
+    "query": "Fed OR 聯準會 利率"
+   },
+   {
     "title": "美債殖利率回檔或衝高？摩根許長泰剖析4大推升主因 估Fed最快12月升息",
     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xdHZ5TzVNVTFHZjJDZnZzbWx0c21LV2xBUHoyRlVGT0lBZGNacXdWMWNodGlLZGR3TUFLME00LVNzMFNpVDcwVGZhV3pLU0U?oc=5",
     "source": "鉅亨網",
     "published": "2026-10-21 13:24",
+    "query": "Fed OR 聯準會 利率"
+   },
+   {
+    "title": "Fed 利率決議前夕台股爆兆元天量血洗!加權驚險守萬四！｜口袋日報｜2026.07.29",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1NcERlWGs2SVBnOXlfZHhKNVpkUEtxZ0ZiY2x5ZVlnbTFlYUJiRkl3cEVWZVZkZTdydHpOdmN0Q0ZDbUJRYzQ5UW41SzFNaV9HdWhV?oc=5",
+    "source": "口袋證券",
+    "published": "2026-10-19 08:57",
     "query": "Fed OR 聯準會 利率"
    },
    {
@@ -17664,38 +17702,52 @@
     "query": "Fed OR 聯準會 利率"
    },
    {
-    "title": "美國信用卡平均年利率近20% 消費者恐背沉重利息",
-    "link": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxNdDZMaTV0TWZ0ajFiRHAyZjRNX1VpVkVrMDIxY3FRQ01oYzQ0RTVodXFYNW9KSlp2dldJR0E1WF9sQmtya1l1WW44M2xTN016V0ZLaUtiNDY0bjNoQjNiOWNKeUpmZHVvLUkzNW1YWkVtV1hteHZzZk40MGp6NGlSWnFTR2FtR2ZpTF90SlFWeFVDRklTVE92b1pzZlR4cEl0V3JIRnd0MkRjOEwtbHk2VlFiTjBieHNwUkdGQ3dDNEgwVHJpXzlUUXlWYzl5R0lwRURNUjdKbUk4NjRQY1dERmNNQzlwVEdaMEFnVmlBaHpCRS01N0x5MkRCeEg3dUJENUo2ZmdfbFoyS1VJdXhBYkpsOWZJcF9EMmxSeENRYmQwSG4wa0pBZENod0FhaDVtMXJES2hkcWMzSjRqQVFCcUZoTU9DeVV1eGtLY3NScjhiQQ?oc=5",
-    "source": "商傳媒",
-    "published": "2026-10-21 23:24",
-    "query": "Fed OR 聯準會 利率"
-   },
-   {
-    "title": "2026年9月台美股行事曆｜聯準會升息機率近九成 (本週FOMC會議)？！ 季底作帳碰上中秋連假會變盤嗎？",
-    "link": "https://news.google.com/rss/articles/CBMi8ARBVV95cUxOQ2I1eFdsbWh6TXJ0aTVCdlJOODZGUjJQdVFYT0U4cC1QNGtEWXEyR1U2MEctZWk4TmFBNEJwdUhCMnRXUzZDQi13ZE80UHZxWG8zOG45OFpTZUNsT3E2aFVnc1loOENlX2ZsanctbHZESmo4SUQteUFtWTg4TDBDZndNQU1Gci0wRW1qMEVnZkhFY29ScFQ0dGszbzNVWWcwVmZxQ2UwM1BTS3lDV3k2MC01dW9yQTlYczktbXNlYkYyX3I4UXR0dkpGM2ZqUnNjTVViMTBfWDVjZGNIdVdRbkhsTGhJSjgtd0tFOXlHeXp5M1YwaVNCSmNNT3RCRWlfX01oVmJEclpBbG12RndQZXEycTFkcGRLUHNaWXJoTnVxc08yR185RzBCNnhiSDNFd1U3OEJCbUJ5dlNDVGVSM2NYUVZnUEFJU2pMZjhmSnB0ZE5ydGRWUlRjd0xaYU5vZ2dUZ1hNbnFNSGNqa3l6WmlDa3pUTnByaFcxWllYNnU4ckVBOUZXR0JESzRPbVpabTd4MEJNRThvSFFjaHpCdHRGNUI1YUxjSE9hSkxld1pYZU5WTjRaV0wyT1c2Ym9GNUV6b1Y0cmZ1S0lwNzRCamxyZThRVExHdjZKQl95M2JQQ0M3ZlA5QTBfeFBVUmttLWd4NEtpSU5oS3N3Ui1jZ21SSjhvSGYxMDY2b1kyNlhYbGR0emU4UkZuRmZSanpRU1ZHbU5xV0hpRFQ3a1BfS3UtbTc0b0R3My1XUDdlaXU5NmtWRTFzZG1ta1kyektHUlNpeUtCcGFyNGRmM0U3VlZFUU5fWktZaDR1eDlBSlU?oc=5",
-    "source": "永豐金證券",
-    "published": "2026-10-21 04:17",
-    "query": "Fed OR 聯準會 利率"
-   },
-   {
-    "title": "Stock futures fall as investors digest earnings from Meta and Tesla: Live updates",
+    "title": "Stock futures sell off as Meta and Tesla lead AI trade lower and oil rises: Live updates",
     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ROG52YzhPZGZHbTVQQjVmSGxSeHJoRlA0UW90MkdwNFR0ZThOQzFhSDBhMUFmNWpxSGo1RG9nU2FOZ1VTUGN2VjNieDNOT0M4bDB0Qlg5NVkwMHV3cy00VGxhQTNqQzg3a3FwUFB4Vy1lR3BlM1dV0gF8QVVfeXFMTjlVakFKZGpLV0RGRVNiaGUxMWdVcHJtSGlWdXNtYkJqUmhXbHM5S3dLcFgzdTZMRGx0OG9LZE40eTVsaDZ5WWRKTGZSMVN5OWptaXk4Qk5EZGNJTmZYdzBVUVRER3NVOW4xWllXa2k0RXFGWmhTcEw5QTZ2Ug?oc=5",
     "source": "CNBC",
-    "published": "2026-10-22 04:21",
+    "published": "2026-10-22 12:26",
     "query": "stock market today"
    },
    {
-    "title": "US Stock Futures Slip as Tech Earnings Rally Fades: Markets Wrap",
+    "title": "Stock Market Today: Stocks Slide After Mideast Tensions, Tesla Earnings — Live Updates",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZHdlcnRQQU9wNmQtZ1c0V3huVjJadkFKS0dwamZRRHltOURMYXRNcHQ3UkdOUVZGR08zRVc0ZHNqWUpWM01CNHdxXzJ1RUQ2ajkycTY0VFNCcUVrN0tKM0pMazJuWkVMclBYcU01MmNQbUw2dVIteWk4SWpVWFI2MWhmSklYREk?oc=5",
+    "source": "WSJ",
+    "published": "2026-10-22 12:26",
+    "query": "stock market today"
+   },
+   {
+    "title": "Stock market today: Dow, S&P 500, Nasdaq futures fall as oil climbs, investors weigh Tesla, Meta earnings",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNN25FM2VQb2hlbTFoTl9SQmp3QzhBdnhER0NValF0Wm9Fdml5M2taT2NGQldFeFE5ZXRLbDBVZU5yOE9WdDdxRFVQZ3Q3LVNxbkRyUC01OWJ3eHREZ3RnZE1YR2dsQm9taFpsT3NlWkl3WTBNaGppRi1ZRmdxaUdEX2d2VWhPR19IZUN0TTdfVzBFNm8yZ0wzVFRDZUgzbnpTd0ZhVy1zcmZjRGlYZ2NmdGJFNTFydDFzLUZNYVBXNXFDUQ?oc=5",
+    "source": "Yahoo Finance",
+    "published": "2026-10-22 11:23",
+    "query": "stock market today"
+   },
+   {
+    "title": "Stocks Slide as AI Trade Falters and Oil Rallies: Markets Wrap",
     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeTBrLWVPck50dERfQ3N3cFhBMFpUN3lfZFFOeXZLM0lDR0lOSFp2Vnd0OHFaWU5JQ092UHg4XzlXQlEtN2JQNG1oWnpFYWFKSUFoYmZkT1FqTHR1bXR5b010d3ZvSENDZ0phTk04R1k5aUg4Z2ZTb1p2MmQ2LW53Ulk5NktSU0prZWwtMkFIZFo1SDll?oc=5",
     "source": "Bloomberg.com",
-    "published": "2026-10-22 04:07",
+    "published": "2026-10-21 22:13",
+    "query": "stock market today"
+   },
+   {
+    "title": "Stock Market Today: Dow Falls As Oil Prices Jump; Meta, Tesla Slide On Earnings (Live Coverage)",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVDl0alRJQkZ0WUN1Uk5COW9TOUozcDh6YWRvNzE0N0FSVXNKWVdJV216eTFZOFJOeXdIdjRrNjVCcDBiWlpFNlN0UWh1dXFTdEp6cTN4M3BaX195Xy1vMFZLZTZsZHdmQ0tHdmJMWjFUODI1VDRrTlkwaXRpdlB4azBJZnFQalRKb1VVR3g2UWRzOFc5S0dQYVItcklHcGw5S3h3a1pSWG8tdHBFLUZveW9tNDkwd2RRWnFQYzNR?oc=5",
+    "source": "Investor's Business Daily",
+    "published": "2026-10-22 12:13",
+    "query": "stock market today"
+   },
+   {
+    "title": "Stock Market Today: Tech Stocks Lead Futures Sharply Lower; Oil Prices Surge on Middle East Escalations",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ1VaVWsxYkltbENNc283QUFCN3I0NE1VUXlPZENlLWxfZ3NyamJwUVRFNV9QV2FIOS1FWkZOV2ZtTTRsU1BiS18wNGZIclBIQ1dxU0tDMUNveGRlWnNKWmJ4dUZqcGlYY1VKcFdQX1IwU3g2TlY2bUlKSER1RjJTZ0dtaFcySTNIWUlhZ21EYVI?oc=5",
+    "source": "Investopedia",
+    "published": "2026-10-22 12:55",
     "query": "stock market today"
    },
    {
     "title": "S&P 500 notches 3-day win streak, Nasdaq jumps 1% as SpaceX and Tesla rally",
     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE44andoMWc1UnV1MnYtOVNwMFJxU3dmRFhYVEFlWEg5c0NTblp5VmJZNDR2TW5jRUdISW5pUmRsTVFmWjlXS0lMUTNOM0NEZV8zeldYOEVYelVaYzMtMGJxaW0tWnZZSUhEU2FxeEppUzVWTnpyY2Y00gF8QVVfeXFMTlFJSF8yb09HR2JyVExWTG9XUTFYeWVyaGpad2ktb2FXTGZ0WnpHcF9hNzlnd1RBVGs0MXpXLXplRVNaWXo3a1d6OUd3U0x0ZVR2ZWI4N1RvVktDY1hYaDR3ZTlVUnhsM1pfT2Q2eDNPQUFHT242QmVUZDdGMg?oc=5",
     "source": "CNBC",
-    "published": "2026-10-22 04:19",
+    "published": "2026-10-22 08:31",
     "query": "stock market today"
    },
    {
@@ -17706,38 +17758,17 @@
     "query": "stock market today"
    },
    {
-    "title": "Stocks Shoot for the Stars on AI Optimism: Stock Market Today",
-    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVFBrMmRPenViZnBoRFFaX3ZsX3ZZYm9MNFpNV2U4Z1RWTEQzX3hiZkhkNVFFNF9Eb3hIdzVFUFRGMWZfU29IZDRhVld1Rm1ScDI5bkhJMHl5cy1QWXVSTDVERm1TV3V6WFByMVYwdWFReXRmcE05aDQ5VFR0SVZqVERtdXVaRFFFRnFPYk16TGFmTGdGcXVTcXBHVG0yVWZJMHgyX1RR?oc=5",
-    "source": "Kiplinger",
-    "published": "2026-10-21 20:09",
-    "query": "stock market today"
+    "title": "Nvidia Stock Falls in a Case of Bad Timing Over Another Potential AI Investment",
+    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9VeEdHR2lCQXB5TGVFS2dwc0JnRTVDR3loNTVlRlRmTHNWcmpHbUdHdzV6bVJQQWgzQkJZTmZWbXJrQjFHWGhMVEVUZEJyOXh4UWZFa1kybFZWcGVDVGF3RXcwOXhZZkVxWVVKc0pwa1lhak1lRXBB?oc=5",
+    "source": "Barron's",
+    "published": "2026-10-22 09:30",
+    "query": "Nvidia OR semiconductor stocks"
    },
    {
-    "title": "Stock Market News, October 21, 2026: Tesla's Profit Falls as Batteries Prove Barrier to Growth",
-    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQmtVSC1FUS1RTWFJU2t1bmFXenNxZHRsM0ZlRklRb3Fuajh2eXFDLWItTmpKTzZaU25lNzJ3dFZyR01BaXVIY01fbFNXVUVySHZOU0NYelhRSzQtSDlTOF9SWVQ1aUFxUGJKT0lzUExaOW9nNkZFYXpjcFNqT2c4QjE3SXRPdGs?oc=5",
-    "source": "WSJ",
-    "published": "2026-10-22 00:49",
-    "query": "stock market today"
-   },
-   {
-    "title": "Stock Market Today: Nasdaq logs 1.1% gain; S&P 500 and Dow end higher as AI plays and tech bounce; oil climbs in after-hours trade as investors monitor Middle East headlines; Meta and Tesla earnings on deck",
-    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVkRpQXdOVzlDUERyeXdaOVdGZER5SmlMcVlvSHd5d3pHZjhLUGpRM0R4ZWtSTlp5bHRlTE1Ibl9haTJzdlBYRWNMWHJ1X2NyZU5oc2ZTWms1eWpGcUlwamNPb3ZXMk90SGIzYWtnUEd6blF6Mlo1WC1lMUVxdDNhMF9yRi1GZGpPV0ZMRDhYUGpBeXVscGxDRjF0MkxKNE9DcHJkdlV5dl9sRWRjcWFUWXRQMVpfY3RsbXlldEJJNlVMY1BBMkVB?oc=5",
-    "source": "MarketWatch",
-    "published": "2026-10-21 21:53",
-    "query": "stock market today"
-   },
-   {
-    "title": "We Are Witnessing the Stock Market Do Something for Only the 2nd Time in 155 Years, and History Is Clear About What Comes Next",
-    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVDJyMjVyMXZqZUh0MGZ3ajhYSXRFc2VaZlFYaXJodUZJNktTNU8yV2lVekR3dlh3RzVDbUdsQ0F5ZFNsOFVKMmZ2RkJMUkRPb0pHTXN2bDZ4S3NSMW9mQkROSVdFb0RaT2dhS3BjMTJOd3lZS01uR1BVTGRtTjNXQ1pxQ1I5WHM1elp0bWtacHhmbXBRa1B3Yw?oc=5",
-    "source": "The Motley Fool",
-    "published": "2026-10-21 06:00",
-    "query": "stock market today"
-   },
-   {
-    "title": "$4,000 in These 4 Non-Nvidia Chip Stocks Could Be Worth This Much by 2030",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUnZ0ZXFEQmtZMW95Q2tHak0tSlk0SnJIcVQxM1J5c2dGdzZJdWpXSUdQVUxKcFhKWjNCaFdMOEdDNzYyamVPb242amlpS296bXdZSWVuMDhTV2xQU1lacExQLUlycTlCb1pBaWNKelU0OW10QTFvMDNWYVlDV1FzUTNCTlFKcFhKN29j?oc=5",
+    "title": "Does Super Micro's Big Quarter Make Nvidia Stock a Buy?",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZ3V6aUZOWGNBZGQwMjhrR3EwQmVJVi13V3dxMXZjYnprNDVPU2RVUXJkaVRjZTlyVUxaQzVOR0ltN1d6WURIYTktMzd5U0Q2Uk5Lb2hBTkxkSm1mV245cU51dVRVVzF3QWlMVDlEUTRkM1hUeDI1TjQxTWNYdlVUMVJDRmY2enBhd2g4Z2JLUXBXQVNnZl9LRGdB?oc=5",
     "source": "Yahoo Finance",
-    "published": "2026-10-21 20:05",
+    "published": "2026-10-22 07:32",
     "query": "Nvidia OR semiconductor stocks"
    },
    {
@@ -17748,85 +17779,71 @@
     "query": "Nvidia OR semiconductor stocks"
    },
    {
+    "title": "Nvidia, Intel among chip stocks to benefit as open-weight models prove expensive: BofA (NVDA:NASDAQ)",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPeFNlWG1qQ2ZDb29NZFdTN3p0QllTUUJVV2RKNGRSeEhhczhhbDh2OU16OHBONFktRG9hX1BaZFFUSWdUQ0NkTjVYNWF1WWdKSUp2Wi1vY3RjOWJkYi13Ry1rTEdET3BlbTQ1VG1WY19qa2VUeEY5Um9lclBXQXc3amhEVFNGVER1Z0tpSklmR2k1NHdvc0d3el8wVGVIZXFCNkNITF80bmZiSHFidmYwWHFHYjNwODNicUJWRDA5bw?oc=5",
+    "source": "Seeking Alpha",
+    "published": "2026-10-22 12:14",
+    "query": "Nvidia OR semiconductor stocks"
+   },
+   {
+    "title": "3 Semiconductor Stocks We’re Skeptical Of",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZGdxWEVHQ1pNQVJfZnMwdmJlbzRhSjh6a3ZhZGd6aHdQcDdUWlB2Y1p0THJrRDZoLTBpdUZFUVFkRTN4RVdNdmJTZFA1NFNfYWJLNDBnbHllWm56OU1keWljRjZjRlR3cThRTVlHT3Y2MHRlTUJPX3dqb3d0M0ptSEkzeGFmTWNTNGdvWXNCZmJ2MVJTZ1Y0OWFmQ0JNdw?oc=5",
+    "source": "Yahoo Finance",
+    "published": "2026-10-21 14:22",
+    "query": "Nvidia OR semiconductor stocks"
+   },
+   {
+    "title": "SpaceX, Tesla, Meta, Nvidia, Intel, Netflix, AT&T, and More Stocks That Explain Today’s Market",
+    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB4YUloR29taVBza2QtN3ZsRGdXckdKeU9oQ3MwdG8yTkJOMjFVU1JyRktyc0pqYk45UlZXUUd6aGhxQXdJM3BrN0JUUkFzYUtHakp4c1Y2MW1YdTlWdkpjQWxFZGw?oc=5",
+    "source": "Barron's",
+    "published": "2026-10-21 20:26",
+    "query": "Nvidia OR semiconductor stocks"
+   },
+   {
     "title": "Semiconductor Stocks May Face An Explosive Move This Week (NASDAQ:SMH)",
     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOa3lNWThUS2lQYVYzbjR0bElPZWZVWmhRajZ3QUN5NXdhVkhfd3JJM1NCMklORkk4anBjU2NrcVhpNHlXOU9UNklpbGozdXI1djk0Uy0yamxKMFhPRWNtMVBZanBBQjhhZHJfX2szVnZ3UlZYalItUzNWQkVNS19EcUFwMkJXQTJPSmluRDRZRlVBaFNKZEZYS3FEeFlqeTA?oc=5",
     "source": "Seeking Alpha",
     "published": "2026-10-21 15:11",
-    "query": "Nvidia OR semiconductor stocks"
-   },
-   {
-    "title": "Nvidia’s Jensen Huang Reveals AI Data Center Quick-Fix. These Stocks Are Winners.",
-    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBmUDhYeUJnWWhob3owVVl0czY4VWFJck5oTk84ZHpJa2tFaEd5TElmdGJRUnl5bEcxVTZ1S21QcEUtY2QwZ2pDaUdmemNzdlgwRnY4QnBIVG95dTkzOHRaaXFaX3ZRdE45RTJQb0FiVWhZdE5UbE15elNvTWpPWFE?oc=5",
-    "source": "Barron's",
-    "published": "2026-10-21 17:37",
-    "query": "Nvidia OR semiconductor stocks"
-   },
-   {
-    "title": "Nvidia Aims To Speed Deployment Of AI Factories",
-    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcVFUcFRrREhOM2cyOEFQN25HamstcFl0QjB2YXcwbHlyOW1EcTB1d0ZjOW5XX2NWckpldVU1YVZ1VnNJeGZ1TzloS0VKN1dERTFmU21mU3RoM2RwVWVBMGh5WnBPRnVTa2JsUWE5U3M3QnRwYUltc2NicnNoVUM5Y0FIQ3pwWGxy?oc=5",
-    "source": "Investor's Business Daily",
-    "published": "2026-10-21 21:15",
-    "query": "Nvidia OR semiconductor stocks"
-   },
-   {
-    "title": "ASML Has Incredible News for Nvidia Stock and Micron Stock Investors",
-    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVkFJdXAzQlduVjl6alhDSmJkdlc3N1dnUUhRai1jVWNKSU56OFc1U0tfa1NUeW1WejltYmRjV1hHMzJ4dmtCYkpTV21XTTZNaEgwVWdJMWVIS21tTE15S1E2SDItT0pvdU1LaGdEOGdHeHU1azdzbHUyc2VhMUltcXZBV283WHZaLXNmSHFKc0p4MTkwWHBQa3NwNnc2R2hhNEpoQzFpZmV6OVM1cUJNZA?oc=5",
-    "source": "The Motley Fool",
-    "published": "2026-10-21 19:32",
-    "query": "Nvidia OR semiconductor stocks"
-   },
-   {
-    "title": "3 Semiconductor Stocks Investors Are Watching For The Next AI Compute Buildout",
-    "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPb2pzaHI5T2JGUnBYTjJsaHpyV3hwZUM1aXJIOFh6V0xadXBFNWNXdHlLOTVhQ0ZTZldGaVB2elJWaWktMjh6aVhOUWVlbnV1STZXeTdFQkF0LVN1TVAtREM5dUFCMEw0R01FcEh6dDdxSERYZWxSUGh6Y3BxUTdHMFFoT0o1YTNIV1djX3hCU1JyQU92REp3dEE1VlRYQ3pLUzVHVWNLaklkQnhDNFlwRk5WY3ZvWjlURE54dFdTdmhkMDRmd1VuREdGRnNGUnh4RDJDcFdyeWZFOHB0dXREVy1OSGlhVklZek5ZRtIB8gFBVV95cUxQQlRhVjNmYmg2aHVla1g4RkhBMG41c0FaOGVjUEVFWU1YSjBHVnpveW0tbWxHY25WbTA4Tnc3NGxRbDRXUndsZHB5cVlYU0JjS2JDcTVtcW5qUm0zMEdLeXJpWVk5dTVYRVF0QzBmMG1iLW5UV3ZFRHNGb3VfZnVqLXJjMUJVamdsaDVzdDNwYVNmQmFGNzBMSmw5cmtEUFRZbFNjbFJMRDFBcGJoNWt0ZW80VXB4U0loVW5rWkR1ejVFOFdyek5NaFhzRy1xRGhodW1rX2xqT0xPWEppeWxOMWpJb3I0RXpmWjd1cUtaT2V3QQ?oc=5",
-    "source": "Simply Wall Street",
-    "published": "2026-10-22 02:49",
-    "query": "Nvidia OR semiconductor stocks"
-   },
-   {
-    "title": "Jensen Huang Says the Next Wave of AI Is Physical. Forget Nvidia and Tesla, I’d Bet on These 2 Mid-Cap Stocks Instead.",
-    "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdFotaUFUdXRhWk5JLWRwTWd1WE5YT0M5VTItX2I5TGkzM21LQ2M2SHZjM2lQeVlhd2ZKTENkdlczVUlDZGlxbWdISVZkUXpvZWZCZ01LM1AyX1VFc0pqOUl2LUtpNzFvQk90bFR6cHBpUkFrM2xsUGVrdkowTjVoWWpITmdYZFJrYWF5OWxZV0tmVjZLdElxQ01JRkJwcV9UZ2NXYUdfNVhJazhfcW9HSTRxSFJQbVpaa3pEQ3hfQm1xSU1Ba3hPd0ZQNFdIa1ZVOUlvblYyaWdMeXE5aTBjMncybFVITHE5QWhQQ3NUVQ?oc=5",
-    "source": "Barchart.com",
-    "published": "2026-10-21 22:25",
     "query": "Nvidia OR semiconductor stocks"
    }
   ],
   "watchlist": {
    "2330": [
     {
-     "title": "台積電股價有望狂飆近3倍！外媒看好「這時」衝破1200美元驚人目標",
-     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBKdWRKZDFuVHFBOHZ1NERQSGZNZ20tMVAyaG9Gd3REQkRXZDdNcmxiNThvZlVLRk12d0Jwd1J5Qmc4V0EwSjY2d2pQUXlVOURKX1Y1SnRFT0xuRWFHX1dn0gFkQVVfeXFMUEdLU0NiRGZySzZkRno1NGdpRkhkRDZ6UlpPVGlBYi1zdUJvb0xqaTRiVEVuRk5RbWJpY3hBRE5PRHRBOFZscUdKSWNnT0dBMmVEcEV4VjlUNVNxTFIwNW1FSHVWeg?oc=5",
-     "source": "自由財經",
-     "published": "2026-10-21 14:07",
-     "query": "台積電 股票"
-    },
-    {
-     "title": "台積電股價超狂預測！外媒看好「這時飆3倍」：衝破1200美元",
-     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9YSUpWdWFfd0RSWkxKZjJ6LXdUVmNfRWswRDg5WC1DNWFyU3NISzQ1ejNTbkxPMkJDaDR3Ti1wTWg0V2huRXlidE8tenNxSG8?oc=5",
-     "source": "TVBS新聞網",
-     "published": "2026-10-22 02:54",
-     "query": "台積電 股票"
-    },
-    {
-     "title": "SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點",
-     "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQQk5ZSXU2dHBHeVUyalhoTVd2eFR0d0JPTDZFV3JOenFmbFBITDUtRG5pdEU1bk9EVTNLQmRGOExsOXdkYlA2X0pYalZQb1FLcmZqQ21zYmNFc2RlSmNsTHpWSTJPWi1Za1BEaGh4V2JDeGc1Wnl5UW5Cc3VDdnlJQ2J3R2ZnZFVodUYzQXlpd1JyU2lfY1ZyOFRtY3AxQkJTTmc2UjFaMVJQbGdkcjlHczhaNjBXTFJyVUZOQjB6R3NuTlNLZ3lydjlMZTJjeTB0eXhGd3Y3QVgyd1ZDNWszWnZfd0ppVUw1Zml1bUJ3dEs2NzZhLXpXZDI3ZmNza3VMOWs3RGFJWkFBaHpJTkJrUHhaTjRKRGNWQm1YVG1WcDVYRl9SZWRRYTdsYVdPVThLSDdiU3VhQjRvakFCMzcxcFpCcmZvb1Z0eEZwXw?oc=5",
+     "title": "薔琵颱風假放定了？台積電跌35元 分析師：等長假回來漲",
+     "link": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxPVFllWnQzNVAyM1k0YlgyQ3JrZzFIT1Z3MnByXzJDSVBHVVdNdTBReHIwMzcwT1kza0o1YWpaSjZpLS1tbi1qdWFSZkhfdlVwZHctMnVXTHdsTV9JN1F6enZZOFNTYUxubmxQTFFoaXlwcndQc2xIZjh6LXY2cWltSHcxY3ZkR25Kd2tCSjNLcVlUUThkVnBxU1RUMUstWnV2dmJJelpQWU9idWVGSk1lcEdhLXZuVUw4Vy1xTTlSZ2dzdzRXNXVDa0lrRXhCbGg1cmtuOW1PTGpPNF8xQ0JZLXdybXNDaGx6ek13ajFKSlYyWm1LVzZ0bzU2R0pMVmlzR3Q0X2x3QV8ydjZ4OENjVG91S2JTQ1RGeFhCUW9QTDdha2FIYzU4MlFzWHFTRmZoZ0MtRlFkclF2RldqQzh1T0w3Q0NvN0ZZMFVCclQzalFQdDZDZnJVcnNwMXBZdXdtcTN2SzFyWXkzeTBjYS1IaDhqTy1tSWw4VXYwWjZPaw?oc=5",
      "source": "Yahoo股市",
-     "published": "2026-10-21 14:58",
+     "published": "2026-10-22 12:12",
+     "query": "台積電 股票"
+    },
+    {
+     "title": "台積電ADR連漲 現貨卻承壓 海外溢價近16% 台美股價落差透露訊號",
+     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9iSGhlc3ZZSFVqb0t5RUJCWjRPZEViOE5oN0JMYWFwdXExQlNSMGFpS0trZVhDby1NZXVIdzgwZXBic1JmaVE1U0U5SnktRWlNQ0c0YTFkcmxVa0dPeFJjd0N0ZjdSX3JId0J3eVlqYw?oc=5",
+     "source": "理財周刊",
+     "published": "2026-10-22 06:13",
+     "query": "台積電 股票"
+    },
+    {
+     "title": "看好台積電還會漲！外媒喊「頂級投資標的」 曝下一波上漲行情",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fLWZTRE1oTDgzdWZGUHFVWWh6dU5GSU5xNTZ0dEZ5THFvam5Od2FkRHNiV3JzdHlPRUJ1QUVvTUZJOGxMbzRUVE5iUk53SGM0bDVGaW0yejFpeURKcUI40gFkQVVfeXFMT1lFRkM5M0tZcjctNVBkWUVGakc0LUVZLXhiYUF1eUIzWjF0OXNyeUxlYnNYQVhHSkdnekljaC1HUmszS0RYMkNCRzJ5YVdHSG5LZjUySERJMkRPRklVaFlYSmdydQ?oc=5",
+     "source": "自由財經",
+     "published": "2026-10-19 08:47",
      "query": "台積電 股票"
     }
    ],
    "2317": [
     {
-     "title": "睽違2個月！郭台銘再買鴻海股票430張　持股市值千億元",
-     "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9YY1FxaEdDZXVwZjJQUFBLR3RNTFRuMkplU3BYTjFBUEdYbE9iM1dsclpaTVhvOFU0bVduc1lEMlN3Y0Y5eFZr0gFLQVVfeXFMT0w2bkQ0VFV0LV9zQmdDVDRvOGtJb0huekMtTzZlSzlYb0dIUGtvckJ6cTBERjdVSUVZSVc5VGxtM2QyYmtTekRzd0hJ?oc=5",
-     "source": "三立新聞",
-     "published": "2026-10-19 20:32",
-     "query": "鴻海 股票"
-    },
-    {
      "title": "鴻海(2317)股價卡250元被嫌「真的廢」？孫慶龍卻砸880萬大買50張...比買台積電CP值高！最新目標價曝光",
      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOFZoUDlLdUlubXhDd1BsU3Y3U2VORTNfSDZZSGtKNS1lNmRpLU92MGFBRXQxZGxHN1ZjUnY0N0RUM055NkM5WVpkeWNSeENwMEtuN2QxZTRnRHRMMUtDRXBONTEwX3RVZDVYMXZvYzFzLTl3eEZNa2xzUHRYY0stWQ?oc=5",
      "source": "今周刊",
      "published": "2026-10-13 07:00",
+     "query": "鴻海 股票"
+    },
+    {
+     "title": "鴻海驚傳「股票1拆20」！詐團假冒分析師斂財 手法曝光",
+     "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQOFNpSk5QaWpxaXVHSnhEX0wtUzFlRjRnQVhQNHhhdjhld0ZIVGcwdnE0TDU4WHVxQlNweUF3ZV84T1NLNllEdGhEVkthZHpTVGZqR1V2dlI4Xy1GbXBsZXM3Ymc0ZVg4dVM1RTVETmRBVGhLUExfWE9oTFdoQVZibGRUaVhnaGd6M3I1SmhOMEtQcm9UbUNsVGdaNXpoMlhBWjRQM1JYT1c0WEVpbVZDY28zNW5CLWhWN0FPQVhYbHM4YWZoNUJuYktRVUJ2SWExYVdaRFliUXlpM1FXQndTc0lPRzFURmstMzhfUXB3VVRBZEhOY0p5Q3RSYThocmMzV1hJR0pxTWdSSjhRMnk5T1hFS3p3aVRQcmQ1RWl5MWduN2ZLWTZHdmd1VmFNZ1Zmbk02c21DTFNEUlZMNUZKVjRkeWd1d3RlUm1pT25tWnJ5Nm8?oc=5",
+     "source": "Yahoo股市",
+     "published": "2026-09-06 07:00",
      "query": "鴻海 股票"
     },
     {
@@ -17839,10 +17856,17 @@
    ],
    "2454": [
     {
-     "title": "【即時新聞】聯發科(2454)營收創高卻重挫24%！法人急調節，法說前還能逢低接嗎？",
-     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBnQTJCZk1vZm9pS3BaMVZrSmt6c1Y4SFZjWXZXQlFrQ0dOSlo5cng0NVVHbDlxN1FJNXpMTWpyZzZLU2FwLTlud3pGT2IzWUs3LTlOQWJKX2M?oc=5",
-     "source": "CMoney",
-     "published": "2026-10-22 04:14",
+     "title": "台股跳水暴跌846點！台積電領跌35元、鴻海、聯發科挫逾3% 日月光拖累大盤重挫4.39%",
+     "link": "https://news.google.com/rss/articles/CBMixgNBVV95cUxNNXlfRDZiUkNUZ2pKODF1V295RjJMUnNfV0paWXVHeXlQZWIyZFJmc2o0Yk5LOEZWTFpuTGllNm0zem5wX1hSbGhnQzN2TnpRdzNkeVFVTXhfc1FmbmtDdUFobld3aVhCRTUyWVprT2hpbkRsdVdSaXl1QTZGZzUyWGhEaXVjTktKZ3dTTHdDUTd0REozY0htVGJFRzZnNlNLWDZJUFlZbjVGNTVIdHZQQ21PUzh5M2l4NUhlbVBwMktJa3VZZTV5WVBZem9HcFBLbm1WUy03WHdjZGhBRzZyWEdReTRfcTVjUGp0UHpPRzYyWTJ6ZG5UOTJWZFJaVWcwdmd3TkFINHFoOUxwa0lWaENlQkMtZkpySHBwYm9QR2FwT2F4dEY5YXRud242VC1CUjc4aVlCb21yeG95QW8zRFNOWnZySHB5Y2xiWGFPWS1VbGlxTzNBRWxlSWF3NnFuTHE0b3FfRTVPcTBiVlRqajZ2eUh1VkYzei1adnBRMGZzVjBmTWNjQ1VmaVRvQlNDXzdKVHJMdlc1WkdOM3NLVUJ0Q05HS21GNWFYaDh0S3RlbEZYWnYyUFE3Q09LQVdGVWFabk1R?oc=5",
+     "source": "Yahoo股市",
+     "published": "2026-10-22 05:59",
+     "query": "聯發科 股票"
+    },
+    {
+     "title": "焦點股》聯發科：搶單傳言衝擊股價 外資力挺市場低估",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WTzEyNko2MUVoSFkzWk1sR2tZeUlYb01PYnVwbHphOE5kUk9SUzFRcllZRUVqbWR3U09LMEVZcElwMGtSVGtELW9laVJucGRtOWxPZV9HREM?oc=5",
+     "source": "自由時報",
+     "published": "2026-10-22 05:47",
      "query": "聯發科 股票"
     },
     {
@@ -17851,21 +17875,21 @@
      "source": "工商時報",
      "published": "2026-10-21 07:51",
      "query": "聯發科 股票"
-    },
-    {
-     "title": "聯發科3500元買進、5500元沒賣！400萬投資人怕獲利回吐 崩潰求解",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9sQ1RLc3pDOUdQSThYVGhKWkFlTDhDU2dZakgzZlFHMGI4OEdsZ0E3bmxFUHJtTTRzeU80alRmUXdMRkl1MU96WFZFTDE5LVFOWEHSAVdBVV95cUxNUi1CZENONzJpVC1GaFpRR1lZaE5HeHlWeFhXcVZaVjdoRzZ0azk4R3NGVGdBUlRLSFdNdGZZWWh0SC1PNGVZd3hRNThVZ1JVeHNXT3pkanM?oc=5",
-     "source": "UDN",
-     "published": "2026-10-19 03:43",
-     "query": "聯發科 股票"
     }
    ],
    "0050": [
     {
-     "title": "元大台灣50(0050)-熱門討論區 - 股市爆料同學會",
-     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9GZDZsWURXQjNyT2d3ODctcldtdkJqTTZYNHFFR3VsVGhrTmQ2QzN4X3phV1VxeE1jekV6RjF2dk83TEFZOGZWU1g1R09iMENITEZZVnJQSXJIbngzME1V?oc=5",
+     "title": "0050 元大台灣50 - 不到40歲就辭職！農夫月領股息5萬投資策略曝光- 股市爆料同學會",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1QbUZ4eWV6Qlc2TEtjajF1dmhaMlVGSzhYeDRub29neDNWeGlDbkphSjBkdWZ6NHFqNTNwSGh1dk5kU1c5c0ZNaUQyWkZMNnNVam1uYTVEWmE?oc=5",
      "source": "CMoney",
-     "published": "2026-10-20 21:51",
+     "published": "2026-10-22 02:00",
+     "query": "元大台灣50 股票"
+    },
+    {
+     "title": "【零股排行榜】 盤中零股成交量TOP 20｜0050 元大台灣50、0056 元大高股息、2330 台積電、00406A 主動中信台灣收益、00631L 元大台灣50正2 (1022)｜豐雲學堂2026 年 10 月",
+     "link": "https://news.google.com/rss/articles/CBMihwVBVV95cUxOeENSaDNzd2FvRHFLZVMxQXdQb1JkYy1OLXlTSGMtdWpnT01SMDNIRUhQaTY0a083Y2RUVnRmN0hBX205NFdMMkJUdmNYWEJJYm10WV9yenVsRkRHejM0UDVRTFlYdHhWQVNNcFFyRWc3cEdLUWc3Qi1vZnJvTThHQ2wyTzJ5azg2bWUzX2plUlBTTVd3Vm5ERU53bnJhNmFuNlVDOXpBdmhZMEhsOWdLMmltWF9VNkMwWnZTOFZoQjZxb2xGaE5kZ05NNHIxSUJlYWh1VFQxZWtadUZ1bEd6QWdVcmpQSU1SWGRKa1UzTE1zaklrSTh1V01VczlveUREVkFRNE9ueW9YV1lIZFQxREtGZFlxMUx2NjBKOEo4dGVQdnZQME1HeDFqQmtSYlhHNGNRNlZibjNUNVBaZEVuMk9ydzgxMnIyRWRKUXhTcjZQSVdnR29kcm52UVVPZ0pNX2NfaTdsbzcwR1ZFV08xSGx2SzZlSWcxWjZELVVBNnlyVlZSbzJVdDVYcGlBWEJtTHhtNkFBcEVPNm1Ob1MxYjk5ZldveDkxY2IxNmVnS2NxX2cxNkpKN1VPMFVsMVQ0RkVhYWFObTdOTzI3MkF3UmJoT3BsYkkyYVFSVE96VzBKdVI0dmJqVnZWWUJkVFk2YWRYQ0lVeTdXWEFEeEt5TUhYSk1JTFZxbGNpamx0ODY3LWl4YlJ6a2d1SmItVHM4Y2VacmpZdzNYeGZLbndaS2doZFZSdnpYZ0ZBVUtLMHBvOUtOYTFEXzZlbnE0NnVSQklMUlotLWFsdUF2OElTRlk2UHRlejhUUmVveTh5bU9jcEhiMkExSUlmM2lHbENQMnpKSHd2WQ?oc=5",
+     "source": "永豐金證券",
+     "published": "2026-10-22 07:28",
      "query": "元大台灣50 股票"
     },
     {
@@ -17873,13 +17897,6 @@
      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wYUdPYUpobGRVX3V5UEtWYTlFWjNXR3Fnb0lmOFMzRjFRdmpyTUZ3QzJ0SHpmVUpCWnBTWGZZUUFoUU13cDRmLXRNTTF3ZDRnenBQQjVudlhSQdIBX0FVX3lxTFBfWWFVWlVvcV9ORmFpeGt1d0dhTko3cndSa19GVFBDZ01hcEdnS2tiOXN3dzBBNmNXQ1RXUDVjalhGeEgzbzJxZXFGVEVLWUNkTXo2ZnEzWV8tcmNrMzhj?oc=5",
      "source": "經濟日報",
      "published": "2026-10-19 09:00",
-     "query": "元大台灣50 股票"
-    },
-    {
-     "title": "0050股價116元新高還能買？100萬滾出2500萬，達人「無敵買法」曝光：月扣1萬、2萬能滾出多少錢？",
-     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOc3ZNdjJjam9idFR0TXRkWHlJMjdGQjFZTDhDRlJucGxTc1hpRlpEbTc4ak1zWEhLM1pLR2gxeThtNzlhYUl5RXhyTXRReklKN2hGcmZnTVhGSjJqM2xYbExGUzRYaHQxZDRaY29zbjFvQWI4cFR1Y3BEVVhSQlg1UA?oc=5",
-     "source": "今周刊",
-     "published": "2026-10-07 07:00",
      "query": "元大台灣50 股票"
     }
    ],
@@ -17899,10 +17916,10 @@
      "query": "輝達 stock"
     },
     {
-     "title": "SpaceX, Anthropic and Nvidia Help Snap Tech Stocks Out of Their Recent Malaise",
-     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVGRlMHl1WTZEajZ1em9odVlVQzlDd1FDX3VXQzYwaFlkZ2tFcktZT3g0Y1JLcGJVbTZxSzdHM3pSNzY3Q1MyZlpjYXRfVTZrRDVEM09velVsbk52MXdDbjJwUHkyUTlUZHR4X2d6SlkzeHFONlktS01wcVZJMDRyWW02NDN2ZVpyWDdLdk1ZbkpraDdYdWx5a2FEeFFYZklzNGZQSTE2UHNGYVZYVERiOUdjUzhpU2dCQWx1UkJB?oc=5",
-     "source": "WSJ",
-     "published": "2026-10-21 21:36",
+     "title": "Jensen Huang Says the Next Wave of AI Is Physical. Forget Nvidia and Tesla, I’d Bet on These 2 Mid-Cap Stocks Instead.",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdFotaUFUdXRhWk5JLWRwTWd1WE5YT0M5VTItX2I5TGkzM21LQ2M2SHZjM2lQeVlhd2ZKTENkdlczVUlDZGlxbWdISVZkUXpvZWZCZ01LM1AyX1VFc0pqOUl2LUtpNzFvQk90bFR6cHBpUkFrM2xsUGVrdkowTjVoWWpITmdYZFJrYWF5OWxZV0tmVjZLdElxQ01JRkJwcV9UZ2NXYUdfNVhJazhfcW9HSTRxSFJQbVpaa3pEQ3hfQm1xSU1Ba3hPd0ZQNFdIa1ZVOUlvblYyaWdMeXE5aTBjMncybFVITHE5QWhQQ3NUVQ?oc=5",
+     "source": "Barchart.com",
+     "published": "2026-10-21 22:25",
      "query": "輝達 stock"
     }
    ],
@@ -17931,24 +17948,24 @@
    ],
    "AAPL": [
     {
-     "title": "Apple's iPhone Duo in short supply — plus, the 2 stocks fueling an AI rebound",
-     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQWkFCQk1hV0ZJcnA4SzlKNWUyU180SDNuX0I0LXpSVzE4d3AtdFlWbi1VTDgyQTdCZlVHRzFIdEZRODNpdEJaRmUwNWUyWHNxV3BJakM0YWNDVlRlQUJaMk1WdTlsdFVRakRtbVB0OTVTT1A1cllBWFpJdWNKM0k0Qm8tdl8zdDhTbFlkZ0FRNnZRbkVGZWZUb3MxeVoxVWU1QXJhTHFfdExXRVVmMW5jZjNaRHhLblRkQXIzUA?oc=5",
-     "source": "CNBC",
-     "published": "2026-10-21 18:45",
+     "title": "What Intel, Boeing, Nike Have In Common With Each Other — And Apple",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWjhRdTBad092aXhFMjlWc2s2M0d1OExfYU93eGxieGtiTkdrOVd1aHdLYURCZDBkZWZadmpCRTZVTVJZZFNKdWdqdDFnQU5YT1hKUGFldk5WNU1YbXNRbnFwaF83bW1KSkVuUEZZbGpUZjdlVXNEZU5HWHVRdDRJeGdkRTFrTkRhemc?oc=5",
+     "source": "Investor's Business Daily",
+     "published": "2026-10-22 11:00",
      "query": "蘋果 stock"
     },
     {
-     "title": "Apple’s iPhone Supply Chain Risk Spells Trouble for This Chip Stock",
-     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBvR3AzTkEyT3M4VS03UENSTGVhN0E1VnJOckMtQXNwV3pNQVRsVmptc2xYekZiNndrbVAyaEJ4eTlKXzU4YlR3SmRsdndGazhaS0pGQnhPU0U5eVc2VmtoTDB2SlctVWJpWFJhYW91NTRJSm1vbDE3WkYwR3Q2dw?oc=5",
-     "source": "Barron's",
-     "published": "2026-10-21 14:19",
+     "title": "If you want an iPhone Duo, Apple will have ‘limited’ stock in stores",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRGJQbUotc2hITWRpMC1RQkxrMEljdURuX243bnBPZmZEOXpLVXZaVldVcnJ2WFVnaEJvdkprLVctb2VvYmpLOHpqQnl3Wk9QdnBvWV9pa0VBN2l6WVhIRHVzRWdkUzJMQjVLeXYwTnVwVzFtYkkycGJ4MWxkSjJHVUpzUEtPa1d1a0xRMDVqRVRNVkkyMVAyZF9CdVhCbWlyNjlLaUx5aEFpR1FWSHBxWA?oc=5",
+     "source": "Macworld",
+     "published": "2026-10-22 00:08",
      "query": "蘋果 stock"
     },
     {
-     "title": "There will be extremely limited iPhone Duo stock in store on Friday",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWEhrNkhFSkl6YnFLdXBQWW9uX21ZR2RlbUhZZVZ2bHBQRjg3c2ZNRVBsVml1aHRiZThscERmQTRXTXBhSVFmaHRFVWdHWDhTdEpiMGplanloN2dVdnRtcGJoOFZtbUREU0UxSDhTWlp1alk5cG1qdHBpMlI2Wnp1VEdJeDhzRXhjV1hyb19ISXFPZzF3cEtUdXlmU3R3aHFLcFhIOXlGa2p4SWxiYkpj?oc=5",
-     "source": "AppleInsider",
-     "published": "2026-10-21 14:41",
+     "title": "Should You Buy Apple Stock Now or Wait for a Dip?",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbGZ4RzItZ2JvOHFINTdlMmxZajFyaEcydFdaVUVvUmVWMHBKUjNhcWtEelJqTVY1dmtudzFkOGdFZFBTZzJZS2pNTzNTSnNzMnBhV1ZyVVBmdTZFRVNTVjRqelM1VXZOWFF3dW9GZmZzc1Z4ZG0wR0NFQWYzY000eTZGVnRQOF9HbG9DaWJoNWZ1QTQ?oc=5",
+     "source": "Yahoo Finance",
+     "published": "2026-10-20 15:19",
      "query": "蘋果 stock"
     }
    ],
@@ -17961,17 +17978,17 @@
      "query": "微軟 stock"
     },
     {
+     "title": "Microsoft (MSFT) Stock May Be 22% Undervalued After Maia 300 Unveiling",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaHdDUjJiMUkwT3NkQ05EOWxJX3lpV1AxUWlqNG9PaHRUWm1BNnJtY3pUMHljbVY4M2UwR18zelVVWkVMa0xiemN6T19MQzhvU0FMLXNQOUdCb1prc0lxb2hxWlRhRTJPZE5aa05DNk1UT2pUWFhVX0Z1QlNHTFZReUhNSU1VbGlXZU1oeXZUNlgzNVZoNS1J?oc=5",
+     "source": "Yahoo Finance",
+     "published": "2026-10-22 04:25",
+     "query": "微軟 stock"
+    },
+    {
      "title": "Microsoft and Alphabet opt out of tokenized stocks in latest blow to ambitious plan from OKX and NYSE parent firm",
      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTEpGTXJ6c3M1V3lVWXVITzBBRGFJVXp3TVhRSlBhNDBYanhiZDVJd015ODdleEtJTHFrYVpPRTl4bHpDOFR0MXVRXy1UYVdZdlFnNThtclMtb1V3U1gwZk5CNHFiSV84YmcwNXdxRENrUThuN0MyNEtJT1Ywb25qZU5VNVdQTkdZZjNfaHJiWDVNd2M?oc=5",
      "source": "Fortune",
      "published": "2026-10-21 17:08",
-     "query": "微軟 stock"
-    },
-    {
-     "title": "Microsoft, Alphabet, Goldman Sachs Join Growing List of Companies Objecting to Tokenized Stocks",
-     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYmRnei1WX3ROWmlBbHNXbDZaS3BQMkhhTzR3M1RmdlVmRHV2YU5XOENpeWdHeW9CUDZRU0RwX25hLW1na1VtV2JwNXFEM1pwZHl3UXlHUnpHTDFZYmg0b1U1NGFoaGJXeG9YOFE3Wmp5X2J0bUxHMnRfdUx2Z1dFMGNseUp1MHFKT1BQVWQzMWNpSnNuanM3bVdHTEd2T0Fzd2F5UQ?oc=5",
-     "source": "Yahoo Finance",
-     "published": "2026-10-20 20:16",
      "query": "微軟 stock"
     }
    ]
