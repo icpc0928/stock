@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日市場報告 · 2026-10-28 午報</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f6f6f4; --surface:#ffffff; --surface-2:#f0efec; --line:#e4e3df;
+  --ink:#141414; --ink-2:#55544f; --ink-3:#8a8983;
+  --up:#c8352b; --up-bg:#fbeae8; --down:#128a4d; --down-bg:#e6f4ec; --flat:#8a8983;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --accent:#2a78d6; --accent-bg:#e8f0fb;
+  --warn-bg:#fff4d6; --warn-ink:#7a5200;
+  --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#131312; --surface:#1c1c1b; --surface-2:#252523; --line:#31312e;
+    --ink:#f2f2ef; --ink-2:#bdbcb4; --ink-3:#85847d;
+    --up:#ef6b62; --up-bg:#3a1f1d; --down:#3fbf7f; --down-bg:#17322a; --flat:#85847d;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --accent:#3987e5; --accent-bg:#1b2a3f;
+    --warn-bg:#3a2e10; --warn-ink:#f2d38a;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei","Segoe UI",Roboto,sans-serif;font-feature-settings:"tnum"}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 18px 60px}
+header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:14px}
+header.top h1{font-size:22px;margin:0;font-weight:700;letter-spacing:.2px}
+header.top .sess{font-size:13px;padding:2px 10px;border-radius:999px;background:var(--accent-bg);color:var(--accent);font-weight:600}
+header.top .meta{color:var(--ink-3);font-size:13px;margin-left:auto}
+.btn-home{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:10px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-weight:600;font-size:13px;box-shadow:var(--shadow)}
+.btn-home:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.bottom-nav{display:flex;gap:10px;justify-content:center;margin-top:36px}
+.banner{padding:10px 14px;border-radius:10px;background:var(--warn-bg);color:var(--warn-ink);font-size:14px;margin-bottom:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--ink-2);letter-spacing:.3px}
+section{margin-top:34px}
+section>h2.sec{font-size:26px;margin:0 0 14px;font-weight:800;display:flex;align-items:baseline;gap:12px;letter-spacing:.5px;padding-left:14px;border-left:5px solid var(--accent)}
+section>h2.sec small{font-size:14px;color:var(--ink-3);font-weight:500}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g23{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+@media (max-width:860px){.g2,.g3,.g23{grid-template-columns:1fr}}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--flat)}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:var(--surface-2);color:var(--ink-2)}
+.chip.up{background:var(--up-bg)} .chip.down{background:var(--down-bg)}
+/* headline */
+.hero{padding:22px 24px}
+.hero .hl{font-size:21px;font-weight:700;line-height:1.4;margin:0 0 10px}
+.hero ul{margin:0;padding-left:20px}
+.hero li{margin:4px 0}
+.hero .sent{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;margin-top:14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 11px;min-width:0}
+.kpi .l{font-size:11px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .v{font-size:18px;font-weight:700;margin-top:2px;letter-spacing:-.3px;white-space:nowrap}
+.kpi .c{font-size:12px;font-weight:600;white-space:nowrap}
+.kpi .s{font-size:10px;color:var(--ink-3)}
+@media (max-width:1000px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:520px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* charts */
+.chart{width:100%;height:280px}
+.chart.tall{height:440px}
+.chart.sm{height:220px}
+.chart.spark{height:56px}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;color:var(--ink-3);font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.n{font-weight:600}
+.sym{color:var(--ink-3);font-size:12px;margin-left:4px}
+/* stats */
+.stat{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.stat:last-child{border-bottom:0}
+.stat .k{color:var(--ink-2)} .stat .v{font-weight:600}
+.breadth{display:flex;height:10px;border-radius:6px;overflow:hidden;margin:8px 0 4px;gap:2px}
+.breadth i{display:block;height:100%}
+.breadth .u{background:var(--up)} .breadth .d{background:var(--down)} .breadth .f{background:var(--ink-3)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink-3)}
+/* watch cards */
+.wcard{display:flex;flex-direction:column;gap:6px}
+.wcard .hd{display:flex;align-items:baseline;gap:8px}
+.wcard .hd b{font-size:16px}
+.wcard .px{font-size:22px;font-weight:700}
+.wcard .m{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 10px;font-size:12px;color:var(--ink-3)}
+.wcard .m b{display:block;color:var(--ink);font-weight:600;font-size:13px}
+.wcard .note{font-size:14px;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:10px;margin-top:4px}
+.wcard .nw{font-size:13px;margin:0;padding-left:18px;color:var(--ink-2)}
+.wcard .nw .src{color:var(--ink-3);font-size:12px;margin-left:6px}
+/* picks */
+.pick{border-left:4px solid var(--accent)}
+.pick .t{display:flex;gap:8px;align-items:baseline}
+.pick .t b{font-size:16px}
+.pick p{margin:6px 0 0;font-size:14px;color:var(--ink-2)}
+/* prose */
+.prose{font-size:15px}
+.prose p{margin:8px 0}
+.prose ul,.prose ol{padding-left:22px}
+.prose table{margin:8px 0}
+.events li,.risks li{margin:4px 0}
+.events time{font-weight:600;margin-right:8px;color:var(--accent)}
+/* news */
+.news li{margin:6px 0;font-size:14px}
+.news .src{color:var(--ink-3);font-size:12px;margin-left:6px}
+footer{margin-top:40px;color:var(--ink-3);font-size:12px;line-height:1.7}
+</style>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="btn-home" href="index.html">← 首頁</a>
+  <h1>每日市場報告</h1>
+  <span class="sess">2026-10-28 午報</span>
+  <span class="meta">產生於 2026-10-28 14:01</span>
+</header>
+
+
+
+
+
+<div class="card hero">
+  
+    <p class="hl">費半大漲 3.6% 點火，台股勁揚 939 點站回季線，記憶體、PCB 領軍</p>
+    <ul><li>加權指數開在最低、收在最高附近，一舉站回季線（46,399）並守住昨天 45,676 低點，漲跌家數 714：280、32 檔漲停，是近期最乾淨的一根紅 K。</li><li>上漲主力是「昨夜費半 +3.60% 的直接受惠者」：電子零組件 +4.38%、光電 +5.11%、塑膠 +5.35%，聯發科 +6.94% 重回 4,000 元之上；金融股反而收黑，資金明顯從防禦轉回科技。</li><li>但量能縮至約 6,741 億元、三大法人資料截稿前未公布，反彈品質還待確認；今晚 Fed 決議（台北 10/29 02:00）與巨頭財報才是能否攻回月線（47,930）的關鍵。</li></ul>
+    <div class="sent">
+      <span class="chip ">美股：中性</span><span class="chip ">台股：中性</span>
+    </div>
+  
+</div>
+
+
+<div class="kpis">
+
+  <div class="kpi">
+    <div class="l">加權指數</div>
+    <div class="v">47,036</div>
+    <div class="c up">▲ +939.35 (+2.04%)</div>
+    <div class="s">2026-10-28</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">S&P 500</div>
+    <div class="v">7,722.60</div>
+    <div class="c up">▲ +45.83 (+0.60%)</div>
+    <div class="s">2026-10-27</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">Nasdaq</div>
+    <div class="v">26,478</div>
+    <div class="c up">▲ +308.43 (+1.18%)</div>
+    <div class="s">2026-10-27</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">費城半導體</div>
+    <div class="v">11,482</div>
+    <div class="c up">▲ +399.03 (+3.60%)</div>
+    <div class="s">2026-10-27</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">道瓊工業</div>
+    <div class="v">52,378</div>
+    <div class="c up">▲ +15.99 (+0.03%)</div>
+    <div class="s">2026-10-27</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">VIX 恐慌指數</div>
+    <div class="v">17.52</div>
+    <div class="c down">▼ -0.87 (-4.73%)</div>
+    <div class="s">2026-10-27</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">USD/TWD</div>
+    <div class="v">32.400</div>
+    <div class="c down">▼ -0.130 (-0.41%)</div>
+    <div class="s">2026-10-28</div>
+  </div>
+
+  <div class="kpi">
+    <div class="l">美債 10 年殖利率</div>
+    <div class="v">4.990</div>
+    <div class="c up">▲ +0.010 (+0.14%)</div>
+    <div class="s">2026-10-27</div>
+  </div>
+
+</div>
+
+
+
+<section>
+  <h2 class="sec">台股 <small>2026-10-28 收盤</small></h2>
+  <div class="grid g23">
+    <div class="card">
+      <h3>加權指數走勢（含 MA20 / MA60）</h3>
+      <div id="fig-taiex" class="chart tall"></div>
+    </div>
+    <div class="card">
+      <h3>市場統計</h3>
+      
+      <div class="stat"><span class="k">成交金額</span><span class="v">6,740.6 億</span></div>
+      <div class="stat"><span class="k">5 日 / 1 月 / 今年以來</span><span class="v"><span class="up">+0.46%</span> / <span class="down">-1.60%</span> / <span class="up">+14.33%</span></span></div>
+      <div class="stat"><span class="k">相對 MA20 / MA60</span><span class="v"><span class="down">-1.87%</span> / <span class="up">+1.37%</span></span></div>
+      <div class="stat"><span class="k">RSI(14) · 52 週位置</span><span class="v">30.7 · 72%</span></div>
+      
+      <div class="stat" style="border:0;padding-bottom:0"><span class="k">漲跌家數</span><span class="v"><span class="up">714</span> / <span class="down">280</span> / <span class="flat">87</span></span></div>
+      
+      <div class="breadth"><i class="u" style="width:66.04995374653099%"></i><i class="f" style="width:8.048103607770583%"></i><i class="d" style="width:25.901942645698426%"></i></div>
+      <div class="legend"><span>▲ 上漲（漲停 32）</span><span>持平</span><span>▼ 下跌（跌停 2）</span></div>
+      
+      
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card">
+      <h3>類股漲跌（%）</h3>
+      <div id="fig-tw_sectors" class="chart" style="height:378px"></div>
+    </div>
+    <div class="card">
+      
+      
+      <h3 style="margin-top:14px">台積電 ADR</h3>
+      <div class="stat"><span class="k">ADR 收盤（美元）</span><span class="v">436.87 <span class="up">(+2.95%)</span></span></div>
+      <div class="stat"><span class="k">換算台幣 @ 32.40</span><span class="v">2,831</span></div>
+      <div class="stat"><span class="k">對台股收盤 2,425 溢價</span><span class="v up">+16.74%</span></div>
+      
+    </div>
+  </div>
+
+  
+  
+  <div class="grid g3" style="margin-top:14px">
+    
+    <div class="card"><h3>漲幅前 5</h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">成交額</th></tr>
+      <tr><td class="n">眾達-KY<span class="sym">4977</span></td><td class="r">187.00</td><td class="r up">+10.00%</td><td class="r">13.1 億</td></tr><tr><td class="n">景碩<span class="sym">3189</span></td><td class="r">1,035.00</td><td class="r up">+9.99%</td><td class="r">177.6 億</td></tr><tr><td class="n">晶豪科<span class="sym">3006</span></td><td class="r">275.50</td><td class="r up">+9.98%</td><td class="r">50.6 億</td></tr><tr><td class="n">東台<span class="sym">4526</span></td><td class="r">49.65</td><td class="r up">+9.97%</td><td class="r">35.7 億</td></tr><tr><td class="n">創意<span class="sym">3443</span></td><td class="r">8,170.00</td><td class="r up">+9.96%</td><td class="r">122.0 億</td></tr>
+      </table></div>
+    
+    <div class="card"><h3>跌幅前 5</h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">成交額</th></tr>
+      <tr><td class="n">德淵<span class="sym">4720</span></td><td class="r">32.50</td><td class="r down">-4.41%</td><td class="r">12.9 億</td></tr><tr><td class="n">台塑化<span class="sym">6505</span></td><td class="r">103.00</td><td class="r down">-2.83%</td><td class="r">26.2 億</td></tr><tr><td class="n">玉山金<span class="sym">2884</span></td><td class="r">48.35</td><td class="r down">-2.22%</td><td class="r">13.4 億</td></tr><tr><td class="n">台灣大<span class="sym">3045</span></td><td class="r">132.50</td><td class="r down">-1.49%</td><td class="r">14.4 億</td></tr><tr><td class="n">中信金<span class="sym">2891</span></td><td class="r">74.20</td><td class="r down">-1.07%</td><td class="r">17.2 億</td></tr>
+      </table></div>
+    
+    <div class="card"><h3>成交金額前 5</h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">成交額</th></tr>
+      <tr><td class="n">台積電<span class="sym">2330</span></td><td class="r">2,425.00</td><td class="r up">+1.04%</td><td class="r">480.0 億</td></tr><tr><td class="n">聯發科<span class="sym">2454</span></td><td class="r">4,235.00</td><td class="r up">+6.94%</td><td class="r">290.3 億</td></tr><tr><td class="n">南亞<span class="sym">1303</span></td><td class="r">319.00</td><td class="r up">+7.23%</td><td class="r">276.5 億</td></tr><tr><td class="n">欣興<span class="sym">3037</span></td><td class="r">1,100.00</td><td class="r up">+3.77%</td><td class="r">260.7 億</td></tr><tr><td class="n">南亞科<span class="sym">2408</span></td><td class="r">477.00</td><td class="r up">+8.16%</td><td class="r">208.4 億</td></tr>
+      </table></div>
+    
+  </div>
+  
+</section>
+
+
+
+
+<section>
+  <h2 class="sec">美股 <small>2026-10-27 收盤</small></h2>
+  <div class="grid g3">
+    
+    <div class="card"><h3>S&P 500 <span class="up">+0.60%</span></h3>
+      <div id="fig-spx" class="chart sm"></div></div>
+    
+    <div class="card"><h3>Nasdaq <span class="up">+1.18%</span></h3>
+      <div id="fig-ndx" class="chart sm"></div></div>
+    
+    <div class="card"><h3>費城半導體 <span class="up">+3.60%</span></h3>
+      <div id="fig-sox" class="chart sm"></div></div>
+    
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>類股 ETF 漲跌（%）</h3>
+      <div id="fig-us_sectors" class="chart" style="height:326px"></div></div>
+    <div class="card"><h3>總經與跨市場</h3>
+      <table><tr><th>項目</th><th class="r">最新</th><th class="r">漲跌</th><th class="r">5 日</th></tr>
+      <tr><td class="n">VIX 恐慌指數</td><td class="r">17.52</td><td class="r down">-4.73%</td><td class="r up">+1.21%</td></tr><tr><td class="n">美債 10 年殖利率</td><td class="r">4.990</td><td class="r up">+0.14%</td><td class="r down">-2.42%</td></tr><tr><td class="n">美元指數</td><td class="r">102.42</td><td class="r up">+0.10%</td><td class="r up">+0.63%</td></tr><tr><td class="n">USD/TWD</td><td class="r">32.400</td><td class="r down">-0.41%</td><td class="r down">-0.54%</td></tr><tr><td class="n">黃金</td><td class="r">4,046.10</td><td class="r down">-0.70%</td><td class="r down">-2.50%</td></tr><tr><td class="n">WTI 原油</td><td class="r">101.60</td><td class="r up">+1.70%</td><td class="r up">+4.58%</td></tr><tr><td class="n">比特幣</td><td class="r">80,805</td><td class="r up">+1.00%</td><td class="r down">-0.62%</td></tr>
+      <tr><td class="n">S&P 500 期貨 <span class="sym">期貨</span></td><td class="r">7,758.75</td><td class="r up">+0.01%</td><td class="r down">-0.53%</td></tr><tr><td class="n">Nasdaq 期貨 <span class="sym">期貨</span></td><td class="r">29,907</td><td class="r up">+0.32%</td><td class="r down">-0.33%</td></tr>
+      <tr><td class="n">道瓊工業</td><td class="r">52,378</td><td class="r up">+0.03%</td><td class="r down">-0.23%</td></tr><tr><td class="n">羅素 2000</td><td class="r">2,818.87</td><td class="r up">+1.16%</td><td class="r up">+1.64%</td></tr>
+      </table></div>
+  </div>
+  
+  
+  <div class="grid g3" style="margin-top:14px">
+    
+    <div class="card"><h3>漲幅前 5 <small class="sym">掃描 50 檔</small></h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">5 日</th></tr>
+      <tr><td class="n">DELL</td><td class="r">501.96</td><td class="r up">+7.47%</td><td class="r">+8.75%</td></tr><tr><td class="n">SMCI</td><td class="r">35.09</td><td class="r up">+7.34%</td><td class="r">+8.07%</td></tr><tr><td class="n">AMD</td><td class="r">560.26</td><td class="r up">+5.45%</td><td class="r">+4.77%</td></tr><tr><td class="n">MRVL</td><td class="r">243.57</td><td class="r up">+4.19%</td><td class="r">+1.31%</td></tr><tr><td class="n">TSLA</td><td class="r">407.46</td><td class="r up">+4.04%</td><td class="r">+9.03%</td></tr>
+      </table></div>
+    
+    <div class="card"><h3>跌幅前 5 <small class="sym">掃描 50 檔</small></h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">5 日</th></tr>
+      <tr><td class="n">BA</td><td class="r">168.18</td><td class="r down">-10.69%</td><td class="r">-11.70%</td></tr><tr><td class="n">ADBE</td><td class="r">248.36</td><td class="r down">-3.97%</td><td class="r">-3.26%</td></tr><tr><td class="n">CRM</td><td class="r">240.89</td><td class="r down">-2.71%</td><td class="r">-0.64%</td></tr><tr><td class="n">XOM</td><td class="r">179.91</td><td class="r down">-2.51%</td><td class="r">+1.15%</td></tr><tr><td class="n">NFLX</td><td class="r">62.52</td><td class="r down">-2.16%</td><td class="r">-8.98%</td></tr>
+      </table></div>
+    
+    <div class="card"><h3>量能放大（量比） <small class="sym">掃描 50 檔</small></h3>
+      <table><tr><th>個股</th><th class="r">收盤</th><th class="r">漲跌</th><th class="r">量比</th></tr>
+      <tr><td class="n">BA</td><td class="r">168.18</td><td class="r down">-10.69%</td><td class="r">4.99x</td></tr><tr><td class="n">META</td><td class="r">620.19</td><td class="r down">-1.64%</td><td class="r">2.47x</td></tr><tr><td class="n">V</td><td class="r">401.86</td><td class="r down">-0.57%</td><td class="r">1.37x</td></tr><tr><td class="n">GE</td><td class="r">297.66</td><td class="r up">+3.20%</td><td class="r">1.37x</td></tr><tr><td class="n">HON</td><td class="r">218.81</td><td class="r down">-0.21%</td><td class="r">1.31x</td></tr>
+      </table></div>
+    
+  </div>
+  
+</section>
+
+
+
+
+<section>
+  <h2 class="sec">自選觀察 <small>config.yaml → watchlist</small></h2>
+  <div class="grid g2">
+  
+    <div class="card wcard">
+      <div class="hd"><b>台積電</b><span class="sym">2330 · 台股</span>
+        <span style="margin-left:auto" class="px">2,425.00</span>
+        <span class="up" style="font-weight:600">▲ +25.00 (+1.04%)</span></div>
+      <div id="fig-spark_tw_2330" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+0.83%</span> / <span class="down">-3.00%</span></b></span>
+        <span>今年以來<b class="up">+7.78%</b></span>
+        <span>52 週位置<b>60%</b></span>
+        <span>vs MA20 / MA60<b><span class="down">-1.98%</span> / <span class="down">-0.29%</span></b></span>
+        <span>RSI(14)<b>20.4</b></span>
+        <span>成交額<b>480.0 億</b></span>
+        
+      </div>
+      <div class="note">收 2,425 元、+1.04%，量比 0.89，全日只在 2,410～2,430 間窄幅整理，仍略低於季線 2,432、低於月線 2,474；ADR 溢價擴大到 16.74%，現股明顯落後，先看能否站回季線。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBReFVNcWZabW9qY3VzVnd1YUY5em1tWkFXWk1sOWpZQ0wtYXFXLUhhNFEyLWE1V2gzSlM3LWphVVN2bl9pQ3R4bl9sc19EU3hJeGJkc0EyWWJlY2NJeXNr0gFkQVVfeXFMT0c5TnB6dF9idDRnLWF3azFXMFZGS1ljUTNZek1QUGZOaERROEwxUk0tTFBxcTBtbjF5WTd6dG1zT3F2RmFNcllRZHBQcUM1aG52MVVKOVRRbUw3U0JXX2c2dnZwRg?oc=5" target="_blank" rel="noopener">財報前先賣了！女股神減持超微、台積電 轉身押寶「這產業」</a><span class="src">自由財經</span></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PZFVkRk1ST1g0VjAxOHloYVRhM051clNpVnZMZlkzNnMxMlRlTU45Tll5S0tNMmltWEFsbVlXTUJ4TWRocmtmLURVTm1zTEk?oc=5" target="_blank" rel="noopener">女股神出手了！大砍台積電、AMD股票 重金砸1族群</a><span class="src">TVBS新聞網</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ic1YtdjhlUEdfbGFmWlhHMndSc2VSNVB1Z2ktbzZrdm8yeWNpWWMxWUJKWTNvUGVfdVp6eE8tLUloZ3c3bHdWQ2R0Sk1DWUREUGtnVVJOWGVLVW5DSl9Z0gFkQVVfeXFMTjdBVXVDZmJJVmtmQVdZeEpoc28tVWhtVFBWNXI3cVk4RlZkU0tRcFRiRk5lMlR4UW5wXzlQbFFOel9seGxPTnFyQW1DYUd1TnhMSUk3djNTWlBVdk5ZYVFqM2RWXw?oc=5" target="_blank" rel="noopener">台積電11張股票領逾7萬！股民哀怨價差快跌沒 網友羨慕炸鍋</a><span class="src">自由財經</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>鴻海</b><span class="sym">2317 · 台股</span>
+        <span style="margin-left:auto" class="px">251.50</span>
+        <span class="up" style="font-weight:600">▲ +4.00 (+1.62%)</span></div>
+      <div id="fig-spark_tw_2317" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+4.14%</span> / <span class="down">-1.76%</span></b></span>
+        <span>今年以來<b class="down">-0.20%</b></span>
+        <span>52 週位置<b>28%</b></span>
+        <span>vs MA20 / MA60<b><span class="up">+1.64%</span> / <span class="up">+0.23%</span></b></span>
+        <span>RSI(14)<b>45.8</b></span>
+        <span>成交額<b>103.0 億</b></span>
+        
+      </div>
+      <div class="note">收 251.5 元、+1.62%、量比 1.09，同時站上月線 247.45 與季線 250.93，五日漲 4.14%，自選股中最先轉強；10/30–31 科技日前，留意能否守住 250 元。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE9YY1FxaEdDZXVwZjJQUFBLR3RNTFRuMkplU3BYTjFBUEdYbE9iM1dsclpaTVhvOFU0bVduc1lEMlN3Y0Y5eFZr0gFLQVVfeXFMT0w2bkQ0VFV0LV9zQmdDVDRvOGtJb0huekMtTzZlSzlYb0dIUGtvckJ6cTBERjdVSUVZSVc5VGxtM2QyYmtTekRzd0hJ?oc=5" target="_blank" rel="noopener">睽違2個月！郭台銘再買鴻海股票430張　持股市值千億元</a><span class="src">三立新聞</span></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOOFZoUDlLdUlubXhDd1BsU3Y3U2VORTNfSDZZSGtKNS1lNmRpLU92MGFBRXQxZGxHN1ZjUnY0N0RUM055NkM5WVpkeWNSeENwMEtuN2QxZTRnRHRMMUtDRXBONTEwX3RVZDVYMXZvYzFzLTl3eEZNa2xzUHRYY0stWQ?oc=5" target="_blank" rel="noopener">鴻海(2317)股價卡250元被嫌「真的廢」？孫慶龍卻砸880萬大買50張...比買台積電CP值高！最新目標價曝光</a><span class="src">今周刊</span></li><li><a href="https://news.google.com/rss/articles/CBMi_wNBVV95cUxObUJIbzY0dExqSTViczBRUldxUjM0MHctTlozVWlmaGYxTFJ0VVdQMmhSdS1WWG5fSnB6TWc5RmZ2eURTWDFWUHJvUUFRU25iQmJBWURrSVlVcW1HczVmTE5odXZvemFqdHk2WTJ3M3Y5eGJLR195cHFJM3JRUTZNNDJjeUVXSWFkWWRVcFE1MGpJU09pVFhFU2VuSmNDZXhxSk1Kb0xfLUZtS1hVN1gtb2dJYmdyYS1Ja0tiWHR4S204ZWN3U1J1czVHOFBJNEVNUWtaUXFRNEgtSWJsbFl6MEszbGx6ZkFxcWdSV1NLQUEzOFNHejd2bWlJVjJoc213STVic2dCNHc2RkJvR29SbTIzOFotYWxXajRSdXdmTHpJZUNXZDdIWWQyZkJkTDhXcks5U0tTOEdVWmFDOEYwdXQzeUhZY2JZamVzSDhNdjhSbzJ5RTNuWlJtclp4aldsc3hieVB6WlB3bWpJVHN6X0dXOGttbC1LYnJ1Mk91Z1hXRU51WFdvUE5nemNyYXRsXzhfRW83aENRcXZBQ3djVFR3UThnd19hS3czM2dDa0FjMkVkUGF6ZG9TakJEbk5McGxzd2JMNjdpbXVZZWFFamZoQVZXRkNyNlMweUZzR0RkZGpybXE4dDZyTnZ1TUUyVHFaWklEbkwyLXRKcWhr?oc=5" target="_blank" rel="noopener">鴻海單月營收破兆元成「台股第一」明天漲定了？分析師曝一關鍵：拉回就布局</a><span class="src">Yahoo股市</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>聯發科</b><span class="sym">2454 · 台股</span>
+        <span style="margin-left:auto" class="px">4,235.00</span>
+        <span class="up" style="font-weight:600">▲ +275.00 (+6.94%)</span></div>
+      <div id="fig-spark_tw_2454" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+2.05%</span> / <span class="down">-18.32%</span></b></span>
+        <span>今年以來<b class="up">+23.47%</b></span>
+        <span>52 週位置<b>51%</b></span>
+        <span>vs MA20 / MA60<b><span class="down">-6.01%</span> / <span class="down">-2.39%</span></b></span>
+        <span>RSI(14)<b>25.6</b></span>
+        <span>成交額<b>290.3 億</b></span>
+        
+      </div>
+      <div class="note">大漲 6.94% 收 4,235 元、重回 4,000 元之上，但仍低於季線 4,338.75 與月線 4,506，一個月跌 18.32%、RSI 25.6，屬超跌反彈；10/30 法說會是最大變數。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQeHdEUXFCckpJVW1oVG9hUGIzTlJIMi1IYUhQZHd5SVRwLVppbjh1S1h1RlNzMVR4dUViVVNFVS1KZk5CWDlnU2ZRdVdnby1tQ2d2QjM0R045cjdybTBTeUVTaVVBLXR5TUdfTDJva0hxd2dPNmVWYWdzbi15QjVVTkpqZWlTOFNKNURaUnBhS0tMWUdkS3k3WW01VlMzVWhRb0t5R2VfblFzS3dVTnlxMWVTeWtpWllyOGlGVDA5M0FQMWI4T0U5U244VzdUaDdVZHVCQlliOFMwUE5PZ2pRT2xUbFA0WjhabGRqTVhyR3cyQ1p1MmhFbnhCQnAwa1NFeTRkTEozWndjUUJEb2VQSXNVZjdUc18wcVFGLUZnWl9IN2NkNGRYdXV1N255T281S3VnODRGeGVaZ2Y0ZmU1M18yQUZ1MWV3WmpYM3hURmtUNFJaY21kX0JJcENMRjVuWjkwLTA2ZGpOUGs?oc=5" target="_blank" rel="noopener">聯發科跌破4000元又反彈！陳重銘揭「2檔發哥ETF」 近一年狂飆逾100%</a><span class="src">Yahoo股市</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHUXRJMmZJOE5LV0RpUE1JNUxTV3htYVlRdHlZUndjakNNV210Q0toQjJJbmx2NHZER1R3RGZmSk5relBQMGV3bE9fc3pQbmlmTkHSAVdBVV95cUxOVmtZeUpLQWNPb2xCWEhWMEJpZkwwd01OM2x4blRjV2tjSzgxaDdObDJyVGpYemhsaFk4WGl5MXpTX3poOXE4SjFQTGR5Zjh6SWFmWnNKY3c?oc=5" target="_blank" rel="noopener">台達電、聯發科跌到攤不下去！股民崩潰：賺錢沒跟到、虧錢卻跟上</a><span class="src">UDN</span></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOSm41b0xfU2pGLWtnVlRvMXk3cV9wWmpOZXp1SFFTdElnT1FYVXlsS0o0S1hrSVBjT0hKalNvUzlBZ2RDQmZacHJ4M2NEZVU1Q3llZVgxTnIwLS1teGUxbmxxTzFFYXRYVTExa28xRjJrdWY5cXZuaUdCNXRqSTFHTg?oc=5" target="_blank" rel="noopener">聯發科法說會10/30！股價為何破4000、崩2成墜熊市？鴻海科技日10/30-31…Model A+看點曝光｜今周重磅</a><span class="src">今周刊</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>元大台灣50</b><span class="sym">0050 · 台股</span>
+        <span style="margin-left:auto" class="px">108.65</span>
+        <span class="up" style="font-weight:600">▲ +2.05 (+1.92%)</span></div>
+      <div id="fig-spark_tw_0050" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+0.46%</span> / <span class="down">-2.86%</span></b></span>
+        <span>今年以來<b class="up">+13.47%</b></span>
+        <span>52 週位置<b>67%</b></span>
+        <span>vs MA20 / MA60<b><span class="down">-2.51%</span> / <span class="up">+0.75%</span></b></span>
+        <span>RSI(14)<b>25.8</b></span>
+        <span>成交額<b>55.0 億</b></span>
+        
+      </div>
+      <div class="note">收 108.65 元、+1.92%，站回季線 107.84 元，但量比僅 0.53、量能偏低，距月線 111.45 元還有 2.51%；走勢與大盤同步，月線是下一道壓力。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMivAVBVV95cUxNSFlTMURrdEhIRFhhM1hEeVUxRHJtRHc1NWMtU3gyeXI3aGNYNzBWT1RtN2EtZnh1VnhsMXBKamFZb0t4UmJGVk9YbUl3cUxpdEtqMlJVdVREZG00UVowZzZjdUtKOXFYWXU3RUtDbHFycDBEWFByeTJoOFp1SWZ4Y1VWUmRKYm5DbTJuckJIM2REUmk0bnYxRENiT3hBbVdabUlOaEJhU0VJVWR1UlkwS0VfRl93aHZibUhjWlhDZWg4NnNtSUNkVnNHRXU2LUpyRnhEVTlwVmdFSTVOZ1Z1SHl1MHN3NVN5aDlrXzJVaDJVdk13UWhPcktHVlh3cF8zcl82bkNGamM0VkEySmNQZHdqbmhOdnNCa185OUNIUzVIMDZwT3AtMTVIVWNrMk1JQzg3Y21IWERrWmNQcTBDR0V2NzA4SzdiME8ydU11UEo5T28waVpwcHBLT1llOXNTNkE5aTQ2a2ZkcUpQVmFKbi1JSUw0T2NHdmpST1RtRVdKcDVSZlpTa3BOVU1WbHdELVdHcHFidDA1UVg1UktEbE1lUFJxZTg4Qzg2dy1NZ0lTVDNXTU9tVlo3TldtZXRuY0g1alZRRFhNS3BUSHNCT2ZCQ096Y1VtbUkyaUkwMVZWbHVhSEV6VGZZcmoyQk9acERhZTdteDZnbERINnJkZDNrQWVJNlRMc2ZpWEdZci1OdXM3a2ljcm1ISDN2UWFvT3ZlRHlOQjg5X21jMjBqYjBGVFJKbjluc3NkdndTWE9tbWVfUlVhVGRiNDNmdW5SX2RJc3pTTDJQWG4xRnV2Zm1WMFlWeGlmeGlNX0hlTm9haTBWZ3NJa0UyQm51dWhpdWExWXlZbE9nLURwd0g3MlVKUElHWXphNGg1ckJ4bHVqOVRDZGgtS0ttV0xpejAxMmhnWjluS3dEcGlw?oc=5" target="_blank" rel="noopener">【零股排行榜】 盤中零股成交量TOP 20｜0050 元大台灣50、00406A 主動中信台灣收益、00981A 主動統一台股增長、009816 凱基台灣TOP50、0056 元大高股息(1027)｜豐雲學堂2026 年 10 月</a><span class="src">永豐金證券</span></li><li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YX0w1d2Jzd3ZpdW5uczEwcFo0bFQtSEE1THI0eG9rbjY1VUo4YVBaUmJQcXZrQ0hSdGhDYl82ZC0wZ3U0dG9GTGpBc25FaUxmMjJKdFVzY24?oc=5" target="_blank" rel="noopener">0050 元大台灣50 - 繼續抱著- 股市爆料同學會</a><span class="src">CMoney</span></li><li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE02al81RGpLcDcxMFBvel81M0F1WFBmT0dwTXJRa2dGakNUMTBtbnZ6eXMyU0VQcG9kMk53Q0UzRWp6bHZEU0V1dnZqa0FsNG40enJN0gFYQVVfeXFMTXY0T0NPUHQxVllXMWNsZWs0LVhWMEM2bk85NjVUVy1VNFRCZ0RqMXdSZjlJc2xia3UxUFJNOW1UZ25GWUFhaEQtOXBFNkstYlh3eGJuaWluMw?oc=5" target="_blank" rel="noopener">震盪擋不住加碼潮 0050、0056投資人數雙創歷史新高</a><span class="src">UDN</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>輝達</b><span class="sym">NVDA · 美股</span>
+        <span style="margin-left:auto" class="px">217.94</span>
+        <span class="up" style="font-weight:600">▲ +1.94 (+0.90%)</span></div>
+      <div id="fig-spark_us_NVDA" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+0.68%</span> / <span class="down">-4.77%</span></b></span>
+        <span>今年以來<b class="up">+10.30%</b></span>
+        <span>52 週位置<b>57%</b></span>
+        <span>vs MA20 / MA60<b><span class="down">-2.89%</span> / <span class="down">-1.80%</span></b></span>
+        <span>RSI(14)<b>32.2</b></span>
+        <span>量比<b>0.83x</b></span>
+        
+      </div>
+      <div class="note">昨收 217.94 美元、+0.90%，費半漲 3.60% 時明顯落後，仍低於月線 2.89%、RSI 32.2；今晚 Meta、微軟等財報的 AI 資本支出數字將直接影響它的走勢。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPZWZXUFEtODM2QVQtdUEtQkpkam1OUldVUGFIcVlISExXd21UNllucGVmbHY1ZTlCal9lZjd0aGowUjhxaUdpaldVZ2w4UFNQYXVSR1lZLTQ4aUVqRjNaeEUyeWNfMzZ0cTM1ODhSOXc0NS13Tmo4NW1xcmlkOWdRNFFJT3F6RmtnYi1PcDhLZlExbnE1dFAyUA?oc=5" target="_blank" rel="noopener">Nvidia Stock Is 10% Below Its Record. Does Anthropic's IPO Filing Make It a Buy?</a><span class="src">Yahoo Finance</span></li><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYUYtTUVGcVg1OEY2WFpMeXZWTmQ0XzB0NGNEdTRTcE5vdGhGaTd3Yzg1XzlLbmZMMTNHUmhGcGxFNXJyNjhmM01KdVU3ZlNsc09IT1o0UWdRSW1fZUdLVVY5UGZOTnVsRXZxUUMtelh0eVFXRUF3YWY4UlQ1OEhLNi1KSVBpcHl5VHRB?oc=5" target="_blank" rel="noopener">Nvidia, AMD Get Their Jollies Hooking Up With Meta's Muse</a><span class="src">Investor's Business Daily</span></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQy13QVhWcnlNN0VOMGc2UmRUWDJBbVFiaFFmalhpYWNCZ1JiVGVOSGpPejBXemladmNjYUxhU1c3MXJJeGZLS1RqcVlmN19lZi05c0xOM3RVdU96M2JKUC10clBoNklXUnZaNzdBd1VRSzB4emZsVkVsamJxQmROcnl6Qnh3QzdLXzVJZ2hLbHpWeERjV2lKZm5ycVdlbTB6YjRScTFyeWY2NEZJc1VkcXQtSUlyQU5nLU5ERENpSm8?oc=5" target="_blank" rel="noopener">Nvidia, Intel, Other Major Tech Stocks Surge After Anthropic’s IPO Filing</a><span class="src">Forbes</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>台積電 ADR</b><span class="sym">TSM · 美股</span>
+        <span style="margin-left:auto" class="px">436.87</span>
+        <span class="up" style="font-weight:600">▲ +12.50 (+2.95%)</span></div>
+      <div id="fig-spark_us_TSM" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+2.77%</span> / <span class="down">-3.54%</span></b></span>
+        <span>今年以來<b class="down">-1.66%</b></span>
+        <span>52 週位置<b>56%</b></span>
+        <span>vs MA20 / MA60<b><span class="down">-1.42%</span> / <span class="up">+1.06%</span></b></span>
+        <span>RSI(14)<b>35.8</b></span>
+        <span>量比<b>0.79x</b></span>
+        
+      </div>
+      <div class="note">ADR 收 436.87 美元、+2.95%，站上季線但仍低於月線 1.42%，換算溢價擴大至 16.74%；若財報週 AI 情緒延續，溢價有望帶動台積電現股補漲。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBla3Y1S2ZrYkRORC1wXy1aa2FvYWt1X0h2SUZjX3BDNWxKSlk4VUt4eV90UlUxOU0yWktJSTEyMVVGQWNab05pdTBxYkhxcVdZTEZwU3VMTnFkdw?oc=5" target="_blank" rel="noopener">TSM News | TAIWAN SEMICONDUCTOR-SP ADR (NYSE:TSM)</a><span class="src">ChartMill</span></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE5OVmVZeG1OWTQ2bHZ2VWR2UjI1Um9zRm50enAzc1V2LWVTblRiNTdQVVdxWktZcTk1RUI0Wnh2N3c1dC1VY1J6STlZU0YtUHBVMUFtUFhSVjhaUUN4M3R4Q0doSExvLU5PTzQyWnQtQTZiejNSanc?oc=5" target="_blank" rel="noopener">Anthropic's IPO Filing Ignites Rally as AI Chip Stocks Lead U.S. Markets Higher; TSMC ADR Rises in Tandem</a><span class="src">BigGo Finance</span></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQTURZeXVKYlpHTWZfVXVqRDZfckdMeGFHOEVmbThRNFBqR2p4YzVjdkxvVUpBNnNQV0hwQVFVcUdnclZDZkg4V3ZFZlZBTlcyU2pTUk0wN1dxdUl1MWtJRXpsYUVzVzBLWVozMnUxNFpUVXVWamJ4UjhzX1JPRUdFbEdNdHVDR3ZTdGVfRTcwcmdjM0psQWc?oc=5" target="_blank" rel="noopener">TSMC ADR Premium Falls To Two-Year Low As Taipei Shares Surge</a><span class="src">Yahoo Finance</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>蘋果</b><span class="sym">AAPL · 美股</span>
+        <span style="margin-left:auto" class="px">347.10</span>
+        <span class="up" style="font-weight:600">▲ +3.19 (+0.93%)</span></div>
+      <div id="fig-spark_us_AAPL" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="up">+2.24%</span> / <span class="up">+2.57%</span></b></span>
+        <span>今年以來<b class="up">+17.91%</b></span>
+        <span>52 週位置<b>98%</b></span>
+        <span>vs MA20 / MA60<b><span class="up">+2.07%</span> / <span class="up">+6.09%</span></b></span>
+        <span>RSI(14)<b>64.3</b></span>
+        <span>量比<b>1.02x</b></span>
+        
+      </div>
+      <div class="note">收 347.10 美元、+0.93%，位於 52 週區間 97.9% 高位、距高點 348.22 美元僅一步；Loop Capital 因 iPhone 出貨疑慮調降目標價，創高前後要留意財報前的獲利了結。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOZGptMG9GN3dsVmc1MzZzZHdKQldZMm0wdmVSay01a3FWMURQUEktQ2tGRE9mNGMyb3l2OEVqczhKdTJJRmVFcGYzd1lLQXNaQjJkLWhqZC15SmY0Z1NyT0tNVEFDTE9FeFdqNUZwRFNRTmRKRXRNZTVjSGNaYk9aY19kdXdUamVDZ21RdEl1Q052YVFaNVJDeTVjdDlSeEllTVFLRjhPQUZQVDhIbE85RlBFSVFSUU0?oc=5" target="_blank" rel="noopener">Loop Capital Lowers Apple Stock Price Target on iPhone Shipment Concerns</a><span class="src">Barchart.com</span></li><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPdjN2SHZNOGRURjJUTXRPdkEyNkx2RHVxdXpadWZvVUU1a3FFcXNFYnpjdi1iN1RUVVNCX0FKRkxlbzBpalRiaWhXbXE5bDJMM1FyUkxtUmxBdG5KZkhKRi15Z1c1R0hLSkZMZzZtdWtFWnFJRDlkRC1DLTlBUlNKRnVDcWxRdXVZRlBCd01NSDlVLTZQNF91aWRjTGF1TGVHMDN6MW1UUQ?oc=5" target="_blank" rel="noopener">Apple’s Next Growth Engine Could Change the Stock’s Trajectory</a><span class="src">24/7 Wall St.</span></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPWExfVkMwM2pEejdZVmJTWUtyeUhQakdGUWJtVVRFVHlIMlFJMzVKVWI2Wlgycm43c3Q1eTN4ekZtaHZJU3JhWEE0Q3MyLVdPZENjT0g0WmZuY3RrMXBBaVFUa0xmZ01EdkM0UkpxNEotZlhaTkNVVEVaWWhlR0tCRTY5ZXJIYlAwWUhScXdoRjYxM1BXRWNxMFRNamgzQXPSAaQBQVVfeXFMTV9hMlVjY1Y3TkhzVmZxakUyUWpDMzRZTm9JUEJoOWU0MmN0TEgxZlJ6emx1dldFQW1LRTVBVjNLRXd6Vk02WHFTTEl2MVBWZHRMVzZHWVNBdGhCbFk1MXRlV0xGNjRTTUxSX0hGQWZGTXRMclV3SWNDbnFBeVZDY0NEQnpFbzJPd0hzWnpCSW9hUmFBQjllOFN4Tll4X2hhQ2RiR3k?oc=5" target="_blank" rel="noopener">This website shows you where iPhone Duo is in stock</a><span class="src">The Apple Post</span></li></ul>
+    </div>
+  
+    <div class="card wcard">
+      <div class="hd"><b>微軟</b><span class="sym">MSFT · 美股</span>
+        <span style="margin-left:auto" class="px">531.33</span>
+        <span class="down" style="font-weight:600">▼ -1.27 (-0.24%)</span></div>
+      <div id="fig-spark_us_MSFT" class="chart spark"></div>
+      <div class="m">
+        <span>5 日 / 1 月<b><span class="down">-0.10%</span> / <span class="up">+4.34%</span></b></span>
+        <span>今年以來<b class="up">+38.27%</b></span>
+        <span>52 週位置<b>92%</b></span>
+        <span>vs MA20 / MA60<b><span class="up">+0.44%</span> / <span class="up">+4.65%</span></b></span>
+        <span>RSI(14)<b>50.9</b></span>
+        <span>量比<b>0.97x</b></span>
+        
+      </div>
+      <div class="note">收 531.33 美元、-0.24%，貼近月線、52 週位置 92.5%，財報預計本週公布，Azure 成長率與資本支出指引是重點，也牽動台灣伺服器供應鏈。</div>
+      <ul class="nw"><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPYTBQSmw4UnFmS3NFajRsb2pXQ29NcHotZkZpd2haSEtwMGROSDhXSlpzMVpETks1RGZjMDhxbzFfejFuVWVaNGlHd3pVUjh2cEg4SER5Y2xwTFppbXVCclNLaE43bkw1RjQ4bHpSQTdTRUtlb1BvdEJGdEJfTkFBRk9iTndRcG1zWUJMNzQ3RXpsMkV4N1BHQ1h4enBvaGM?oc=5" target="_blank" rel="noopener">Microsoft (MSFT) Q3 earnings report preview: what to look for</a><span class="src">Yahoo Finance</span></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYm1VU3o4dV9wbnVYd1VSejFCQ25qbm5iTi1VWGszbGR4VUFzd1Z5Zll2dEJRRVdQRExYM0hCT0xMUDJGa3NPRnlhc1pHQV9mdFNzTW43YVVER09MZUxjR0NXNElCS0g0WUFtWk9WNEZTZGc5ZWJ0REVpUWJmd2NERHdFajBPRnJFRWMxQWxkQU0zbDJ2alIweW5qcUs4dXlfbFhPZUdpV0tILVNkbWtfWW8xcWhtdmlOc1U4U2ppVzE?oc=5" target="_blank" rel="noopener">Microsoft offers buyouts to 60,000 workers as AI reshapes workforce</a><span class="src">Investing.com</span></li><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2JnTndMNmx5MXNTZmZwLVd1MjZjZDQzTVhKUmJfQ3NfamMzTmUxZ0pSVWpsMHFfU1dZSlJtYmJzeXA2YVhOeWhNeDhad2dYWUFaTnZDRGdfMFU2ZER6Qi03RUFFVWpubG56UVVmLURlSlFyOU9teWZicnNWMGVOaGxnZTBuVGdnbEJEWHhzTjI0QUNueVZSSVpIcXZhME9GSjYzZ0p0VnduN2N1elhYQXpGT0ZCaFdm?oc=5" target="_blank" rel="noopener">About 60,000 Microsoft Employees Are Eligible for New Buyout Program</a><span class="src">Investopedia</span></li></ul>
+    </div>
+  
+  </div>
+</section>
+
+
+
+
+<section>
+  <h2 class="sec">值得觀察 <small>AI 依今日資料挑選，非投資建議</small></h2>
+  <div class="grid g2">
+  
+    <div class="card pick">
+      <div class="t"><b>景碩</b><span class="sym">3189 · 台股</span><span class="chip" style="margin-left:auto">強勢股</span></div>
+      <p>漲停收 1,035 元、成交約 177.6 億元，是今天 PCB／載板反彈的領頭羊，直接推翻昨天載板鏈轉弱的判斷。</p>
+      <p style="color:var(--ink-3)">留意：明天能否量縮守住 1,035 元；欣興今天開高走低，若景碩也出現同樣走勢，代表反彈只是空單回補。</p>
+    </div>
+  
+    <div class="card pick">
+      <div class="t"><b>南亞</b><span class="sym">1303 · 台股</span><span class="chip" style="margin-left:auto">轉強觀察</span></div>
+      <p>昨天盤中殺到 290.5 元，今天大漲 7.23% 收 319 元、成交約 276.5 億元居全市場第三，CCL／玻纖布題材資金回流，帶動塑膠類指數 +5.35%。</p>
+      <p style="color:var(--ink-3)">留意：成交量是否維持高檔、能否站穩昨天高點 321 元；法人數據公布後確認是否有外資回補。</p>
+    </div>
+  
+    <div class="card pick">
+      <div class="t"><b>南亞科</b><span class="sym">2408 · 台股</span><span class="chip" style="margin-left:auto">強勢股</span></div>
+      <p>大漲 8.16%、成交約 208.4 億元，晶豪科同步漲停，記憶體是連續兩天資金最集中的族群，也是昨天外資唯一明確加碼的方向。</p>
+      <p style="color:var(--ink-3)">留意：今晚美光走勢與 DRAM 報價消息；連續大漲後若出現長上影線爆量，需提防短線過熱。</p>
+    </div>
+  
+    <div class="card pick">
+      <div class="t"><b>創意</b><span class="sym">3443 · 台股</span><span class="chip" style="margin-left:auto">事件驅動</span></div>
+      <p>漲停收 8,170 元、成交約 122 億元，ASIC 族群受 Anthropic 遞件上市、博通大單等 AI 客製晶片消息激勵，與聯發科同步反彈。</p>
+      <p style="color:var(--ink-3)">留意：今晚 Google、Meta 財報中自研晶片（TPU／MTIA）相關支出的說法，攸關 ASIC 族群後續動能。</p>
+    </div>
+  
+    <div class="card pick">
+      <div class="t"><b>Meta</b><span class="sym">META · 美股</span><span class="chip" style="margin-left:auto">事件驅動</span></div>
+      <p>昨跌 1.64%、量能放大 2.47 倍，五日跌 10.67%、RSI 24.1，低於月線 12.34%，市場已提前對其 AI 支出與增資計畫打折，本週將公布財報。</p>
+      <p style="color:var(--ink-3)">留意：財報中的明年資本支出指引：上修且獲市場接受，有利台灣伺服器、PCB、散熱鏈；若遭市場懲罰，今天的台股反彈恐受考驗。</p>
+    </div>
+  
+  </div>
+</section>
+
+
+
+
+<section>
+  <h2 class="sec">市場評論</h2>
+  <div class="grid g2">
+  <div class="card prose"><h3>台股收盤：站回季線，但量縮</h3><p>昨夜費半 +3.60%、台積電 ADR +2.95%，台股跳空開在 <strong>46,403</strong>（全日最低）後一路走高，收在 <strong>47,036</strong>、距最高點 47,060 僅一步之遙，日 K 是標準的開低走高長紅。</p>
+<ul>
+<li><strong>技術面</strong>：收盤站上季線 1.37%、守住昨天 45,676 盤中低點，短線「破底翻」雛形出現；但仍低於月線 1.87%，RSI 30.7 只是從超賣區邊緣回升。</li>
+<li><strong>廣度佳</strong>：上漲 714 家、下跌 280 家、漲停 32 檔，跟昨天「跌多於漲」相比，今天是普漲而非只靠權值。</li>
+<li><strong>量能是罩門</strong>：成交約 6,741 億元，比昨天約 9,466 億明顯萎縮近三成，上漲 939 點卻不需要大量，表示賣壓減輕，但也代表追價買盤並不積極。</li>
+</ul>
+<p><strong>意涵</strong>：今天是修正以來第一個「指數、廣度、型態」都過關的訊號，但量縮反彈遇到月線常有壓力，明天要看能否不回補今天開盤缺口（46,096～46,403）。</p></div><div class="card prose"><h3>類股與個股：昨天被倒貨的，今天彈最兇</h3><ul>
+<li><strong>電子零組件 +4.38%</strong>：<strong>景碩漲停</strong>（成交約 177.6 億元）、欣興 +3.77%。要認錯：昨天把 PCB／載板列為轉弱，今天一日就大幅反彈。不過欣興開在 1,145 元、收 1,100 元，開高走低，族群內部強弱已在分化。</li>
+<li><strong>塑膠 +5.35%</strong>：南亞 +7.23%、成交約 276.5 億元居全市場第三，昨天盤中曾殺到 290.5 元，今天收 319 元，CCL／玻纖布題材重新被買回；同族群台塑化 -2.83%，漲勢只集中在電子材料。</li>
+<li><strong>記憶體續強</strong>：南亞科 +8.16%、<strong>晶豪科漲停</strong>，延續昨天外資集中加碼的方向。</li>
+<li><strong>IC 設計反彈</strong>：聯發科 +6.94% 收 4,235 元、<strong>創意漲停</strong>收 8,170 元，ASIC 族群受 Anthropic 遞件上市與博通訂單消息激勵。</li>
+<li><strong>工具機續攻</strong>：東台連兩日漲停，電機機械 +2.73%。</li>
+<li><strong>弱勢</strong>：金融保險 -0.56%（玉山金 -2.22%、中信金 -1.07%）、台灣大 -1.49%，資金從防禦股流向科技股。</li>
+</ul>
+<p><strong>意涵</strong>：今天是超跌回補為主，漲幅最大的多半是前幾天跌最兇的族群；能否延續，要看今晚美股巨頭的資本支出指引。</p></div><div class="card prose"><h3>資金流向：法人資料今日無資料</h3><ul>
+<li><strong>三大法人與外資買賣超個股：今日無資料</strong>（資料擷取時 TWSE 尚未公布），無法確認外資是否結束連續賣超，這是今天判讀反彈品質最大的缺口。</li>
+<li><strong>間接線索</strong>：新台幣升值 0.41% 至 32.40，在美元指數仍接近 52 週高點（102.42）的背景下，台幣逆勢走強通常代表有外資匯入，至少賣壓不像上週那麼兇。</li>
+<li><strong>台積電 ADR 溢價擴大到 16.74%</strong>：ADR 昨夜漲 2.95%，台積電現股今天只漲 1.04%，價差不縮反擴，顯示今天的上攻主力不是台積電，而是中小型電子股與聯發科。</li>
+<li><strong>對照昨天</strong>：投信 236 億買盤撐盤、外資賣 80 億；若明天公布的法人數據顯示外資轉為買超，今天的反彈才算有籌碼支撐。</li>
+</ul></div><div class="card prose"><h3>美股盤前觀察：Fed 與巨頭財報同晚登場</h3><ul>
+<li><strong>期貨</strong>：S&amp;P 500 期貨 +0.01%、Nasdaq 期貨 +0.32%，市場在等待結果、不願提前押注。</li>
+<li><strong>Fed（台北 10/29 02:00）</strong>：市場普遍預期按兵不動，重點是主席華許記者會對 12 月是否升息的口風。10 年債殖利率 4.99% 貼著 5% 關卡、RSI 24.0，債市已經先反映部分利多；聲明若偏鷹，殖利率回升會先壓抑科技股估值。</li>
+<li><strong>巨頭財報</strong>：新聞指出 Google、微軟財報在本週登場，Meta 也在本週，預計今晚美股盤後陸續公布（以公司公告為準）。Meta 五日跌 10.67%、RSI 24.1、昨天量能放大 2.47 倍，市場對它的資本支出計畫已有疑慮，財報後波動恐怕會很大。</li>
+<li><strong>油價</strong>：WTI 回升 1.70% 至 101.60 美元，重新站上 100 美元；昨天 XLE 跌 2.05% 只是暫時降溫，伊朗相關消息仍會左右通膨預期。</li>
+<li><strong>昨夜警訊</strong>：波音跌 10.69%、量能放大 4.99 倍，跌到 52 週新低；通訊類 XLC 也收在 52 週低點，AI 反彈之外的大型股並不全面強勢。</li>
+</ul></div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="grid g2">
+    <div class="card"><h3>今日 / 近期事件</h3><ul class="events" style="margin:0;padding-left:18px"><li><time>10/29 02:00</time>Fed 利率決議 <span class="flat">— 市場普遍預期按兵不動，留意聲明對 12 月升息的措辭</span></li><li><time>10/29 02:30</time>Fed 主席華許記者會 <span class="flat">— 若拒絕排除升息，10 年債殖利率可能重回 5% 以上</span></li><li><time>今晚美股盤後</time>微軟、Alphabet、Meta 財報（預計） <span class="flat">— 確切時間以公司公告為準；台股週四開盤直接反應 AI 資本支出指引</span></li><li><time>10/30</time>聯發科法說會 <span class="flat">— 股價一個月跌 18%，第四季展望與 ASIC 進度是焦點</span></li><li><time>10/30–31</time>鴻海科技日 <span class="flat">— AI 伺服器與電動車布局更新</span></li><li><time>本週稍晚</time>美國 9 月 PCE 物價 <span class="flat">— Fed 偏好的通膨指標</span></li></ul></div>
+    <div class="card"><h3>風險提醒</h3><ul class="risks" style="margin:0;padding-left:18px"><li>Fed 若維持利率但華許暗示 12 月可能升息，10 年債殖利率重回 5% 以上，科技股估值承壓，台股今天量縮的反彈可能回補 46,096～46,403 的跳空缺口。</li><li>微軟、Alphabet、Meta 若出現「資本支出大增但獲利不如預期」遭市場賣出（Meta 五日已跌 10.67%），今天漲最兇的 PCB、ASIC、伺服器族群首當其衝。</li><li>今天成交量比昨天萎縮近三成，且三大法人資料未及納入；若明天公布外資仍持續賣超，今天的上漲可能只是空單回補，月線 47,930 難以突破。</li><li>WTI 原油重回 101.60 美元，若伊朗局勢再升溫推高油價，會同時推升通膨與殖利率，削弱 Fed 轉鴿的空間。</li></ul></div>
+  </div>
+</section>
+
+
+
+
+<section>
+  <h2 class="sec">相關新聞</h2>
+  <div class="card"><ul class="news" style="margin:0;padding-left:18px">
+  <li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE0wRVhzRkg5SHl4QWhwU2pkS19kazVVSkNqZU9DU0t4T1pNa2tLNGt3WmQtR1F3WjF5MjJrXzctZmtaZTZRalpOOERXUEtjdw?oc=5" target="_blank" rel="noopener">台股狂飆逾700點！行情震盪，盤點8檔「雙高成長」ETF</a><span class="src">遠見雜誌 · 2026-10-28 03:54</span></li><li><a href="https://news.google.com/rss/articles/CBMixgJBVV95cUxNS2hIWThHQ2FKQVljbjdSMzZnLXVZVmk2RmwtRDYwQjNINEZxQnJORWktMXlTNUZ5MFdJZWV2ejhBY0o0dEczRWNENEZ4VXA4X2VFV0dZMUw1VmpESmJZUVFfS1VaRmhYX0E3dTdNU3dBTFBycERJWTAzSEdETFdvTnJHdVBSaTVKbFc2Z2ZsLVpQWWRseHU2SEJIOGc2Wnd2OC1uNUtfaFp4WG1ZUEZlTVNjcWZoZ0pUZ19PVnNkX25EQ095TGlpT0tabG5JdDNmeGlEMWpiTkE2WkJ1Z043bTVDbWYyOWIwcFFBNHd4SzBmWGh2c0tOandCMEhYemtOUWY3TlNPY3NsMkJCc1BHb1gwZzFSOXdSdHkwVER4M3h0dEZPSkxGZ2hVSmRZa21HVzNuUzlQMldoZHMwTi1RckdZTWF5Zw?oc=5" target="_blank" rel="noopener">連假過後台股恐「摜破半年線」？法人籲「8檔」勿接刀</a><span class="src">Yahoo股市 · 2026-10-27 00:41</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBDRXVCZFZ3bzVoQVFFMHJGMW10QVR1WjNZMHdXVVEwOUNDa0FyRDJlZ1FNazJxeXNUejhzQjNaY25EbVZQdzdHcHhSZHJlekl5TExXeUx3?oc=5" target="_blank" rel="noopener">台股開盤》大盤強彈790點！季線保衛戰 專家喊「破底翻」攻4萬8 | Newtalk</a><span class="src">LINE TODAY · 2026-10-28 01:39</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBSUWVRM2FQOTJmeWljZERBTjU3Nl9ZQmpXbW5oaklhOHFPWkM1bTNJVk5GdjcwN2FjNWxsU3ZWOXdiMlkxU1ZoN2w0NTY1MDkwU0ROX1lfRFhEd1otbmFZ?oc=5" target="_blank" rel="noopener">台股科技基金3檔近月贏大盤- 日報</a><span class="src">工商時報 · 2026-10-27 19:00</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE04VGJDc1JNYTJDVkJUVzdvcjJVU3gwdTdWbWlYYjg2MGNqUDRIOGt1d29mdjJ4bGJqR1lidDd2V25lMHBsdFozMVVqOTFrRVVwTDhPYlZ6VS1iM00?oc=5" target="_blank" rel="noopener">台股開盤》 大盤震盪漲逾200點力守46K！權王台積長線、短線支撐曝光| 財經</a><span class="src">Newtalk新聞 · 2026-10-27 01:37</span></li><li><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFBxYWVySTBnSmtXR1g5SXM2czlZRUNmbnFrTnloRHVyTzBSTktoZnAwTDJVRG1ETzNfM2lnanE2dDVENU1aUkRLcGV2MA?oc=5" target="_blank" rel="noopener">台股失守4萬6000點有危險！分析師示警「選前賣壓恐引爆」 揭大盤最慘下探點位</a><span class="src">FTNN 新聞網 · 2026-10-27 04:25</span></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE11SWl2UUlxMUM0TEc0MVktQjBMSVZlN0dldF9DMGtMVTNQeDg1cVprdnI3dDMwYVZlZFkzTWlYNG94WHhuME8tSDUta2RkVXc?oc=5" target="_blank" rel="noopener">美期中選舉前大盤加速趕底 8檔台股搶手型ETF戰力猛</a><span class="src">鉅亨網 · 2026-10-25 02:20</span></li><li><a href="https://news.google.com/rss/articles/CBMiqgNBVV95cUxQcDl1dEpZMEZTSlNQNWFMWEh2OWNqS01hblJ6YmdZeW14X2NoamM1WG1MZXlYX1drTFVDTVRFZlJfS0tuazhLbUNqQ3o2Y2dHUXBYbU16Z3F2V0NNN1NqQTQyU2JNWVBPVjg2QWpKTE9ITlRqb09ETVZBWFJfWENXV3NrZWxlb1NKZGxza0E1TnF1Nl82ZlhweUlucGFocFdiSEQwOEZVZmprLVNTeTlQTEp5VzlDYmk4X0NPTFZrb3VUUFFueGNNc3VIeGNFSXAxa0JQakpmX08tTjJQbkpCU0hZVlhjR2ZraEI1Nm5pOGt4MldYX09YQmhnZndsWkNSSDdBNDh4b1RGWXYxOEFXd0dKaUFwREFIaFZnMFA3YXc0allLZjk2ZWRvTXhHOGFmV0p0OXgweVJ2ZHQ3VW5NNlE5Y2lOMW54QVV2T2R0Tml4YXlfbk9NY1pSRHp0OWlCSlFWakQyaWVlMUpaTVpZN0xXek1SYzNjQ2o2aHBiSndsSlcxY3M4VnotYkpUSVl5c2RRU3IzSEJVaV9KSVJQamRLYlhOY054Qmc?oc=5" target="_blank" rel="noopener">台股教戰1／大盤跌破季線該逃命？ 莊文宗：短線超賣先看這3道反彈關卡</a><span class="src">Yahoo新聞 · 2026-10-25 23:30</span></li><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE02M2Yya0Q2dGlod3hJS3V2aktCUlp5dkRJNnhCMFRfVWd2MGlOLUtpOGpGR0dJUFpBRUtfdUdVbUJ6dEdVMHhHTVBYUl80ZE5ZZndHY2ZkanA2V0M3SEE1TXE5VF9FTmRHT1ZGanJn?oc=5" target="_blank" rel="noopener">《10/27日法人賣超》外資賣超前三名：台肥(-1026張)、葡萄王(-280張)、太景*(-268張)</a><span class="src">生技投資第一站-Genet觀點 · 2026-10-27 19:57</span></li><li><a href="https://news.google.com/rss/articles/CBMixgNBVV95cUxQR2VUVFBTWHBJNHRnLTg3Y25wbWNXZHlxSjdZZTVmdngxZ3VSYjBqdDBSeWROZkhlM2MwaVVEME1HdXRvNlNZV1Rsc2NOX3hVNnlaU2RqZ0hXLTdfT1c4bFBnTDdUaDFqWDQ2aUpRODAyMlk1MFh3VVpfenF3enZlSkZaZ0hTUVNTQThybnlyVTFHWndwRG5jTjRMVW1wSlBWLWNKU3ZYXzdkYmhNcDkyS2IzRW9vUFVYMk9vMDU2MjVyY2IxQlREbld4S3N5T0FuUlhUei01LW5idFMxcUlVZGFyVmNGQWV6bjlqZ29rLWs3Y1FjVXhUelZyRHhla0dmR3FXbzNlRXBQb3NHVVV6OWQtbkZaZEhTbTBha3hPMTJ2Q0hNQTJWX29ZLU00MmVrVVVNam05TGdTMFJtSDBDVVFXR0JGclNLaHdBSEE1NWtrQXFscVFQTkdnemdib0ZZd3VYWXU4LXVWYzZaR2szYndxQ3VxcFRaMHNnZkVDQ05jQTRtSUpEN2MwOWV6d3ZleFRibUVyT1RXRXRJMnlfUDc0NlprUUdGU3RHZHdpRWg3dXV1Rjd1a1EyVzcySE1ySlcxZHhB?oc=5" target="_blank" rel="noopener">【Follow法人】外資賣超81億元！友達遭倒貨近9.6萬張登榜首 再拋台玻破萬張</a><span class="src">Yahoo股市 · 2026-10-27 08:48</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1IdmE5ZDVzVWRQWmFGbks3aWNmcjlpRTBPbEcyZk1ZclRmUE03Q0puUFJNRTdIRnJ5Q2lfQzBJMTNRRlNuVU5aNFlWRHdIRXhuQ2fSAVdBVV95cUxNU1E5SjBOSHd6U041ZzFZUzRXbWRldG0tcmdPTmNid1J6WDAyZjc0b1RkdVVyLXAxT1gtb21sS1hfUWJuSUtGNEdkam44cTR5ZmgwTzBVb0E?oc=5" target="_blank" rel="noopener">外資賣超亞股…台股失血 上周遭提款近76億美元</a><span class="src">UDN · 2026-10-27 16:45</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE95am9XSUlJQlIyb09qbkRiekdDb1FGcC1vejB5ekpHNVJVQzhDenQ3ZmN3ZjdpSWhPWGVDMWY0THdKSVFGRmZHMzVMVU1OM2FrYUR6SWdJaHR2WU40bWYw?oc=5" target="_blank" rel="noopener">外資調節新興亞股買超泰、印度賣超台股- 日報</a><span class="src">工商時報 · 2026-10-27 19:00</span></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5mbDVlNjJlakl1QVdKZVZ0TEJpNzVVTkxXV1ZiTW5lMWd6ZjJBb0VCQmh3SFdQSDllRnFiVkFHSDItaHdITndsRXRmQ3p5ckU?oc=5" target="_blank" rel="noopener">台積擺尾台股守住4萬6、外資連2賣 三大法人買超31.42億元</a><span class="src">鉅亨網 · 2026-10-27 07:04</span></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOdTBXeVZab1hlQUZwQ2RCcXVzWldKUWg2b1I0SV9MU0M5dXZaRTlZMW5BYi15WDRXd01qMFdZWk42VnJlTmpVRVY4dnYyZVVHTWE5U3pwYjM4dV9UVzNXVkVxaHdEZWxQd3l6a1FiTUE0dlJvWXZraFM0OHlKQUNLaE13NUE0MEQ3bzIzWDVTOXM?oc=5" target="_blank" rel="noopener">基金-FundDJ基智網</a><span class="src">MoneyDJ · 2026-10-27 21:02</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE45UHhvWlZwNUZpNk1yY1dWMXpTY09fSUlJeWNHVE1uR3hpeE1IN0RNYkI1Tk03c29DRk1lS3U4SHVleDB5d1g3NFdwU003Y1p4UHo1VllGZFRFczJVYTU00gFkQVVfeXFMT0E1VVltOUdmVnJqVTN6U3lGTXVHUW80aTdsaDFGeno1bTc5Q2FCeWZab0VSRHVFX1Vzd2l0UkRvNlQ4dm1wbGEwOUl6TE13T1Y5MkstU1BreG9pQ0doaUtKWmlqUQ?oc=5" target="_blank" rel="noopener">外資賣超81億卻狂掃記憶體！「這檔」爆買5.6萬張 69萬股東笑了</a><span class="src">自由財經 · 2026-10-27 08:51</span></li><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUEMydjBEYmtlUFBzMnNJaU5JSVdWOU5MODlDR3c2Q1dsdXZkdTc2dmZPdmhQVldKWjBKMm5IaXdnSGtUTlA1Q1V0SmFGZ25tVGllaThDNm9vVlpLWUtTa2EwdkJNcUl6cUJnUS16dUozRGlaZXlwTFZvQkV0a1J5cWR4Q1ljbmdXNGRHbzJxWDU2MDJvaGVxdzdkYmtHYU1yc2d4NHNoZWhYTXp3RjlkZkhzaVRTcnhJOU1nbnUxaVFYYzg?oc=5" target="_blank" rel="noopener">AI 回暖！投信砸 236 億死守 4 萬 6 關卡，外資狂買記憶體百億</a><span class="src">TechNews 科技新報 · 2026-10-28 02:04</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9rSXB5bG5iR0V6LWVEam84NGlGUHNpYnJlelozYnZ6VWRmMFYwXzAxT1ljMDRmcnJTWWhwZ04xblBUeUpDdjI5SGR0UXRNWlg0Y3UtVFVaREs5X2RJazNn?oc=5" target="_blank" rel="noopener">台積電CoWoS傳漲價2成！AI晶片搶產能設備交期拉長至8個月- 日報</a><span class="src">工商時報 · 2026-10-26 19:00</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1mN2d5U3BBcXpFXzRtOTRPQUUxeU1GN1Z0bTJXUVdQSG13ZExsZC1oREY3dnhuc3FHRWUyQUwtYU5UVWJBUjlJZFAteUtYd3gtNmfSAVBBVV95cUxOd2pnc0I3MDYtaDFlLURqTDdhOGQ3ejkzMHVYZnhPM3dReU84RXZUU055RHBsSHgtOTBYWVctVkVFbGFLNEdhYmpsSzd5VllXSA?oc=5" target="_blank" rel="noopener">快訊／台股收盤上漲55點　台積電漲15元至2400</a><span class="src">ETtoday財經雲 · 2026-10-27 05:34</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQbzNnMXN5WHRuZFkxYzZfeFkwYUtycFptQ1VFSkZqZy1RMnFnSnkwRkNTc0VWR3RoZXdkYlJmREVRZzU4dDBndVduUDZPWUx5WmJ4R0RpT3IyTHV4ZWlRU2p2MURadUFrblU5UGhsclU3NUdKMFh6ZEx5Z2VEN1ZzUjBKNUVlNl9WRkFveGlVcF9XYUJFbDdFNUpnV2NMZw?oc=5" target="_blank" rel="noopener">可能拯救美國製造業的台積電工廠- 紐約時報中文網</a><span class="src">纽约时报中文网 · 2026-10-27 06:27</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8zTC0tM1RfU2ZsYVVOdFo2Z0lhSWZvSGxEUUpuMDdpdWJrLXpkVFlnRGNMQU1kNlBMXzVibHJnaFAtVGRUeDlIT0l0VWtrM3g5cTBfMEpCZUZmNzZJUGdja2o4emdGVWN1Q0E?oc=5" target="_blank" rel="noopener">ETF愈買愈多反而白忙？0050、006208、00692…達人揭「假分散」陷阱：台積電全是最大持股- 基金</a><span class="src">旺得富理財網 · 2026-10-27 23:11</span></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPV0pPemgzQ201WTdFYjBKeVJSdlZWR2RET1c3WEJUS2xIUHk5T1YxTHVHSnhaVzB2RzZLY1hhR1FwSHJBQ2hFMkRqT3hTUkJzT3FFRXdsYTNtZkpObnltUjBDWlF6SU9VSHhncldXZzNRMFVmTGlUS0xMVWtDekZZbUw0ai1OUXlZTFBZa2V3?oc=5" target="_blank" rel="noopener">台積電A14傳實現全球最小SRAM單元尺寸 終結8年微縮技術停滯</a><span class="src">DIGITIMES · 2026-10-27 03:41</span></li><li><a href="https://news.google.com/rss/articles/CBMiigVBVV95cUxNTUlBcmlhaWdlYmhINjROSzN0RjVaUW54TTlDVDdjZ294bjRiR3VIMmNjQzdmWktCS3hqZG9fcUx6eEFJNkxsQ0V1X1gybW9lekdWYWRRZ0NPQnpjNzgyZjZLdE15Zkc4R1BLeC1RdmF3RE5uZjUweTN2YUl0R2lPeTh0NlZXSGVVaDZBX1BrWUIzZ2ZpS2hUTjRsVTZncS1paTk0emFrMGFMWFpEQlhXeGd1VWlwYUVWX0xpODJ1dGxSRFpmazdjMS1WY1NiNWhvbF9Yc184M1d3bFd6cmpiaHo1N1FDZURTMlFkY2FJYmpMU1VLNHNkMjlfNXRVMHZ4dXFrLUJXckdONmMyZ1lPdDh2UGxERFNKOENBd2dJcHNrV1BJMVhRS2tOQjRScTBtcF9ldmxoOXNTaWhjdzZjdzdOMXJrZllvcFBENkF5cVRIMHZnNENxc211eEUyYzhsMUpDLXhySGdfRjg0Q2Z3TVVPN1Iyakt1QkFqRzhXSVJiaVAwR0o2clVYRG9FdmZNNm1MOHVENUswbW9QUllrN2tlSTV2V19mWFdFWTdpeEc1Uko1Z2d0YXFmYjgwOWtXYUZTSzdyWVN1ejJsSDJoUWhyRDNLMEhkT2tkR2JqNzE4bTRsUjd5dTJ1WEhRWVRpaHRJRUlaZjJvenNWODMzNGpPMGQ5Tm5HeFItejF5YWhVd2Q4U3A3MWt5aEdUU2gwWUNHcGJFV3NxV2JmdENTaEtnNm1kbGtCSXJJSjhGWXRibmFNWG9IbTd0MWNJWDJGRVV6NXlucUgyNXNfTTZYZ0hxb3g5UmFLSDVjb2FBVERZYXlyT2ItdEJ5YjQwWjhLa3JfeWQxaGtyQQ?oc=5" target="_blank" rel="noopener">台灣碳封存法規上路、台積電及鴻海加入布局！借鏡英國經驗，CCUS如何降低投資風險、走向商業化？</a><span class="src">今周刊 · 2026-10-27 03:34</span></li><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBCOE50Nl8yVVVwdGp1dy0zWkpTcXVDOFRxV1haRk1mZTk2Wjl5M3VsSVUyS0laeFI1LWJBZ09GYnJURHR6MlRGZzdwSHpmbnpWeGJKWkgtY3dxTkx1dzFsaHY5Wlo?oc=5" target="_blank" rel="noopener">力成調整中國廠股權 董座談台積電藏大戰略</a><span class="src">民報 · 2026-10-27 23:00</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5udG53blhwSzJycEpNUUlra3A2VmtKc2pHYUhiNV9NMXBwX1NmQkJCQ1dTbW5UbEowQWhzazhORmF6V0xBUjhfWHk2RmJDQWRO0gFWQVVfeXFMUDRDUDBKQjRvMk5GbHk5dWhrVEFxSjc5QXRiQ2NSdElkZHdESTJGMk5xLWlLN25JMzJ3OWFFVW54NTFhMV91SGg3eXQ3Q3RSQWloMDEzTnc?oc=5" target="_blank" rel="noopener">AI巨頭Anthropic上市文件點名台灣！警告台積電供應風險 自爆曾受影響</a><span class="src">UDN · 2026-10-26 23:51</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5hR3FHOEhpS0VybDh1QllCbFJDcFI2cXVERmptNHpRTktVTVBJOW9IWkJ5VXY1akotUG5Ob2Y1S19nLVVhSVVwUGZyMERXN3RKT1FsT2hqN252SHBfdVVJ0gFkQVVfeXFMT2YzbHU3QXBkMjFkeWpOUUVBeUxiMHdvRzNtUlNpdW9rdzcwYjJhLTB6cDZMeGpCek5BSmhhbk1OZzd0Y3dBZlZMYnRndlZPOWQxNzVZb2pTMUFmOFd5Sm1IQkxoVQ?oc=5" target="_blank" rel="noopener">美股收盤》AI股提振！費半勁揚3.6％ 台積電ADR漲近3％</a><span class="src">自由財經 · 2026-10-27 22:01</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFAtbXF4YWs0N2pNMjloNks0ZW1jMnMyV0Y1bS1Jd00yVHVOVGVZTFJLQ3hHMHRrYlJTNkROSjRNaHdMcVFaRUl1c2Y2VjNSUVRrTmVLdDRhQ0JOanVk0gFiQVVfeXFMTjZsNVZNckZYSFZJX1pKWHo1MGJ6N2xvT0M5YUFWSFUyU29KYktPNnB1bm9fNmdhSVpSbHh0N2dwVjY1OHRRSWcyVHppXy1qZk0waDkwTmhaS0tjRGxlYTN5Vmc?oc=5" target="_blank" rel="noopener">美股收盤／四大指數收紅費半狂飆3.6% AI 股領漲 WTI 原油跌破100美元</a><span class="src">經濟日報 · 2026-10-27 23:11</span></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QV1B2WWtCWlR5X1p4RnpDLXA4aHpURF90T042TXdEenE2dE1xcWdoYU5yZFVBbTFSV1R6SlNJdzd5ekNTYnVHZmVqb3JaZkU?oc=5" target="_blank" rel="noopener">美股收盤｜Anthropic申請IPO提振AI股，費半漲2.8%、那指升0.83%</a><span class="src">鉅亨網 · 2026-10-26 21:33</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE51RzViRmduZnJ0dmw3TEtKVVRUcTlTSC1xdmRiOUF5UkN4UXZGUzh0b3M4WW5sYlVIQTNCbWgtOGZ4U0twWlUyeUFvUFBuRi1HOTVndWg5WThSeGQtZnd30gFkQVVfeXFMT1k3NTh0ZkRka1A1RDVpSW5jYXpkVmNVVnBNNlJSZEFNcmJJMXkxdVRmbVhzZVFndFRvWmhIaGw3WlRMQ3lGdVAxOC1aWjZGXzBlT283OUZYSkxzeDBydmg3UWtTUg?oc=5" target="_blank" rel="noopener">美股收盤》AI概念股回神領漲、四大主指全收紅 台積電ADR漲1.40％</a><span class="src">自由財經 · 2026-10-26 22:40</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XRVk0ckhxN2VpR3h1WDFfSzlCdXV6OFlYbVVfWFY1X29XSUNDNF9VSUp5cWJxQkgyLUszczFzQkpOWVZkTkd5U3VPejVaUHBWOVhaS21Zc1B6WmFz0gFiQVVfeXFMTWJUVzJ5bXRGOHpzVUdOT3ZsNGx3aWZLQXJTaFpUcFBpcFB0SDdFcXlOLWVuMDE3bW1BZmg5bE5VQzJLMzhOem5YOUxiTHpBYmw3RWdDUEpJd1BfTUNxOGQ2Smc?oc=5" target="_blank" rel="noopener">美股收盤／Anthropic 上市案點燃 AI 買氣 費半大漲2.8% AI 疑慮仍在</a><span class="src">經濟日報 · 2026-10-26 22:52</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1jTnViMnFnSDUtcUUteVZFUUdTVU5hWlBTT1Y3NjluNExlN1NsdTRJbnp0RGhsZWQxVWE1M09DSmROYVhPMFJaZGpDTFFEV05OWTU2VzJjOHUwVm1QR3Yw0gFkQVVfeXFMTlJrelNsZUdRWGk5THhJOVF1LUxKcTdvak5maTFTeXJTc1g0VWRvR2ZTSEJGOVBIajhOWGFXTFhzd09ISnl6Q2NCbE4wNVFGZGVIN1FmM1M5Y0laa2RULUl0ODdhYQ?oc=5" target="_blank" rel="noopener">美股收盤》AI續熱、投資人關注美伊 美股漲跌互見 台積電ADR漲1.54％</a><span class="src">自由財經 · 2026-09-23 07:00</span></li>
+  </ul></div>
+</section>
+
+
+<div class="bottom-nav"><a class="btn-home" href="index.html">← 回首頁</a><a class="btn-home" href="latest.html">最新報告 →</a></div>
+<footer>
+  資料來源：TWSE 公開資料、Yahoo Finance（yfinance）、Google News。AI 評論由 Claude 依當日資料生成，僅供個人參考，不構成投資建議。<br>
+  台股慣例：<span class="up">紅色 ▲ 上漲</span>、<span class="down">綠色 ▼ 下跌</span>。報告識別：2026-10-28-pm
+</footer>
+</div>
+
+<script>
+(function(){
+  const figs = {"taiex": {"data": [{"type": "scatter", "mode": "lines", "name": "加權指數", "x": ["2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-27", "2026-10-28"], "y": [41138.85, 41933.78, 41603.94, 41790.06, 41898.32, 41374.5, 41751.75, 41172.36, 40891.82, 40175.56, 40020.82, 41368.21, 42267.97, 43644.4, 43525.37, 44256.8, 43636.44, 44732.94, 45337.91, 45557.31, 46459.16, 45677.46, 45070.94, 43502.78, 44704.44, 43225.54, 43149.46, 44169.04, 45396.99, 45809.19, 45877.39, 46465.2, 47741.51, 47100.65, 46043.6, 46255.26, 44571.76, 44999.9, 46125.91, 47018.99, 46744.16, 46780.62, 46556.39, 45479.11, 45734.41, 45354.61, 45380.52, 44737.95, 45631.59, 45624.98, 42671.27, 42449.7, 44232.87, 44825.78, 44850.81, 43654.84, 43634.19, 41603.36, 40039.18, 39933.3, 43119.75, 43386.41, 43360.66, 44611.6, 44396.7, 44225.91, 44928.76, 45120.72, 45518.07, 46021.48, 45811.01, 45857.27, 45308.68, 44719.35, 44933.74, 45224.29, 44762.32, 45169.46, 45832.62, 45975.22, 46331.45, 46128.47, 46948.72, 46164.72, 45857.66, 46551.13, 47326.27, 47105.78, 47183.36, 46940.49, 46184.85, 45862.52, 45511.49, 45848.9, 46288.0, 47180.75, 47718.84, 47800.17, 48157.29, 48024.6, 47631.96, 47940.13, 48353.49, 48475.74, 49712.04, 49822.55, 49806.37, 49313.44, 49301.96, 48341.31, 48625.83, 46969.87, 47111.26, 46822.08, 46292.93, 46887.77, 46041.43, 46096.23, 47035.58], "line": {"width": 2, "color": "__S1__"}, "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA20", "x": ["2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-27", "2026-10-28"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 42403.96, 42669.97, 42857.15, 43030.5, 43116.14, 43256.45, 43349.0, 43418.88, 43568.72, 43793.98, 44075.66, 44368.49, 44623.34, 44897.01, 45069.83, 45195.74, 45295.66, 45342.43, 45355.77, 45395.17, 45468.26, 45482.51, 45537.67, 45611.94, 45710.76, 45762.25, 45868.71, 45980.26, 46008.71, 46020.44, 46011.23, 45850.92, 45650.14, 45474.71, 45360.97, 45301.33, 45171.31, 45124.43, 44954.6, 44650.27, 44295.98, 44114.76, 43945.05, 43785.26, 43741.89, 43675.0, 43618.57, 43595.98, 43615.12, 43609.44, 43629.27, 43786.25, 43956.63, 44010.42, 44005.1, 44009.25, 44087.72, 44144.13, 44322.43, 44612.1, 44914.2, 45074.79, 45211.89, 45391.29, 45468.95, 45542.0, 45658.26, 45778.13, 45877.39, 45960.65, 46006.6, 46025.29, 46025.56, 46035.7, 46092.17, 46159.89, 46257.71, 46405.53, 46537.07, 46653.3, 46755.77, 46820.8, 46911.38, 46981.62, 47097.17, 47289.89, 47453.46, 47577.47, 47687.85, 47793.78, 47863.82, 47985.87, 48041.24, 48121.22, 48169.88, 48170.13, 48155.48, 48071.61, 47986.41, 47930.33], "line": {"width": 1.2, "color": "__S2__"}, "hovertemplate": "MA20 %{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA60", "x": ["2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-27", "2026-10-28"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 44056.07, 44089.08, 44113.29, 44142.57, 44189.6, 44231.23, 44278.76, 44331.71, 44397.51, 44474.62, 44572.05, 44668.55, 44743.37, 44794.05, 44811.97, 44835.44, 44851.56, 44870.33, 44877.6, 44885.85, 44892.81, 44890.69, 44898.2, 44929.5, 44973.86, 44993.08, 45048.51, 45118.12, 45167.07, 45196.84, 45215.7, 45220.82, 45210.78, 45173.61, 45152.75, 45156.82, 45172.25, 45224.7, 45271.37, 45305.23, 45321.99, 45336.78, 45356.11, 45386.06, 45436.0, 45502.3, 45576.76, 45650.53, 45726.78, 45787.96, 45833.23, 45932.47, 46007.81, 46055.78, 46089.05, 46113.09, 46166.97, 46207.09, 46281.97, 46398.58], "line": {"width": 1.2, "color": "__S3__"}, "hovertemplate": "MA60 %{y:,.2f}<extra></extra>"}], "layout": {"hovermode": "x unified", "xaxis": {"type": "category", "tickvals": ["2026-05-06", "2026-07-01", "2026-08-26", "2026-10-27"], "ticktext": ["5/6", "7/1", "8/26", "10/27"], "tickangle": 0, "showgrid": false}, "yaxis": {"tickformat": ",.0f"}, "legend": {"orientation": "h", "y": 1.12, "x": 0}}}, "spx": {"data": [{"type": "scatter", "mode": "lines", "name": "S&P 500", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [7483.23, 7483.24, 7537.43, 7503.85, 7482.71, 7543.64, 7575.39, 7515.34, 7543.59, 7572.4, 7533.77, 7457.69, 7443.28, 7509.2, 7498.96, 7408.3, 7411.98, 7413.18, 7428.78, 7316.15, 7437.63, 7489.72, 7600.5, 7736.52, 7723.55, 7709.96, 7757.64, 7753.11, 7728.2, 7748.5, 7798.99, 7785.76, 7745.06, 7691.76, 7707.98, 7641.16, 7674.37, 7652.86, 7677.28, 7675.7, 7730.99, 7711.76, 7686.14, 7631.47, 7666.6, 7747.71, 7718.6, 7673.52, 7636.36, 7591.7, 7656.98, 7619.98, 7585.73, 7551.81, 7637.76, 7650.5, 7764.7, 7764.64, 7706.03, 7704.13, 7743.41, 7683.69, 7670.84, 7651.54, 7666.45, 7722.72, 7773.95, 7818.93, 7801.77, 7765.36, 7811.54, 7807.24, 7805.45, 7718.94, 7744.06, 7659.44, 7690.73, 7712.57, 7757.17, 7663.43, 7623.68, 7676.77, 7722.6], "line": {"width": 2, "color": "__S1__"}, "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA20", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 7483.11, 7480.83, 7481.15, 7484.3, 7495.94, 7507.98, 7516.29, 7525.41, 7537.3, 7546.53, 7555.33, 7568.59, 7585.0, 7600.08, 7609.21, 7619.66, 7631.31, 7644.43, 7656.41, 7668.84, 7686.81, 7701.48, 7712.58, 7716.86, 7711.61, 7708.76, 7710.65, 7708.7, 7704.72, 7700.13, 7692.29, 7685.19, 7676.9, 7668.93, 7661.94, 7658.42, 7658.89, 7663.41, 7669.0, 7670.43, 7671.86, 7672.48, 7671.07, 7670.31, 7671.31, 7671.3, 7670.05, 7672.82, 7680.09, 7688.36, 7697.05, 7704.77, 7714.14, 7725.12, 7733.48, 7738.79, 7739.24, 7735.54, 7732.94, 7735.5, 7733.46, 7727.48, 7727.13, 7729.72], "line": {"width": 1.2, "color": "__S2__"}, "hovertemplate": "MA20 %{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA60", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 7613.92, 7618.26, 7621.6, 7623.83, 7626.29, 7629.35, 7632.33, 7635.64, 7640.7, 7645.01, 7648.22, 7652.85, 7658.68, 7664.71, 7668.21, 7672.29, 7676.48, 7681.13, 7686.12, 7691.59, 7697.38, 7700.48, 7703.59, 7705.63], "line": {"width": 1.2, "color": "__S3__"}, "hovertemplate": "MA60 %{y:,.2f}<extra></extra>"}], "layout": {"hovermode": "x unified", "xaxis": {"type": "category", "tickvals": ["2026-07-01", "2026-08-10", "2026-09-17", "2026-10-26"], "ticktext": ["7/1", "8/10", "9/17", "10/26"], "tickangle": 0, "showgrid": false}, "yaxis": {"tickformat": ",.0f"}, "legend": {"orientation": "h", "y": 1.12, "x": 0}}}, "ndx": {"data": [{"type": "scatter", "mode": "lines", "name": "Nasdaq", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [26040.03, 25832.67, 26121.16, 25818.69, 25870.65, 26206.89, 26281.61, 25873.18, 26107.01, 26269.23, 25881.95, 25520.24, 25508.07, 25837.21, 25690.9, 25137.69, 24975.82, 24932.08, 24876.91, 24442.94, 25122.18, 25373.85, 25913.9, 26584.99, 26363.44, 26348.35, 26690.62, 26605.36, 26445.45, 26588.49, 26803.03, 26729.16, 26644.91, 26289.71, 26331.09, 26067.17, 26180.46, 25980.19, 26151.3, 26130.2, 26541.35, 26402.42, 26370.89, 26099.77, 26217.83, 26584.06, 26506.99, 26421.41, 26253.34, 26081.72, 26333.04, 26186.41, 25981.57, 25978.43, 26418.3, 26522.54, 27122.09, 27244.28, 26936.04, 26939.37, 27068.72, 26820.38, 26797.54, 26861.06, 26871.6, 27190.86, 27477.31, 27599.79, 27538.69, 27193.34, 27366.17, 27245.9, 27204.38, 26692.87, 26713.03, 26140.03, 26430.89, 26424.82, 26702.86, 26008.86, 25955.34, 26169.38, 26477.81], "line": {"width": 2, "color": "__S1__"}, "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA20", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 25661.25, 25615.35, 25592.41, 25582.05, 25620.36, 25645.0, 25652.08, 25672.53, 25709.14, 25726.06, 25742.02, 25788.08, 25848.52, 25905.36, 25927.99, 25960.0, 26006.47, 26066.7, 26119.11, 26182.83, 26267.19, 26338.15, 26389.58, 26412.43, 26388.17, 26380.89, 26392.67, 26383.49, 26374.29, 26364.69, 26339.35, 26315.85, 26288.71, 26255.55, 26239.98, 26244.34, 26267.11, 26314.19, 26377.4, 26416.63, 26457.09, 26483.46, 26504.36, 26525.69, 26563.76, 26596.44, 26626.78, 26675.3, 26734.22, 26798.49, 26854.07, 26905.72, 26958.7, 27019.84, 27055.56, 27070.3, 27051.17, 27016.61, 26975.64, 26963.98, 26917.45, 26861.79, 26829.24, 26813.25], "line": {"width": 1.2, "color": "__S2__"}, "hovertemplate": "MA20 %{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA60", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 26128.51, 26145.66, 26162.12, 26173.39, 26190.76, 26207.45, 26223.84, 26243.77, 26272.55, 26296.41, 26311.81, 26336.55, 26365.31, 26393.58, 26407.84, 26424.88, 26441.59, 26465.84, 26490.72, 26521.15, 26547.25, 26561.13, 26574.39, 26583.79], "line": {"width": 1.2, "color": "__S3__"}, "hovertemplate": "MA60 %{y:,.2f}<extra></extra>"}], "layout": {"hovermode": "x unified", "xaxis": {"type": "category", "tickvals": ["2026-07-01", "2026-08-10", "2026-09-17", "2026-10-26"], "ticktext": ["7/1", "8/10", "9/17", "10/26"], "tickangle": 0, "showgrid": false}, "yaxis": {"tickformat": ",.0f"}, "legend": {"orientation": "h", "y": 1.12, "x": 0}}}, "sox": {"data": [{"type": "scatter", "mode": "lines", "name": "費城半導體", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [13353.28, 12626.22, 12900.14, 12300.52, 12574.97, 12960.0, 12967.16, 12347.78, 12661.93, 12398.89, 11867.5, 11673.89, 11743.85, 12356.16, 12410.67, 12343.84, 11818.88, 11554.88, 11035.68, 10447.49, 11302.99, 11311.08, 11430.35, 12179.26, 12008.88, 12048.69, 12356.79, 11993.86, 12098.47, 12399.38, 12456.0, 12417.05, 12621.0, 11992.46, 11738.23, 11800.02, 11740.37, 11423.17, 11588.04, 11611.24, 11882.17, 11469.66, 11535.05, 11288.61, 11339.25, 11352.13, 11735.26, 11887.87, 11931.32, 11614.17, 11824.0, 11131.28, 11175.55, 11246.11, 11599.49, 11921.69, 12433.17, 12689.82, 12534.28, 12492.54, 12668.93, 12465.24, 12629.16, 12628.62, 12829.0, 13136.67, 13172.74, 13217.82, 13066.15, 12623.71, 12572.42, 12236.79, 12208.79, 11684.38, 11581.21, 11137.29, 11316.34, 11283.81, 11505.56, 10731.98, 10779.46, 11083.47, 11482.5], "line": {"width": 2, "color": "__S1__"}, "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA20", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 12217.19, 12114.67, 12048.91, 11975.43, 11969.36, 11941.06, 11895.49, 11864.97, 11847.28, 11819.1, 11819.13, 11848.55, 11885.71, 11929.57, 11911.39, 11877.76, 11850.57, 11846.65, 11840.06, 11867.68, 11925.87, 11954.83, 11962.75, 11967.99, 11923.46, 11889.98, 11855.15, 11824.07, 11818.77, 11810.41, 11771.15, 11739.55, 11675.26, 11602.99, 11565.67, 11558.74, 11564.82, 11599.46, 11662.79, 11710.11, 11754.17, 11793.51, 11843.29, 11897.99, 11964.99, 12039.48, 12128.71, 12200.58, 12267.08, 12323.82, 12374.3, 12411.72, 12466.99, 12518.66, 12540.57, 12539.66, 12500.44, 12444.59, 12374.29, 12322.86, 12234.83, 12140.36, 12071.27, 12013.94], "line": {"width": 1.2, "color": "__S2__"}, "hovertemplate": "MA20 %{y:,.2f}<extra></extra>"}, {"type": "scatter", "mode": "lines", "name": "MA60", "x": ["2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 11965.74, 11954.34, 11951.65, 11947.14, 11952.6, 11956.84, 11959.78, 11963.21, 11977.71, 11984.45, 11988.19, 11999.94, 12009.32, 12017.07, 12005.88, 11992.05, 11971.94, 11963.57, 11959.05, 11966.88, 11971.62, 11962.9, 11959.1, 11959.97], "line": {"width": 1.2, "color": "__S3__"}, "hovertemplate": "MA60 %{y:,.2f}<extra></extra>"}], "layout": {"hovermode": "x unified", "xaxis": {"type": "category", "tickvals": ["2026-07-01", "2026-08-10", "2026-09-17", "2026-10-26"], "ticktext": ["7/1", "8/10", "9/17", "10/26"], "tickangle": 0, "showgrid": false}, "yaxis": {"tickformat": ",.0f"}, "legend": {"orientation": "h", "y": 1.12, "x": 0}}}, "tw_sectors": {"data": [{"type": "bar", "orientation": "h", "x": [-0.56, -0.36, -0.28, -0.2, 0.22, 0.58, 0.66, 1.48, 2.29, 2.73, 4.38, 5.11, 5.35], "y": ["金融保險", "建材營造", "鋼鐵", "觀光餐旅", "航運", "生技醫療", "通信網路", "電腦及週邊設備", "半導體", "電機機械", "電子零組件", "光電", "塑膠"], "marker": {"color": ["__DOWN__", "__DOWN__", "__DOWN__", "__DOWN__", "__UP__", "__UP__", "__UP__", "__UP__", "__UP__", "__UP__", "__UP__", "__UP__", "__UP__"], "line": {"width": 0}}, "text": ["-0.56%", "-0.36%", "-0.28%", "-0.20%", "+0.22%", "+0.58%", "+0.66%", "+1.48%", "+2.29%", "+2.73%", "+4.38%", "+5.11%", "+5.35%"], "textposition": "outside", "cliponaxis": false, "hovertemplate": "%{y}: %{text}<extra></extra>"}], "layout": {"bargap": 0.35, "xaxis": {"zeroline": true, "range": [-2.6285, 7.4185], "ticksuffix": "%"}, "yaxis": {"automargin": true, "side": "left"}, "showlegend": false, "margin": {"l": 8, "r": 8, "t": 4, "b": 24}}}, "us_sectors": {"data": [{"type": "bar", "orientation": "h", "x": [-2.05, -0.92, -0.84, -0.26, -0.25, -0.06, 0.57, 0.71, 0.78, 1.04, 1.7], "y": ["能源 XLE", "必需消費 XLP", "不動產 XLRE", "通訊 XLC", "金融 XLF", "醫療 XLV", "工業 XLI", "公用事業 XLU", "原物料 XLB", "非必需消費 XLY", "科技 XLK"], "marker": {"color": ["__DOWN__", "__DOWN__", "__DOWN__", "__DOWN__", "__DOWN__", "__DOWN__", "__UP__", "__UP__", "__UP__", "__UP__", "__UP__"], "line": {"width": 0}}, "text": ["-2.05%", "-0.92%", "-0.84%", "-0.26%", "-0.25%", "-0.06%", "+0.57%", "+0.71%", "+0.78%", "+1.04%", "+1.70%"], "textposition": "outside", "cliponaxis": false, "hovertemplate": "%{y}: %{text}<extra></extra>"}], "layout": {"bargap": 0.35, "xaxis": {"zeroline": true, "range": [-3.3625, 3.0125], "ticksuffix": "%"}, "yaxis": {"automargin": true, "side": "left"}, "showlegend": false, "margin": {"l": 8, "r": 8, "t": 4, "b": 24}}}, "spark_tw_2330": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-27", "2026-10-28"], "y": [2425.0, 2370.0, 2320.0, 2405.0, 2365.0, 2370.0, 2380.0, 2395.0, 2415.0, 2435.0, 2395.0, 2400.0, 2380.0, 2350.0, 2375.0, 2410.0, 2375.0, 2400.0, 2415.0, 2410.0, 2420.0, 2405.0, 2440.0, 2385.0, 2390.0, 2410.0, 2460.0, 2470.0, 2465.0, 2450.0, 2410.0, 2380.0, 2385.0, 2380.0, 2425.0, 2460.0, 2480.0, 2460.0, 2500.0, 2475.0, 2475.0, 2480.0, 2510.0, 2500.0, 2575.0, 2585.0, 2585.0, 2550.0, 2540.0, 2490.0, 2490.0, 2440.0, 2420.0, 2420.0, 2405.0, 2420.0, 2385.0, 2385.0, 2400.0, 2425.0], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [2285.2, 2623.7749999999996]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_tw_2317": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-27", "2026-10-28"], "y": [250.5, 253.0, 250.0, 258.5, 264.5, 260.0, 264.5, 263.0, 270.0, 262.0, 259.5, 255.0, 249.0, 245.0, 246.5, 245.5, 243.5, 243.0, 246.5, 252.0, 253.0, 250.0, 256.0, 251.0, 247.5, 256.0, 256.0, 251.5, 252.0, 251.0, 248.0, 248.5, 246.5, 248.0, 250.5, 250.5, 250.0, 253.0, 256.0, 250.5, 250.5, 251.5, 254.0, 251.0, 254.0, 256.0, 252.0, 249.0, 244.5, 240.0, 243.0, 239.5, 244.0, 239.5, 241.5, 250.0, 245.0, 245.0, 247.5, 251.5], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [235.9075, 274.04999999999995]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_tw_2454": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-27", "2026-10-28"], "y": [3555.0, 3910.0, 3865.0, 4000.0, 3920.0, 3900.0, 3960.0, 4020.0, 4015.0, 4225.0, 4210.0, 4050.0, 3885.0, 3845.0, 3700.0, 3790.0, 3765.0, 3735.0, 3945.0, 3865.0, 3985.0, 3925.0, 4315.0, 4275.0, 4340.0, 4415.0, 4760.0, 4710.0, 4625.0, 4720.0, 4585.0, 4560.0, 4430.0, 4530.0, 4500.0, 4710.0, 5010.0, 5180.0, 5185.0, 5285.0, 4910.0, 4920.0, 4980.0, 4950.0, 5165.0, 4920.0, 4835.0, 4690.0, 4625.0, 4525.0, 4475.0, 4165.0, 4250.0, 4205.0, 4150.0, 4140.0, 4010.0, 4010.0, 3960.0, 4235.0], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [3501.6749999999997, 5364.275]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_tw_0050": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-28"], "y": [93.5, 102.85, 102.0, 100.65, 103.8, 103.3, 102.85, 104.25, 104.6, 105.2, 106.7, 106.4, 106.45, 104.9, 103.1, 103.8, 104.65, 103.8, 104.4, 105.9, 106.05, 106.95, 106.25, 108.45, 106.8, 106.2, 107.9, 109.9, 109.65, 109.65, 109.15, 107.7, 106.9, 106.25, 106.9, 108.05, 109.85, 111.35, 111.85, 112.45, 112.4, 111.3, 112.05, 112.9, 112.8, 115.95, 116.5, 116.05, 114.95, 114.8, 112.4, 113.0, 108.9, 109.0, 108.15, 107.25, 108.15, 106.9, 106.9, 108.65], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [92.0975, 118.24749999999999]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_us_NVDA": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [211.94, 219.22, 218.99, 223.96, 217.55, 217.5, 224.09, 225.3, 225.16, 225.01, 219.74, 217.56, 216.85, 214.72, 208.48, 213.05, 209.66, 227.98, 217.55, 220.78, 217.44, 224.41, 228.45, 230.36, 225.73, 223.67, 218.36, 218.29, 210.96, 212.17, 213.9, 219.34, 222.27, 227.38, 228.87, 225.51, 224.58, 225.07, 228.86, 227.21, 228.38, 230.86, 233.95, 238.9, 239.24, 237.47, 230.48, 229.28, 226.32, 228.52, 221.3, 217.23, 214.13, 217.09, 216.47, 221.97, 212.21, 210.96, 216.0, 217.94], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [205.35279999999997, 242.8286]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_us_TSM": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [417.17, 414.0, 418.2, 420.04, 418.47, 422.06, 429.15, 430.49, 426.35, 430.97, 413.41, 412.09, 416.0, 418.95, 410.12, 417.41, 417.69, 427.3, 417.52, 415.32, 414.0, 415.5, 417.01, 428.91, 439.0, 435.36, 428.03, 433.24, 418.01, 413.75, 417.72, 430.26, 434.67, 445.14, 452.0, 446.57, 451.15, 450.61, 452.88, 456.94, 456.19, 459.2, 472.78, 485.8, 482.3, 472.2, 457.99, 453.31, 444.35, 445.12, 430.0, 422.25, 412.61, 420.22, 425.08, 431.89, 412.35, 418.51, 424.37, 436.87], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [403.9682, 493.087]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_us_AAPL": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [309.38, 311.0, 312.41, 313.33, 308.26, 304.91, 302.25, 305.26, 305.93, 305.59, 310.03, 316.83, 311.3, 309.35, 310.34, 309.9, 313.45, 314.58, 319.7, 316.85, 325.13, 324.96, 328.21, 319.97, 316.22, 315.34, 326.57, 332.27, 333.08, 331.34, 332.41, 337.0, 336.13, 338.98, 339.75, 337.02, 335.92, 341.07, 338.4, 329.4, 333.02, 330.32, 333.69, 332.89, 333.63, 336.67, 340.42, 336.64, 340.97, 341.27, 342.96, 342.0, 343.46, 342.94, 339.5, 343.99, 348.22, 347.73, 343.91, 347.1], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [297.71625, 353.4433]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}, "spark_us_MSFT": {"data": [{"type": "scatter", "mode": "lines", "x": ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27"], "y": [492.81, 487.46, 499.86, 499.99, 506.06, 503.81, 492.43, 496.88, 495.4, 480.35, 481.63, 484.31, 481.15, 483.24, 487.31, 491.71, 496.37, 505.06, 513.53, 507.29, 501.02, 496.82, 510.12, 499.7, 493.95, 491.65, 492.44, 495.63, 505.41, 497.12, 490.3, 497.75, 493.78, 501.61, 498.0, 500.59, 497.93, 516.17, 509.22, 508.96, 512.9, 512.8, 517.53, 525.18, 529.3, 529.76, 522.61, 535.07, 541.15, 543.45, 533.69, 539.44, 529.05, 533.52, 531.87, 532.95, 521.08, 524.51, 532.6, 531.33], "line": {"width": 1.5, "color": "__UP__"}, "fill": "tozeroy", "fillcolor": "__UPF__", "hovertemplate": "%{x}<br>%{y:,.2f}<extra></extra>"}], "layout": {"xaxis": {"visible": false}, "yaxis": {"visible": false, "range": [473.14475, 551.60175]}, "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, "showlegend": false, "hovermode": "x"}}};
+  function theme(){
+    const cs = getComputedStyle(document.documentElement);
+    const v = k => cs.getPropertyValue(k).trim();
+    return {S1:v('--s1'),S2:v('--s2'),S3:v('--s3'),UP:v('--up'),DOWN:v('--down'),
+            UPF:v('--up')+'22',DOWNF:v('--down')+'22',ink:v('--ink-2'),ink3:v('--ink-3'),line:v('--line')};
+  }
+  function paint(){
+    const t = theme();
+    const sub = s => JSON.parse(JSON.stringify(s).replace(/__(S1|S2|S3|UP|DOWN|UPF|DOWNF)__/g,(m,k)=>t[k]));
+    for (const [id, fig] of Object.entries(figs)){
+      const el = document.getElementById('fig-'+id); if(!el) continue;
+      const f = sub(fig);
+      const axis = {gridcolor:t.line, zerolinecolor:t.ink3, linecolor:t.line, tickfont:{color:t.ink3}, automargin:true};
+      const layout = Object.assign({
+        paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+        font:{family:getComputedStyle(document.body).fontFamily, size:12, color:t.ink},
+        margin:{l:8,r:16,t:8,b:28,pad:4}, autosize:true, hoverlabel:{font:{size:12}}
+      }, f.layout);
+      layout.xaxis = Object.assign({}, axis, f.layout.xaxis||{});
+      layout.yaxis = Object.assign({side:'right'}, axis, f.layout.yaxis||{});
+      layout.legend = Object.assign({font:{color:t.ink3,size:11}, bgcolor:'rgba(0,0,0,0)'}, f.layout.legend||{});
+      Plotly.react(el, f.data, layout, {displayModeBar:false, responsive:true, locale:'zh-TW'});
+    }
+  }
+  if (window.Plotly) { paint(); } else { document.querySelectorAll('.chart').forEach(e=>{e.innerHTML='<p class="flat" style="font-size:13px">圖表需要連線載入 plotly.js（或用 --inline 內嵌）</p>';}); }
+  if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ()=>window.Plotly && paint());
+})();
+</script>
+</body>
+</html>
